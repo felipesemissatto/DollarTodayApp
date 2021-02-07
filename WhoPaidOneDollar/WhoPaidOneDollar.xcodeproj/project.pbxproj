@@ -15,6 +15,8 @@
 		2F7FC44B25D05359009D925D /* WhoPaidOneDollarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FC44A25D05359009D925D /* WhoPaidOneDollarTests.swift */; };
 		2F7FC45625D05359009D925D /* WhoPaidOneDollarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FC45525D05359009D925D /* WhoPaidOneDollarUITests.swift */; };
 		2F7FC46825D053F1009D925D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FC46725D053F1009D925D /* Constants.swift */; };
+		2F7FC47A25D05778009D925D /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FC47925D05778009D925D /* Person.swift */; };
+		2F7FC47F25D059B4009D925D /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FC47E25D059B4009D925D /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		2F7FC45525D05359009D925D /* WhoPaidOneDollarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoPaidOneDollarUITests.swift; sourceTree = "<group>"; };
 		2F7FC45725D05359009D925D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F7FC46725D053F1009D925D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2F7FC47925D05778009D925D /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		2F7FC47E25D059B4009D925D /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +183,8 @@
 		2F7FC47425D05635009D925D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2F7FC47925D05778009D925D /* Person.swift */,
+				2F7FC47E25D059B4009D925D /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -324,6 +330,8 @@
 			files = (
 				2F7FC43425D05355009D925D /* AppDelegate.swift in Sources */,
 				2F7FC43625D05355009D925D /* SceneDelegate.swift in Sources */,
+				2F7FC47F25D059B4009D925D /* Message.swift in Sources */,
+				2F7FC47A25D05778009D925D /* Person.swift in Sources */,
 				2F7FC46825D053F1009D925D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
