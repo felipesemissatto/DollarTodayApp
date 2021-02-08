@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import Alamofire
+import SwiftyJSON
 
 class RequestSenderImplementation {
     
@@ -16,20 +18,31 @@ class RequestSenderImplementation {
                       instagram: String?,
                       date: NSDate,
                       completion: @escaping(String?) -> Void) {
-//        
-//        guard let url = URL(string: rootBackendURL + "/person") else {
-//            completion("Error: URL not decoded")
-//            return
-//        }
-//        
-//        let requestBody = ["name" : name]
-//        
-//        sendPostRequestForUrl(url: url, requestBody: requestBody) { error in
-//            if let errorMessage = error {
-//                completion(errorMessage)
-//            } else {
-//                completion(nil)
-//            }
-//        }
+        
+        guard let url = URL(string: rootBackendURL + "/person") else {
+            completion("Error: URL not decoded")
+            return
+        }
+        
+        let parameters: Parameters = [ "name" : name,
+                                       "photoUrl" : photoUrl ?? "",
+                                       "twitter": twitter ?? "",
+                                       "instagram": instagram ?? "",
+                                       "date": date]
+        
+        Alamofire
+            .request(url,
+                    method: .post,
+                    parameters: parameters,
+                    encoding: JSONEncoding.default)
+            .responseJSON(completionHandler: { response in
+                switch response.result {
+                    case .success(let json):
+                        let jsonData = json
+                        print(jsonData)
+                    case .failure(let error):
+                        completion(error.localizedDescription)
+               }
+           })
     }
 }
