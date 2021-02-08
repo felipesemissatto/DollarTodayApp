@@ -21,6 +21,9 @@
 		2F7FC48925D16E4E009D925D /* LoginViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FC48825D16E4E009D925D /* LoginViewProtocol.swift */; };
 		2F7FC48E25D17016009D925D /* LoginViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FC48D25D17016009D925D /* LoginViewControllerImplementation.swift */; };
 		2F7FC4A225D176D3009D925D /* RequestSenderImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FC4A125D176D3009D925D /* RequestSenderImplementation.swift */; };
+		9B2B0C3B55A171FDAFF3D4A4 /* Pods_WhoPaidOneDollarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19AB3EC280B30F13F4FCB05 /* Pods_WhoPaidOneDollarTests.framework */; };
+		A1BAAE8D82C88BAF4DAF3BBE /* Pods_WhoPaidOneDollar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464D3BE6F456224DC97B4C58 /* Pods_WhoPaidOneDollar.framework */; };
+		F4C5810D4ACB0BD3B8DA213F /* Pods_WhoPaidOneDollar_WhoPaidOneDollarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E696AA33453B67B3155701E /* Pods_WhoPaidOneDollar_WhoPaidOneDollarUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,15 @@
 		2F7FC48825D16E4E009D925D /* LoginViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewProtocol.swift; sourceTree = "<group>"; };
 		2F7FC48D25D17016009D925D /* LoginViewControllerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerImplementation.swift; sourceTree = "<group>"; };
 		2F7FC4A125D176D3009D925D /* RequestSenderImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSenderImplementation.swift; sourceTree = "<group>"; };
+		464D3BE6F456224DC97B4C58 /* Pods_WhoPaidOneDollar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhoPaidOneDollar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8567035F148D22ECC950A365 /* Pods-WhoPaidOneDollar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoPaidOneDollar.release.xcconfig"; path = "Target Support Files/Pods-WhoPaidOneDollar/Pods-WhoPaidOneDollar.release.xcconfig"; sourceTree = "<group>"; };
+		87B773409D888D194A89AABB /* Pods-WhoPaidOneDollar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoPaidOneDollar.debug.xcconfig"; path = "Target Support Files/Pods-WhoPaidOneDollar/Pods-WhoPaidOneDollar.debug.xcconfig"; sourceTree = "<group>"; };
+		8E696AA33453B67B3155701E /* Pods_WhoPaidOneDollar_WhoPaidOneDollarUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhoPaidOneDollar_WhoPaidOneDollarUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9522C7390C7FF00645204E30 /* Pods-WhoPaidOneDollarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoPaidOneDollarTests.release.xcconfig"; path = "Target Support Files/Pods-WhoPaidOneDollarTests/Pods-WhoPaidOneDollarTests.release.xcconfig"; sourceTree = "<group>"; };
+		A19AB3EC280B30F13F4FCB05 /* Pods_WhoPaidOneDollarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhoPaidOneDollarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABB29D5714A92056F3CA3F30 /* Pods-WhoPaidOneDollar-WhoPaidOneDollarUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoPaidOneDollar-WhoPaidOneDollarUITests.release.xcconfig"; path = "Target Support Files/Pods-WhoPaidOneDollar-WhoPaidOneDollarUITests/Pods-WhoPaidOneDollar-WhoPaidOneDollarUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AF0FBCC3478F00C429E5C2C3 /* Pods-WhoPaidOneDollarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoPaidOneDollarTests.debug.xcconfig"; path = "Target Support Files/Pods-WhoPaidOneDollarTests/Pods-WhoPaidOneDollarTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D4E9560670430204D84DAF22 /* Pods-WhoPaidOneDollar-WhoPaidOneDollarUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoPaidOneDollar-WhoPaidOneDollarUITests.debug.xcconfig"; path = "Target Support Files/Pods-WhoPaidOneDollar-WhoPaidOneDollarUITests/Pods-WhoPaidOneDollar-WhoPaidOneDollarUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1BAAE8D82C88BAF4DAF3BBE /* Pods_WhoPaidOneDollar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B2B0C3B55A171FDAFF3D4A4 /* Pods_WhoPaidOneDollarTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4C5810D4ACB0BD3B8DA213F /* Pods_WhoPaidOneDollar_WhoPaidOneDollarUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +110,8 @@
 				2F7FC44925D05359009D925D /* WhoPaidOneDollarTests */,
 				2F7FC45425D05359009D925D /* WhoPaidOneDollarUITests */,
 				2F7FC43125D05355009D925D /* Products */,
+				EB1F896CCFB784814A648585 /* Pods */,
+				75D686EBA4AB83AACEAB4E22 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -218,6 +235,30 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		75D686EBA4AB83AACEAB4E22 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				464D3BE6F456224DC97B4C58 /* Pods_WhoPaidOneDollar.framework */,
+				8E696AA33453B67B3155701E /* Pods_WhoPaidOneDollar_WhoPaidOneDollarUITests.framework */,
+				A19AB3EC280B30F13F4FCB05 /* Pods_WhoPaidOneDollarTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB1F896CCFB784814A648585 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				87B773409D888D194A89AABB /* Pods-WhoPaidOneDollar.debug.xcconfig */,
+				8567035F148D22ECC950A365 /* Pods-WhoPaidOneDollar.release.xcconfig */,
+				D4E9560670430204D84DAF22 /* Pods-WhoPaidOneDollar-WhoPaidOneDollarUITests.debug.xcconfig */,
+				ABB29D5714A92056F3CA3F30 /* Pods-WhoPaidOneDollar-WhoPaidOneDollarUITests.release.xcconfig */,
+				AF0FBCC3478F00C429E5C2C3 /* Pods-WhoPaidOneDollarTests.debug.xcconfig */,
+				9522C7390C7FF00645204E30 /* Pods-WhoPaidOneDollarTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -225,9 +266,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F7FC45A25D05359009D925D /* Build configuration list for PBXNativeTarget "WhoPaidOneDollar" */;
 			buildPhases = (
+				74811C70A0882BD0D39B309E /* [CP] Check Pods Manifest.lock */,
 				2F7FC42C25D05355009D925D /* Sources */,
 				2F7FC42D25D05355009D925D /* Frameworks */,
 				2F7FC42E25D05355009D925D /* Resources */,
+				11998C8986540FA2964F7373 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -242,6 +285,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F7FC45D25D05359009D925D /* Build configuration list for PBXNativeTarget "WhoPaidOneDollarTests" */;
 			buildPhases = (
+				8399E116B34163548CF19379 /* [CP] Check Pods Manifest.lock */,
 				2F7FC44225D05359009D925D /* Sources */,
 				2F7FC44325D05359009D925D /* Frameworks */,
 				2F7FC44425D05359009D925D /* Resources */,
@@ -260,9 +304,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F7FC46025D05359009D925D /* Build configuration list for PBXNativeTarget "WhoPaidOneDollarUITests" */;
 			buildPhases = (
+				0B7E393784D12E3545597016 /* [CP] Check Pods Manifest.lock */,
 				2F7FC44D25D05359009D925D /* Sources */,
 				2F7FC44E25D05359009D925D /* Frameworks */,
 				2F7FC44F25D05359009D925D /* Resources */,
+				00B1E340D0D852A391BF74D2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -342,6 +388,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00B1E340D0D852A391BF74D2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhoPaidOneDollar-WhoPaidOneDollarUITests/Pods-WhoPaidOneDollar-WhoPaidOneDollarUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhoPaidOneDollar-WhoPaidOneDollarUITests/Pods-WhoPaidOneDollar-WhoPaidOneDollarUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WhoPaidOneDollar-WhoPaidOneDollarUITests/Pods-WhoPaidOneDollar-WhoPaidOneDollarUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0B7E393784D12E3545597016 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhoPaidOneDollar-WhoPaidOneDollarUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		11998C8986540FA2964F7373 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhoPaidOneDollar/Pods-WhoPaidOneDollar-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhoPaidOneDollar/Pods-WhoPaidOneDollar-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WhoPaidOneDollar/Pods-WhoPaidOneDollar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74811C70A0882BD0D39B309E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhoPaidOneDollar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8399E116B34163548CF19379 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhoPaidOneDollarTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2F7FC42C25D05355009D925D /* Sources */ = {
@@ -529,6 +678,7 @@
 		};
 		2F7FC45B25D05359009D925D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87B773409D888D194A89AABB /* Pods-WhoPaidOneDollar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -549,6 +699,7 @@
 		};
 		2F7FC45C25D05359009D925D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8567035F148D22ECC950A365 /* Pods-WhoPaidOneDollar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -569,6 +720,7 @@
 		};
 		2F7FC45E25D05359009D925D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF0FBCC3478F00C429E5C2C3 /* Pods-WhoPaidOneDollarTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -591,6 +743,7 @@
 		};
 		2F7FC45F25D05359009D925D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9522C7390C7FF00645204E30 /* Pods-WhoPaidOneDollarTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -613,6 +766,7 @@
 		};
 		2F7FC46125D05359009D925D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4E9560670430204D84DAF22 /* Pods-WhoPaidOneDollar-WhoPaidOneDollarUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -633,6 +787,7 @@
 		};
 		2F7FC46225D05359009D925D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABB29D5714A92056F3CA3F30 /* Pods-WhoPaidOneDollar-WhoPaidOneDollarUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
