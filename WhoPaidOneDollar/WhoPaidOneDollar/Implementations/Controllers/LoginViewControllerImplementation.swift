@@ -14,7 +14,17 @@ class LoginViewControllerImplementation: UIViewController, LoginViewControllerPr
     var myView: LoginViewProtocol?
     let requestSender = RequestSenderImplementation()
     
+    // MARK: - Lifecycle methods
+    override func loadView() {
+        super.loadView()
+        let defaultView = LoginViewImplementation(viewController: self)
+        self.myView = defaultView
+        self.view = defaultView
+    }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
     
     // MARK: - LoginViewControllerProtocol methods
     func addNewPerson(name: String, photoUrl: URL?, twitter: String?, instagram: String?, date: NSDate) {

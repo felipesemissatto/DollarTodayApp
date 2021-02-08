@@ -7,13 +7,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ButtonSaveTableViewCell" customModule="WhoPaidOneDollar" customModuleProvider="target">
-            <connections>
-                <outlet property="saveButton" destination="1cc-xc-dfo" id="p6G-vE-tG0"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ButtonSaveTableViewCell" id="xJY-oa-2gg">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ButtonSaveTableViewCell" id="xJY-oa-2gg" customClass="ButtonSaveTableViewCell" customModule="WhoPaidOneDollar" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xJY-oa-2gg" id="zeB-I8-2Zy">
@@ -38,6 +34,9 @@
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="saveButton" destination="1cc-xc-dfo" id="lLI-xs-bas"/>
+            </connections>
             <point key="canvasLocation" x="89" y="-19"/>
         </tableViewCell>
     </objects>
