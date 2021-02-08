@@ -18,9 +18,5 @@ class PhotoTableViewCell: UITableViewCell {
         super.awakeFromNib()
         photoButton.layer.cornerRadius = 0.5 * photoButton.bounds.size.width
     }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
 }
 
