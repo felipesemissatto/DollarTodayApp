@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ButtonSaveTableViewCell" customModule="WhoPaidOneDollar" customModuleProvider="target">
+            <connections>
+                <outlet property="saveButton" destination="1cc-xc-dfo" id="p6G-vE-tG0"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ButtonSaveTableViewCell" id="xJY-oa-2gg">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xJY-oa-2gg" id="zeB-I8-2Zy">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cc-xc-dfo">
+                        <rect key="frame" x="24" y="16" width="366" height="40"/>
+                        <color key="backgroundColor" red="0.098039215690000001" green="0.37254901959999998" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                        <state key="normal" title="SAVE">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="1cc-xc-dfo" firstAttribute="top" secondItem="zeB-I8-2Zy" secondAttribute="top" constant="16" id="CTL-JF-lid"/>
+                    <constraint firstAttribute="bottom" secondItem="1cc-xc-dfo" secondAttribute="bottom" constant="16" id="TXV-3Z-mQl"/>
+                    <constraint firstAttribute="trailing" secondItem="1cc-xc-dfo" secondAttribute="trailing" constant="24" id="lLu-RX-UhG"/>
+                    <constraint firstItem="1cc-xc-dfo" firstAttribute="leading" secondItem="zeB-I8-2Zy" secondAttribute="leading" constant="24" id="vXr-iO-ce2"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+            <point key="canvasLocation" x="89" y="-19"/>
+        </tableViewCell>
+    </objects>
+</document>
