@@ -17,6 +17,10 @@
 		2F7FC46825D053F1009D925D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FC46725D053F1009D925D /* Constants.swift */; };
 		2F7FC47A25D05778009D925D /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FC47925D05778009D925D /* Person.swift */; };
 		2F7FC47F25D059B4009D925D /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FC47E25D059B4009D925D /* Message.swift */; };
+		2F7FC48425D16C85009D925D /* LoginViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FC48325D16C85009D925D /* LoginViewControllerProtocol.swift */; };
+		2F7FC48925D16E4E009D925D /* LoginViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FC48825D16E4E009D925D /* LoginViewProtocol.swift */; };
+		2F7FC48E25D17016009D925D /* LoginViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FC48D25D17016009D925D /* LoginViewControllerImplementation.swift */; };
+		2F7FC4A225D176D3009D925D /* RequestSenderImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FC4A125D176D3009D925D /* RequestSenderImplementation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		2F7FC46725D053F1009D925D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2F7FC47925D05778009D925D /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		2F7FC47E25D059B4009D925D /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		2F7FC48325D16C85009D925D /* LoginViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerProtocol.swift; sourceTree = "<group>"; };
+		2F7FC48825D16E4E009D925D /* LoginViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewProtocol.swift; sourceTree = "<group>"; };
+		2F7FC48D25D17016009D925D /* LoginViewControllerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerImplementation.swift; sourceTree = "<group>"; };
+		2F7FC4A125D176D3009D925D /* RequestSenderImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSenderImplementation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +153,7 @@
 		2F7FC46F25D05479009D925D /* Implementations */ = {
 			isa = PBXGroup;
 			children = (
+				2F7FC49725D17398009D925D /* Service */,
 				2F7FC47225D0559C009D925D /* Controllers */,
 				2F7FC47125D054F1009D925D /* Views */,
 				2F7FC47025D05489009D925D /* JSON */,
@@ -169,6 +178,7 @@
 		2F7FC47225D0559C009D925D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2F7FC48D25D17016009D925D /* LoginViewControllerImplementation.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -176,6 +186,8 @@
 		2F7FC47325D055CE009D925D /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				2F7FC48325D16C85009D925D /* LoginViewControllerProtocol.swift */,
+				2F7FC48825D16E4E009D925D /* LoginViewProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -196,6 +208,14 @@
 				2F7FC43525D05355009D925D /* SceneDelegate.swift */,
 			);
 			path = "App and Scene Delegates";
+			sourceTree = "<group>";
+		};
+		2F7FC49725D17398009D925D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2F7FC4A125D176D3009D925D /* RequestSenderImplementation.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,10 +348,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F7FC48E25D17016009D925D /* LoginViewControllerImplementation.swift in Sources */,
+				2F7FC48925D16E4E009D925D /* LoginViewProtocol.swift in Sources */,
+				2F7FC48425D16C85009D925D /* LoginViewControllerProtocol.swift in Sources */,
 				2F7FC43425D05355009D925D /* AppDelegate.swift in Sources */,
 				2F7FC43625D05355009D925D /* SceneDelegate.swift in Sources */,
 				2F7FC47F25D059B4009D925D /* Message.swift in Sources */,
 				2F7FC47A25D05778009D925D /* Person.swift in Sources */,
+				2F7FC4A225D176D3009D925D /* RequestSenderImplementation.swift in Sources */,
 				2F7FC46825D053F1009D925D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
