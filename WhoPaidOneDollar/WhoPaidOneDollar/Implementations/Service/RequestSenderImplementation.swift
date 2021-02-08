@@ -40,6 +40,7 @@ class RequestSenderImplementation {
                     case .success(let json):
                         let jsonData = json
                         print(jsonData)
+                        completion(nil)
                     case .failure(let error):
                         completion(error.localizedDescription)
                }

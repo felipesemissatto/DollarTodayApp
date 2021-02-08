@@ -22,6 +22,20 @@ class LoginViewControllerImplementation: UIViewController, LoginViewControllerPr
                                    photoUrl: photoUrl,
                                    twitter: twitter,
                                    instagram: instagram,
-                                   date: date)
+                                   date: date) { error in
+            
+            if error != nil {
+                let alert = UIAlertController(title: "Error registering",
+                                              message: "Connection fail. Try it again later.",
+                                              preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(alert, animated: true, completion: nil)
+            }
+            
+            // Save person in UserDefaults
+            
+            // Push controller and the user enters in the app
+            
+        }
     }
 }
