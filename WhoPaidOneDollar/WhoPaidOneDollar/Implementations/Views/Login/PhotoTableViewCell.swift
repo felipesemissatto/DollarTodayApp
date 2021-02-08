@@ -16,6 +16,7 @@ class PhotoTableViewCell: UITableViewCell {
     // MARK: -Lifecyle
     override func awakeFromNib() {
         super.awakeFromNib()
+        photoButton.clipsToBounds = true
         photoButton.layer.cornerRadius = 0.5 * photoButton.bounds.size.width
     }
 }
