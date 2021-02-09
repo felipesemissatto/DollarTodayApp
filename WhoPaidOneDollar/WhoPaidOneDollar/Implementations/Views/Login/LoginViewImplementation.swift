@@ -48,6 +48,7 @@ class LoginViewImplementation: UIView, LoginViewProtocol {
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.delaysContentTouches = false
     }
     
     /**
@@ -106,6 +107,10 @@ extension LoginViewImplementation: UITableViewDataSource, UITableViewDelegate {
                 fatalError("The dequeued cell is not an instance of ButtonSaveTableViewCell.")
             }
             
+            cell.saveButton.addTarget(self,
+                                      action: #selector(tapSaveButton),
+                                      for: .touchUpInside)
+            
             finalCell = cell
             
         default:
@@ -115,5 +120,15 @@ extension LoginViewImplementation: UITableViewDataSource, UITableViewDelegate {
         
         return finalCell
     }
+    
+    // MARK: -Objc Functions
+    @objc func tapSaveButton(sender: UIButton!) {
+        let button: UIButton = sender
+        if button.tag == 1 {
+            print("oi")
+            //            viewController.addNewPerson(name: <#T##String#>, photoUrl: <#T##URL?#>, twitter: <#T##String?#>, instagram: <#T##String?#>, date: <#T##NSDate#>)
+        }
+    }
+    
 }
 

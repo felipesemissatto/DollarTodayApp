@@ -10,21 +10,21 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextFieldsTableViewCell" id="35v-bk-CpH" customClass="TextFieldsTableViewCell" customModule="WhoPaidOneDollar" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="129"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="35v-bk-CpH" id="F6y-B5-0ch">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>
+                <rect key="frame" x="0.0" y="0.0" width="414" height="129"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7b0-m3-yeG">
-                        <rect key="frame" x="0.0" y="104" width="414" height="1"/>
+                        <rect key="frame" x="0.0" y="128" width="414" height="1"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="69W-rp-hgj"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ahk-GW-fcs">
-                        <rect key="frame" x="24" y="29" width="390" height="1"/>
+                        <rect key="frame" x="24" y="37" width="390" height="1"/>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="mPD-Ho-Xma"/>
@@ -36,17 +36,17 @@
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Twitter" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ADb-lC-K2F">
-                        <rect key="frame" x="24" y="46" width="390" height="21"/>
+                        <rect key="frame" x="24" y="54" width="390" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Instagram" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="naM-kK-6o9">
-                        <rect key="frame" x="24" y="83" width="390" height="21"/>
+                        <rect key="frame" x="24" y="99" width="390" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V7P-8O-h6O">
-                        <rect key="frame" x="24" y="66" width="390" height="1"/>
+                        <rect key="frame" x="24" y="82" width="390" height="1"/>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="LUN-we-ndu"/>
@@ -56,14 +56,13 @@
                 <constraints>
                     <constraint firstItem="naM-kK-6o9" firstAttribute="leading" secondItem="ADb-lC-K2F" secondAttribute="leading" id="4jH-gy-r4e"/>
                     <constraint firstAttribute="bottom" secondItem="7b0-m3-yeG" secondAttribute="bottom" id="91M-c4-KYx"/>
-                    <constraint firstItem="Ahk-GW-fcs" firstAttribute="top" secondItem="OGc-oO-s9D" secondAttribute="bottom" id="9xW-wg-gAD"/>
+                    <constraint firstItem="Ahk-GW-fcs" firstAttribute="top" secondItem="OGc-oO-s9D" secondAttribute="bottom" constant="8" id="9xW-wg-gAD"/>
                     <constraint firstItem="OGc-oO-s9D" firstAttribute="width" secondItem="F6y-B5-0ch" secondAttribute="width" constant="-24" id="DCe-1s-tY3"/>
                     <constraint firstItem="ADb-lC-K2F" firstAttribute="top" secondItem="Ahk-GW-fcs" secondAttribute="bottom" constant="16" id="DiL-zI-fsU"/>
                     <constraint firstItem="Ahk-GW-fcs" firstAttribute="width" secondItem="F6y-B5-0ch" secondAttribute="width" constant="-24" id="FRb-Kn-5kh"/>
-                    <constraint firstItem="7b0-m3-yeG" firstAttribute="top" secondItem="naM-kK-6o9" secondAttribute="bottom" id="FdJ-UR-os7"/>
                     <constraint firstItem="Ahk-GW-fcs" firstAttribute="leading" secondItem="OGc-oO-s9D" secondAttribute="leading" id="OQX-zv-FRl"/>
                     <constraint firstItem="OGc-oO-s9D" firstAttribute="top" secondItem="F6y-B5-0ch" secondAttribute="top" constant="8" id="Oyf-9b-HTy"/>
-                    <constraint firstItem="V7P-8O-h6O" firstAttribute="bottom" secondItem="ADb-lC-K2F" secondAttribute="bottom" id="TUq-Zz-6lG"/>
+                    <constraint firstItem="V7P-8O-h6O" firstAttribute="bottom" secondItem="ADb-lC-K2F" secondAttribute="bottom" constant="8" id="TUq-Zz-6lG"/>
                     <constraint firstItem="naM-kK-6o9" firstAttribute="top" secondItem="V7P-8O-h6O" secondAttribute="bottom" constant="16" id="Tte-U8-1hc"/>
                     <constraint firstAttribute="trailing" secondItem="7b0-m3-yeG" secondAttribute="trailing" id="WvE-l8-gHe"/>
                     <constraint firstItem="7b0-m3-yeG" firstAttribute="leading" secondItem="F6y-B5-0ch" secondAttribute="leading" id="a9F-90-Xhy"/>
@@ -72,6 +71,7 @@
                     <constraint firstItem="OGc-oO-s9D" firstAttribute="leading" secondItem="F6y-B5-0ch" secondAttribute="leading" constant="24" id="h7u-zu-wDZ"/>
                     <constraint firstItem="V7P-8O-h6O" firstAttribute="width" secondItem="ADb-lC-K2F" secondAttribute="width" id="tVI-UP-7wl"/>
                     <constraint firstItem="V7P-8O-h6O" firstAttribute="leading" secondItem="ADb-lC-K2F" secondAttribute="leading" id="wtE-w8-JUs"/>
+                    <constraint firstItem="7b0-m3-yeG" firstAttribute="top" secondItem="naM-kK-6o9" secondAttribute="bottom" constant="8" symbolic="YES" id="xFc-Sa-ykF"/>
                     <constraint firstItem="naM-kK-6o9" firstAttribute="width" secondItem="ADb-lC-K2F" secondAttribute="width" id="zLG-xb-9rJ"/>
                 </constraints>
             </tableViewCellContentView>

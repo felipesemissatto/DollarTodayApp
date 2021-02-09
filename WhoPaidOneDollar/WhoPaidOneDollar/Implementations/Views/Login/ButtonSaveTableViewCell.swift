@@ -15,5 +15,6 @@ class ButtonSaveTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         saveButton.layer.cornerRadius = 8
+        saveButton.tag = 1
     }
 }
