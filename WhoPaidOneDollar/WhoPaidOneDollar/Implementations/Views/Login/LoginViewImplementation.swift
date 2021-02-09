@@ -205,6 +205,7 @@ extension LoginViewImplementation: UITableViewDataSource, UITableViewDelegate {
             //            print(textTwitter)
             //            print(textInstagram)
             //            viewController.addNewPerson(name: <#T##String#>, photoUrl: <#T##URL?#>, twitter: <#T##String?#>, instagram: <#T##String?#>, date: <#T##NSDate#>)
+            viewController.getURLFromAnImage(image: (buttonPhoto.imageView?.image)!)
         }
     }
     
@@ -226,6 +227,4 @@ extension LoginViewImplementation: UIImagePickerControllerDelegate, UINavigation
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
-    
-    
 }

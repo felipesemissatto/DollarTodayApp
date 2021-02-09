@@ -6,8 +6,18 @@
 //
 
 import Foundation
+import UIKit
 
 protocol LoginViewControllerProtocol {
+    
+    /**
+     
+     
+     Method that receives user photo to create an URL.
+     
+     */
+    
+    func getURLFromAnImage(image: UIImage) -> URL
     
     /**
      

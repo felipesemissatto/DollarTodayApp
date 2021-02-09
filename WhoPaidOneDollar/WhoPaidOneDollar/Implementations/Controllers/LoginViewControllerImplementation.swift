@@ -28,6 +28,22 @@ class LoginViewControllerImplementation: UIViewController, LoginViewControllerPr
     }
     
     // MARK: - LoginViewControllerProtocol methods
+    
+    func getURLFromAnImage(image: UIImage) -> URL {
+        requestSender.getURLFromAnImage(image: image) { error in
+            
+            if error != nil {
+                let alert = UIAlertController(title: "Error Upload Image",
+                                              message: "Connection fail. Try it again later.",
+                                              preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(alert, animated: true, completion: nil)
+            }
+            
+        }
+        return URL(fileURLWithPath: "dcd")
+    }
+    
     func addNewPerson(name: String, photoUrl: URL?, twitter: String?, instagram: String?, date: NSDate) {
         requestSender.addNewPerson(name: name,
                                    photoUrl: photoUrl,

@@ -8,3 +8,4 @@
 import Foundation
 
 let rootBackendURL = "https://gentle-hamlet-07840.herokuapp.com/api/v1/"
+let clientIdIMGUR = "e22b8da2688e9da"
