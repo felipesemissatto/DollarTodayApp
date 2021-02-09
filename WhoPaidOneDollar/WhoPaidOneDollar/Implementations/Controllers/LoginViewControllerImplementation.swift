@@ -24,6 +24,7 @@ class LoginViewControllerImplementation: UIViewController, LoginViewControllerPr
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
     }
     
     // MARK: - LoginViewControllerProtocol methods

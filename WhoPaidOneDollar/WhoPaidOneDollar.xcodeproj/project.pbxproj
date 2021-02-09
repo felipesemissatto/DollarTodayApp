@@ -29,6 +29,7 @@
 		2F7FC4CC25D1A19C009D925D /* TextFieldsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7FC4CB25D1A19C009D925D /* TextFieldsTableViewCell.xib */; };
 		2F7FC4D425D1A72F009D925D /* ButtonSaveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7FC4D325D1A72F009D925D /* ButtonSaveTableViewCell.xib */; };
 		2F7FC4D925D1A761009D925D /* ButtonSaveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FC4D825D1A761009D925D /* ButtonSaveTableViewCell.swift */; };
+		2F7FC4DE25D2C47D009D925D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FC4DD25D2C47C009D925D /* Extensions.swift */; };
 		9B2B0C3B55A171FDAFF3D4A4 /* Pods_WhoPaidOneDollarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19AB3EC280B30F13F4FCB05 /* Pods_WhoPaidOneDollarTests.framework */; };
 		A1BAAE8D82C88BAF4DAF3BBE /* Pods_WhoPaidOneDollar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464D3BE6F456224DC97B4C58 /* Pods_WhoPaidOneDollar.framework */; };
 		F4C5810D4ACB0BD3B8DA213F /* Pods_WhoPaidOneDollar_WhoPaidOneDollarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E696AA33453B67B3155701E /* Pods_WhoPaidOneDollar_WhoPaidOneDollarUITests.framework */; };
@@ -80,6 +81,7 @@
 		2F7FC4CB25D1A19C009D925D /* TextFieldsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldsTableViewCell.xib; sourceTree = "<group>"; };
 		2F7FC4D325D1A72F009D925D /* ButtonSaveTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonSaveTableViewCell.xib; sourceTree = "<group>"; };
 		2F7FC4D825D1A761009D925D /* ButtonSaveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSaveTableViewCell.swift; sourceTree = "<group>"; };
+		2F7FC4DD25D2C47C009D925D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		464D3BE6F456224DC97B4C58 /* Pods_WhoPaidOneDollar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhoPaidOneDollar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8567035F148D22ECC950A365 /* Pods-WhoPaidOneDollar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoPaidOneDollar.release.xcconfig"; path = "Target Support Files/Pods-WhoPaidOneDollar/Pods-WhoPaidOneDollar.release.xcconfig"; sourceTree = "<group>"; };
 		87B773409D888D194A89AABB /* Pods-WhoPaidOneDollar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoPaidOneDollar.debug.xcconfig"; path = "Target Support Files/Pods-WhoPaidOneDollar/Pods-WhoPaidOneDollar.debug.xcconfig"; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				2F7FC46725D053F1009D925D /* Constants.swift */,
+				2F7FC4DD25D2C47C009D925D /* Extensions.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -545,6 +548,7 @@
 				2F7FC46825D053F1009D925D /* Constants.swift in Sources */,
 				2F7FC4C225D1902F009D925D /* PhotoTableViewCell.swift in Sources */,
 				2F7FC4C725D1A16D009D925D /* TextFieldsTableViewCell.swift in Sources */,
+				2F7FC4DE25D2C47D009D925D /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

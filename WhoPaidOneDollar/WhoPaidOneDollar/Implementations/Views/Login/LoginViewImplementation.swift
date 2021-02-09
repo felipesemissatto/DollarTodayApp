@@ -17,9 +17,9 @@ class LoginViewImplementation: UIView, LoginViewProtocol {
     var viewController: LoginViewControllerProtocol
     
     // MARK: - Private Methods
-    var textName: String?
-    var textTwitter: String?
-    var textInstagram: String?
+    private var textName: String?
+    private var textTwitter: String?
+    private var textInstagram: String?
     
     // MARK: - Init methods
     required init(viewController: LoginViewControllerProtocol) {
@@ -175,9 +175,9 @@ extension LoginViewImplementation: UITableViewDataSource, UITableViewDelegate {
     @objc func tapSaveButton(sender: UIButton!) {
         let button: UIButton = sender
         if button.tag == 1 {
-            print(textName)
-            print(textTwitter)
-            print(textInstagram)
+//            print(textName)
+//            print(textTwitter)
+//            print(textInstagram)
             //            viewController.addNewPerson(name: <#T##String#>, photoUrl: <#T##URL?#>, twitter: <#T##String?#>, instagram: <#T##String?#>, date: <#T##NSDate#>)
         }
     }
