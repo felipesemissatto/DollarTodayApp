@@ -18,6 +18,8 @@ class PhotoTableViewCell: UITableViewCell {
         super.awakeFromNib()
         photoButton.clipsToBounds = true
         photoButton.layer.cornerRadius = 0.5 * photoButton.bounds.size.width
+        photoButton.tag = 1
+        editPhotoButton.tag = 1
     }
 }
 

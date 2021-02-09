@@ -89,6 +89,13 @@ extension LoginViewImplementation: UITableViewDataSource, UITableViewDelegate {
                 fatalError("The dequeued cell is not an instance of PhotoTableViewCell.")
             }
             
+            cell.photoButton.addTarget(self,
+                                       action: #selector(tapPhotoButton),
+                                       for: .touchUpInside)
+            cell.editPhotoButton.addTarget(self,
+                                       action: #selector(tapEditPhotoButton),
+                                       for: .touchUpInside)
+            
             finalCell = cell
         case 1:
             cellIdentifier = "TextFieldsTableViewCell"
@@ -122,10 +129,26 @@ extension LoginViewImplementation: UITableViewDataSource, UITableViewDelegate {
     }
     
     // MARK: -Objc Functions
+    @objc func tapPhotoButton(sender: UIButton!) {
+        let button: UIButton = sender
+        if button.tag == 1 {
+            print("oi1")
+            
+        }
+    }
+    
+    @objc func tapEditPhotoButton(sender: UIButton!) {
+        let button: UIButton = sender
+        if button.tag == 1 {
+            print("oi2")
+            
+        }
+    }
+    
     @objc func tapSaveButton(sender: UIButton!) {
         let button: UIButton = sender
         if button.tag == 1 {
-            print("oi")
+            print("oi3")
             //            viewController.addNewPerson(name: <#T##String#>, photoUrl: <#T##URL?#>, twitter: <#T##String?#>, instagram: <#T##String?#>, date: <#T##NSDate#>)
         }
     }
