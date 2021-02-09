@@ -20,6 +20,10 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+    <key>NSCameraUsageDescription</key>
+    <string>This app will use camera to set your profile pic, if you want.</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>You can select photos to attach to reports.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

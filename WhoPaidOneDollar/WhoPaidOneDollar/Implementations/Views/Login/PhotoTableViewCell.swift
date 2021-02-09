@@ -19,6 +19,7 @@ class PhotoTableViewCell: UITableViewCell {
         photoButton.clipsToBounds = true
         photoButton.layer.cornerRadius = 0.5 * photoButton.bounds.size.width
         photoButton.tag = 1
+        photoButton.imageView?.contentMode = .scaleAspectFit
         editPhotoButton.tag = 1
     }
 }

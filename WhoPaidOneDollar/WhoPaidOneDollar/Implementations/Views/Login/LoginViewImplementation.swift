@@ -21,6 +21,8 @@ class LoginViewImplementation: UIView, LoginViewProtocol {
     private var textTwitter: String?
     private var textInstagram: String?
     
+    private var buttonPhoto = UIButton()
+    
     // MARK: - Init methods
     required init(viewController: LoginViewControllerProtocol) {
         self.viewController = viewController
@@ -69,6 +71,29 @@ class LoginViewImplementation: UIView, LoginViewProtocol {
         let nib = UINib.init(nibName: nibName, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: nibName)
     }
+    
+    /**
+     
+     Method that chooses a photo from library or camera to set the profile pic.
+     
+     */
+    private func chooseProfilePic() {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: {
+            action in
+            picker.sourceType = .camera
+            self.window?.rootViewController?.present(picker, animated: true, completion: nil)
+        }))
+        alert.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: {
+            action in
+            picker.sourceType = .photoLibrary
+            self.window?.rootViewController?.present(picker, animated: true, completion: nil)
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.window?.rootViewController?.present(alert, animated: true, completion: nil)
+    }
 }
 
 // MARK: - Extension Table View Data Source Methods
@@ -99,8 +124,10 @@ extension LoginViewImplementation: UITableViewDataSource, UITableViewDelegate {
                                        action: #selector(tapPhotoButton),
                                        for: .touchUpInside)
             cell.editPhotoButton.addTarget(self,
-                                       action: #selector(tapEditPhotoButton),
-                                       for: .touchUpInside)
+                                           action: #selector(tapEditPhotoButton),
+                                           for: .touchUpInside)
+            
+            buttonPhoto = cell.photoButton
             
             finalCell = cell
         case 1:
@@ -148,16 +175,14 @@ extension LoginViewImplementation: UITableViewDataSource, UITableViewDelegate {
     @objc func tapPhotoButton(sender: UIButton!) {
         let button: UIButton = sender
         if button.tag == 1 {
-            print("oi1")
-            
+            chooseProfilePic()
         }
     }
     
     @objc func tapEditPhotoButton(sender: UIButton!) {
         let button: UIButton = sender
         if button.tag == 1 {
-            print("oi2")
-            
+            chooseProfilePic()
         }
     }
     
@@ -176,17 +201,31 @@ extension LoginViewImplementation: UITableViewDataSource, UITableViewDelegate {
     @objc func tapSaveButton(sender: UIButton!) {
         let button: UIButton = sender
         if button.tag == 1 {
-//            print(textName)
-//            print(textTwitter)
-//            print(textInstagram)
+            //            print(textName)
+            //            print(textTwitter)
+            //            print(textInstagram)
             //            viewController.addNewPerson(name: <#T##String#>, photoUrl: <#T##URL?#>, twitter: <#T##String?#>, instagram: <#T##String?#>, date: <#T##NSDate#>)
         }
     }
     
     @objc private func keyboardWillShow(notification: NSNotification) {
-            if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-                tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height + tableView.rowHeight, right: 0)
-            }
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height + tableView.rowHeight, right: 0)
         }
+    }
 }
 
+extension LoginViewImplementation: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            buttonPhoto.setImage(image, for: .normal)
+        }
+        picker.dismiss(animated: true, completion: nil);
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    
+}
