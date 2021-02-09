@@ -16,7 +16,7 @@ class LoginViewImplementation: UIView, LoginViewProtocol {
     // MARK: - Dependencies
     var viewController: LoginViewControllerProtocol
     
-    // MARK: - Private Methods
+    // MARK: - Private Variables 
     private var textName: String?
     private var textTwitter: String?
     private var textInstagram: String?
@@ -27,6 +27,7 @@ class LoginViewImplementation: UIView, LoginViewProtocol {
         super.init(frame: CGRect.zero)
         initFromNib()
         setupTableView()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -182,5 +183,10 @@ extension LoginViewImplementation: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    @objc private func keyboardWillShow(notification: NSNotification) {
+            if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+                tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height + tableView.rowHeight, right: 0)
+            }
+        }
 }
 
