@@ -16,6 +16,11 @@ class LoginViewImplementation: UIView, LoginViewProtocol {
     // MARK: - Dependencies
     var viewController: LoginViewControllerProtocol
     
+    // MARK: - Private Methods
+    var textName: String?
+    var textTwitter: String?
+    var textInstagram: String?
+    
     // MARK: - Init methods
     required init(viewController: LoginViewControllerProtocol) {
         self.viewController = viewController
@@ -105,6 +110,16 @@ extension LoginViewImplementation: UITableViewDataSource, UITableViewDelegate {
                 fatalError("The dequeued cell is not an instance of TextFieldsTableViewCell.")
             }
             
+            cell.textFieldName.addTarget(self,
+                                         action: #selector(edditingTextFieldName),
+                                         for: .allEditingEvents)
+            cell.textFieldTwitter.addTarget(self,
+                                            action: #selector(edditingTextFieldTwitter),
+                                            for: .allEditingEvents)
+            cell.textFieldInstagram.addTarget(self,
+                                              action: #selector(edditingTextFieldInstagram),
+                                              for: .allEditingEvents)
+            
             finalCell = cell
         case 2:
             cellIdentifier = "ButtonSaveTableViewCell"
@@ -145,10 +160,24 @@ extension LoginViewImplementation: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    @objc func edditingTextFieldName(textField: UITextField) {
+        textName = textField.text
+    }
+    
+    @objc func edditingTextFieldTwitter(textField: UITextField) {
+        textTwitter = textField.text
+    }
+    
+    @objc func edditingTextFieldInstagram(textField: UITextField) {
+        textInstagram = textField.text
+    }
+    
     @objc func tapSaveButton(sender: UIButton!) {
         let button: UIButton = sender
         if button.tag == 1 {
-            print("oi3")
+            print(textName)
+            print(textTwitter)
+            print(textInstagram)
             //            viewController.addNewPerson(name: <#T##String#>, photoUrl: <#T##URL?#>, twitter: <#T##String?#>, instagram: <#T##String?#>, date: <#T##NSDate#>)
         }
     }
