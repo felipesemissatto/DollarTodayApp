@@ -29,24 +29,36 @@ class LoginViewControllerImplementation: UIViewController, LoginViewControllerPr
     
     // MARK: - LoginViewControllerProtocol methods
     
-    func getURLFromAnImage(image: UIImage) -> URL {
-        requestSender.getURLFromAnImage(image: image) { error in
+    func insertNewPerson(image: UIImage,
+                         name: String,
+                         twitter: String?,
+                         instagram: String?,
+                         date: String) {
+        requestSender.getURLFromAnImage(image: image) { url, error   in
             
             if error != nil {
-                let alert = UIAlertController(title: "Error Upload Image",
+                let alert = UIAlertController(title: "Error Uploading Image",
                                               message: "Connection fail. Try it again later.",
                                               preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default))
                 self.present(alert, animated: true, completion: nil)
             }
             
+            guard let urlProfilePic = url else {
+                    return
+            }
+            
+            self.addNewPerson(name: name,
+                              photoUrlString: urlProfilePic,
+                              twitter: twitter,
+                              instagram: instagram,
+                              date: date)
         }
-        return URL(fileURLWithPath: "dcd")
     }
     
-    func addNewPerson(name: String, photoUrl: URL?, twitter: String?, instagram: String?, date: NSDate) {
+    func addNewPerson(name: String, photoUrlString: String?, twitter: String?, instagram: String?, date: String) {
         requestSender.addNewPerson(name: name,
-                                   photoUrl: photoUrl,
+                                   photoUrlString: photoUrlString,
                                    twitter: twitter,
                                    instagram: instagram,
                                    date: date) { error in

@@ -205,7 +205,17 @@ extension LoginViewImplementation: UITableViewDataSource, UITableViewDelegate {
             //            print(textTwitter)
             //            print(textInstagram)
             //            viewController.addNewPerson(name: <#T##String#>, photoUrl: <#T##URL?#>, twitter: <#T##String?#>, instagram: <#T##String?#>, date: <#T##NSDate#>)
-            viewController.getURLFromAnImage(image: (buttonPhoto.imageView?.image)!)
+            
+            
+            let date = Date()
+            let calendar = Calendar.current
+            let components = calendar.dateComponents([.year, .month, .day], from: date)
+            
+            viewController.insertNewPerson(image: (buttonPhoto.imageView?.image)!,
+                                           name: textName ?? "",
+                                           twitter: textTwitter,
+                                           instagram: textInstagram,
+                                           date: "\(String(describing: components.year))-\(String(describing: components.month))-\(String(describing: components.day))")
         }
     }
     
