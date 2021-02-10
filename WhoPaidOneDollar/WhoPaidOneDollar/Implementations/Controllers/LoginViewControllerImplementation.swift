@@ -14,12 +14,29 @@ class LoginViewControllerImplementation: UIViewController, LoginViewControllerPr
     var myView: LoginViewProtocol?
     let requestSender = RequestSenderImplementation()
     
+    // MARK: - Private Variables
+    private var loadingView = UIView()
+    private var mainView = UIView()
+    
     // MARK: - Lifecycle methods
     override func loadView() {
         super.loadView()
         let defaultView = LoginViewImplementation(viewController: self)
         self.myView = defaultView
         self.view = defaultView
+        
+        self.loadingView = LoadingView(message: "Saving...",
+                                       error: false,
+                                       frame: CGRect.zero)!
+        self.view.addSubview(loadingView)
+        loadingView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            loadingView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            loadingView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
+        ])
+        self.view.sendSubviewToBack(self.loadingView)
+        
+        self.mainView = self.view
     }
     
     override func viewDidLoad() {
@@ -34,6 +51,10 @@ class LoginViewControllerImplementation: UIViewController, LoginViewControllerPr
                          twitter: String?,
                          instagram: String?,
                          date: String) {
+        self.view = LoadingView(message: "Saving...",
+                               error: false,
+                               frame: CGRect.zero)!
+        
         requestSender.getURLFromAnImage(image: image) { url, error   in
             
             if error != nil {
@@ -45,7 +66,7 @@ class LoginViewControllerImplementation: UIViewController, LoginViewControllerPr
             }
             
             guard let urlProfilePic = url else {
-                    return
+                return
             }
             
             self.addNewPerson(name: name,
@@ -74,7 +95,7 @@ class LoginViewControllerImplementation: UIViewController, LoginViewControllerPr
             // Save person in UserDefaults
             
             // Push controller and the user enters in the app
-            
+            self.view = self.mainView
         }
     }
 }
