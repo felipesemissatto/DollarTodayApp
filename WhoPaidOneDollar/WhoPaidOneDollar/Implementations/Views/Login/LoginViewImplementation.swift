@@ -201,21 +201,13 @@ extension LoginViewImplementation: UITableViewDataSource, UITableViewDelegate {
     @objc func tapSaveButton(sender: UIButton!) {
         let button: UIButton = sender
         if button.tag == 1 {
-            //            print(textName)
-            //            print(textTwitter)
-            //            print(textInstagram)
-            //            viewController.addNewPerson(name: <#T##String#>, photoUrl: <#T##URL?#>, twitter: <#T##String?#>, instagram: <#T##String?#>, date: <#T##NSDate#>)
-            
-            
-            let date = Date()
-            let calendar = Calendar.current
-            let components = calendar.dateComponents([.year, .month, .day], from: date)
-            
+
+            let localDate = Date().get(.year) + "-" + Date().get(.month) + "-" + Date().get(.day)
             viewController.insertNewPerson(image: (buttonPhoto.imageView?.image)!,
                                            name: textName ?? "",
                                            twitter: textTwitter,
                                            instagram: textInstagram,
-                                           date: "\(String(describing: components.year))-\(String(describing: components.month))-\(String(describing: components.day))")
+                                           date: localDate)
         }
     }
     

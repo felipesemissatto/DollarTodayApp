@@ -56,22 +56,21 @@ class RequestSenderImplementation {
             return
         }
         
-        let parameters: Parameters = [ "name" : name,
-                                       "photoUrl" : photoUrlString ?? "",
-                                       "twitter": twitter ?? "",
-                                       "instagram": instagram ?? "",
-                                       "date": date]
-        
+        let parameters: Parameters = ["name": name,
+                                      "photoUrl": photoUrlString ?? IMAGE_DEFAULT_URL,
+                                      "twitter": twitter ?? "",
+                                      "instagram": instagram ?? "",
+                                      "date": date]
         Alamofire
             .request(url,
                      method: .post,
                      parameters: parameters,
                      encoding: JSONEncoding.default)
-            .responseJSON(completionHandler: { response in
+            .responseString(completionHandler: { response in
                 switch response.result {
-                case .success(let json):
-                    let jsonData = json
-                    print(jsonData)
+                case .success:
+                    let json = try? JSONSerialization.jsonObject(with: response.data!, options: .allowFragments) as? [String:Any]
+                    print(json)
                     completion(nil)
                 case .failure(let error):
                     completion(error.localizedDescription)
