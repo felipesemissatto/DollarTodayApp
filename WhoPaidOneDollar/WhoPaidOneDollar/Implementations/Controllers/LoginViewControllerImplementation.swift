@@ -51,31 +51,39 @@ class LoginViewControllerImplementation: UIViewController, LoginViewControllerPr
                          twitter: String?,
                          instagram: String?,
                          date: String) {
-        self.view = LoadingView(message: "Saving...",
-                               error: false,
-                               frame: CGRect.zero)!
-        
-        requestSender.getURLFromAnImage(image: image) { url, error   in
+        if name != ""{
+            self.view = LoadingView(message: "Saving...",
+                                   error: false,
+                                   frame: CGRect.zero)!
             
-            if error != nil {
-                self.view = self.mainView
+            requestSender.getURLFromAnImage(image: image) { url, error   in
                 
-                let alert = UIAlertController(title: "Error Uploading Image",
-                                              message: "Connection fail. Try it again later.",
-                                              preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default))
-                self.present(alert, animated: true, completion: nil)
+                if error != nil {
+                    self.view = self.mainView
+                    
+                    let alert = UIAlertController(title: "Error Uploading Image",
+                                                  message: "Connection fail. Try it again later.",
+                                                  preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default))
+                    self.present(alert, animated: true, completion: nil)
+                }
+                
+                guard let urlProfilePic = url else {
+                    return
+                }
+                
+                self.addNewPerson(name: name,
+                                  photoUrlString: urlProfilePic,
+                                  twitter: twitter,
+                                  instagram: instagram,
+                                  date: date)
             }
-            
-            guard let urlProfilePic = url else {
-                return
-            }
-            
-            self.addNewPerson(name: name,
-                              photoUrlString: urlProfilePic,
-                              twitter: twitter,
-                              instagram: instagram,
-                              date: date)
+        } else {
+            let alert = UIAlertController(title: "Empty fields",
+                                          message: "Please, insert at least a name.",
+                                          preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
