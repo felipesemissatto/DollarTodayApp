@@ -113,10 +113,10 @@ class LoginViewControllerImplementation: UIViewController, LoginViewControllerPr
             UserDefaults.standard.set(date, forKey: "date")
             
             // Push controller and the user enters in the app
-            if let navController = self.navigationController {
-//                let schoolViewController = SchoolViewControllerImplementation(data: school)
-//                navController.pushViewController(schoolViewController, animated: true)
-            }
+            let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let tabViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "TabBarViewStoryboard") as! UITabBarController
+            tabViewController.modalPresentationStyle = .fullScreen
+            self.present(tabViewController, animated:true, completion:nil)
         }
     }
 }
