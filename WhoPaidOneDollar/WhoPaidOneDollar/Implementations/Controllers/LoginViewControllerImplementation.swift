@@ -58,6 +58,8 @@ class LoginViewControllerImplementation: UIViewController, LoginViewControllerPr
         requestSender.getURLFromAnImage(image: image) { url, error   in
             
             if error != nil {
+                self.view = self.mainView
+                
                 let alert = UIAlertController(title: "Error Uploading Image",
                                               message: "Connection fail. Try it again later.",
                                               preferredStyle: .alert)
@@ -82,9 +84,11 @@ class LoginViewControllerImplementation: UIViewController, LoginViewControllerPr
                                    photoUrlString: photoUrlString,
                                    twitter: twitter,
                                    instagram: instagram,
-                                   date: date) { error in
+                                   date: date) { idResponse, error in
             
             if error != nil {
+                self.view = self.mainView
+                
                 let alert = UIAlertController(title: "Error registering",
                                               message: "Connection fail. Try it again later.",
                                               preferredStyle: .alert)
@@ -93,6 +97,12 @@ class LoginViewControllerImplementation: UIViewController, LoginViewControllerPr
             }
             
             // Save person in UserDefaults
+            UserDefaults.standard.set(idResponse, forKey: "id")
+            UserDefaults.standard.set(name, forKey: "name")
+            UserDefaults.standard.set(photoUrlString, forKey: "photoUrlString")
+            UserDefaults.standard.set(twitter, forKey: "twitter")
+            UserDefaults.standard.set(instagram, forKey: "instagram")
+            UserDefaults.standard.set(date, forKey: "date")
             
             // Push controller and the user enters in the app
             self.view = self.mainView

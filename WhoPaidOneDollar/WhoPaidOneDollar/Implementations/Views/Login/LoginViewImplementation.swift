@@ -218,6 +218,7 @@ extension LoginViewImplementation: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
+// MARK: - Extension Image Picker
 extension LoginViewImplementation: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {

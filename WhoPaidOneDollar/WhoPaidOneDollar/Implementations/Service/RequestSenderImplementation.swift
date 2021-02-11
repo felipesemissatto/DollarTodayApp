@@ -49,10 +49,10 @@ class RequestSenderImplementation {
                       twitter: String?,
                       instagram: String?,
                       date: String,
-                      completion: @escaping(String?) -> Void) {
+                      completion: @escaping(String?, String?) -> Void) {
         
         guard let url = URL(string: ROOT_BACKEND_URL + "/person") else {
-            completion("Error: URL not decoded")
+            completion(nil, "Error: URL not decoded")
             return
         }
         
@@ -69,11 +69,13 @@ class RequestSenderImplementation {
             .responseString(completionHandler: { response in
                 switch response.result {
                 case .success:
-                    let json = try? JSONSerialization.jsonObject(with: response.data!, options: .allowFragments) as? [String:Any]
-                    print(json)
-                    completion(nil)
+                    guard let idResponse = response.result.value else {
+                        completion(nil, "Error: can not save datas")
+                        return
+                    }
+                    completion(idResponse, nil)
                 case .failure(let error):
-                    completion(error.localizedDescription)
+                    completion(nil, error.localizedDescription)
                 }
             })
     }
