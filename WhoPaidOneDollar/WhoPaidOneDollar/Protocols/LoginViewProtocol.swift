@@ -12,12 +12,12 @@ protocol LoginViewProtocol {
      
      Method that starts the login view. It receives the view controller.
      
-     - parameter viewController: a controller with PeopleViewControllerProtocol type.
+     - parameter viewController: a controller with LoginViewControllerProtocol type.
      
      */
     
-    init(viewController: PeopleViewControllerProtocol)
+    init(viewController: LoginViewControllerProtocol)
     
     // Dependencies
-    var viewController: PeopleViewControllerProtocol {get set}
+    var viewController: LoginViewControllerProtocol {get set}
 }
