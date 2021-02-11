@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextFieldsTableViewCell" id="35v-bk-CpH" customClass="TextFieldsTableViewCell" customModule="WhoPaidOneDollar" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="129"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="35v-bk-CpH" id="F6y-B5-0ch">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="129"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7b0-m3-yeG">
+                        <rect key="frame" x="0.0" y="128" width="414" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="69W-rp-hgj"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ahk-GW-fcs">
+                        <rect key="frame" x="24" y="37" width="390" height="1"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="mPD-Ho-Xma"/>
+                        </constraints>
+                    </view>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OGc-oO-s9D">
+                        <rect key="frame" x="24" y="8" width="390" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Twitter" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ADb-lC-K2F">
+                        <rect key="frame" x="24" y="54" width="390" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Instagram" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="naM-kK-6o9">
+                        <rect key="frame" x="24" y="99" width="390" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V7P-8O-h6O">
+                        <rect key="frame" x="24" y="82" width="390" height="1"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="LUN-we-ndu"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="naM-kK-6o9" firstAttribute="leading" secondItem="ADb-lC-K2F" secondAttribute="leading" id="4jH-gy-r4e"/>
+                    <constraint firstAttribute="bottom" secondItem="7b0-m3-yeG" secondAttribute="bottom" id="91M-c4-KYx"/>
+                    <constraint firstItem="Ahk-GW-fcs" firstAttribute="top" secondItem="OGc-oO-s9D" secondAttribute="bottom" constant="8" id="9xW-wg-gAD"/>
+                    <constraint firstItem="OGc-oO-s9D" firstAttribute="width" secondItem="F6y-B5-0ch" secondAttribute="width" constant="-24" id="DCe-1s-tY3"/>
+                    <constraint firstItem="ADb-lC-K2F" firstAttribute="top" secondItem="Ahk-GW-fcs" secondAttribute="bottom" constant="16" id="DiL-zI-fsU"/>
+                    <constraint firstItem="Ahk-GW-fcs" firstAttribute="width" secondItem="F6y-B5-0ch" secondAttribute="width" constant="-24" id="FRb-Kn-5kh"/>
+                    <constraint firstItem="Ahk-GW-fcs" firstAttribute="leading" secondItem="OGc-oO-s9D" secondAttribute="leading" id="OQX-zv-FRl"/>
+                    <constraint firstItem="OGc-oO-s9D" firstAttribute="top" secondItem="F6y-B5-0ch" secondAttribute="top" constant="8" id="Oyf-9b-HTy"/>
+                    <constraint firstItem="V7P-8O-h6O" firstAttribute="bottom" secondItem="ADb-lC-K2F" secondAttribute="bottom" constant="8" id="TUq-Zz-6lG"/>
+                    <constraint firstItem="naM-kK-6o9" firstAttribute="top" secondItem="V7P-8O-h6O" secondAttribute="bottom" constant="16" id="Tte-U8-1hc"/>
+                    <constraint firstAttribute="trailing" secondItem="7b0-m3-yeG" secondAttribute="trailing" id="WvE-l8-gHe"/>
+                    <constraint firstItem="7b0-m3-yeG" firstAttribute="leading" secondItem="F6y-B5-0ch" secondAttribute="leading" id="a9F-90-Xhy"/>
+                    <constraint firstItem="ADb-lC-K2F" firstAttribute="leading" secondItem="OGc-oO-s9D" secondAttribute="leading" id="apz-FF-jgG"/>
+                    <constraint firstItem="ADb-lC-K2F" firstAttribute="width" secondItem="OGc-oO-s9D" secondAttribute="width" id="dKI-DK-bXP"/>
+                    <constraint firstItem="OGc-oO-s9D" firstAttribute="leading" secondItem="F6y-B5-0ch" secondAttribute="leading" constant="24" id="h7u-zu-wDZ"/>
+                    <constraint firstItem="V7P-8O-h6O" firstAttribute="width" secondItem="ADb-lC-K2F" secondAttribute="width" id="tVI-UP-7wl"/>
+                    <constraint firstItem="V7P-8O-h6O" firstAttribute="leading" secondItem="ADb-lC-K2F" secondAttribute="leading" id="wtE-w8-JUs"/>
+                    <constraint firstItem="7b0-m3-yeG" firstAttribute="top" secondItem="naM-kK-6o9" secondAttribute="bottom" constant="8" symbolic="YES" id="xFc-Sa-ykF"/>
+                    <constraint firstItem="naM-kK-6o9" firstAttribute="width" secondItem="ADb-lC-K2F" secondAttribute="width" id="zLG-xb-9rJ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="textFieldInstagram" destination="naM-kK-6o9" id="Wxe-2l-dKc"/>
+                <outlet property="textFieldName" destination="OGc-oO-s9D" id="1ii-hT-y62"/>
+                <outlet property="textFieldTwitter" destination="ADb-lC-K2F" id="Z2N-KZ-zqU"/>
+            </connections>
+            <point key="canvasLocation" x="-89.855072463768124" y="-49.553571428571423"/>
+        </tableViewCell>
+    </objects>
+</document>
