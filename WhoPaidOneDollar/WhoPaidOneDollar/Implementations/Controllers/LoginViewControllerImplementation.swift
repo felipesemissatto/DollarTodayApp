@@ -113,7 +113,10 @@ class LoginViewControllerImplementation: UIViewController, LoginViewControllerPr
             UserDefaults.standard.set(date, forKey: "date")
             
             // Push controller and the user enters in the app
-            self.view = self.mainView
+            if let navController = self.navigationController {
+//                let schoolViewController = SchoolViewControllerImplementation(data: school)
+//                navController.pushViewController(schoolViewController, animated: true)
+            }
         }
     }
 }
