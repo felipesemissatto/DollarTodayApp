@@ -71,20 +71,8 @@ class PeopleViewControllerImplementation: UIViewController, PeopleViewController
                 return
             }
             
-            let person = Person(personId: 2,
-                                name: "Testando",
-                                photoUrl: URL(string: "https://i.imgur.com/E90UoQ0.jpg")!,
-                                twitter: "teste",
-                                instagram: "teste",
-                                date: NSDate())
-            let person1 = Person(personId: 2,
-                                name: "Testando",
-                                photoUrl: URL(string: "https://i.imgur.com/E90UoQ0.jpg")!,
-                                twitter: "",
-                                instagram: "teste",
-                                date: NSDate())
             self.view = self.mainView
-            let defaultView = PeopleViewImplementation(data: [person, person1], viewController: self)
+            let defaultView = PeopleViewImplementation(data: allPeople, viewController: self)
             self.myView = defaultView
             self.view = defaultView
         }
