@@ -42,7 +42,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VaE-Xv-siN">
                                 <rect key="frame" x="96" y="37" width="294" height="16"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zPC-FF-3yv">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitter" translatesAutoresizingMaskIntoConstraints="NO" id="zPC-FF-3yv">
                                         <rect key="frame" x="0.0" y="3" width="10" height="10"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="10" id="c1v-EX-dJZ"/>
@@ -75,7 +75,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Gq-KJ-2ek">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instagram" translatesAutoresizingMaskIntoConstraints="NO" id="1Gq-KJ-2ek">
                                         <rect key="frame" x="0.0" y="3" width="10" height="10"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="10" id="Zo4-QF-8hv"/>
@@ -121,10 +121,22 @@
                     <constraint firstAttribute="trailing" secondItem="csi-6U-je4" secondAttribute="trailing" constant="8" id="oax-yn-1Vb"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="imageViewProfilePic" destination="Je5-J0-7Ye" id="eJP-vT-qNe"/>
+                <outlet property="labelDate" destination="6ci-mi-e2g" id="HDl-tB-rL5"/>
+                <outlet property="labelInstagram" destination="xGH-TL-SvD" id="xDP-jp-N98"/>
+                <outlet property="labelPersonName" destination="Kyb-c0-ec0" id="8jG-FU-U0m"/>
+                <outlet property="labelTwitter" destination="pTq-hF-qBC" id="FSh-xg-czE"/>
+                <outlet property="viewBackground" destination="csi-6U-je4" id="wqD-cG-EiP"/>
+                <outlet property="viewInstagram" destination="pTm-DC-tiR" id="rRg-BK-cfh"/>
+                <outlet property="viewTwitter" destination="VaE-Xv-siN" id="bCm-IF-CkV"/>
+            </connections>
             <point key="canvasLocation" x="28.985507246376812" y="4.6875"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="defaultPhoto" width="200" height="200"/>
+        <image name="instagram" width="10" height="10"/>
+        <image name="twitter" width="10" height="10"/>
     </resources>
 </document>
