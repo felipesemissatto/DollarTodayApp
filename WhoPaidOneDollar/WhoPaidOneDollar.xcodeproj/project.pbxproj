@@ -32,6 +32,7 @@
 		2F7FC4DE25D2C47D009D925D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FC4DD25D2C47C009D925D /* Extensions.swift */; };
 		2FB462F125D6BE1700932D6B /* ConverterPersonJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB462F025D6BE1700932D6B /* ConverterPersonJSON.swift */; };
 		2FB462F625D6BE6500932D6B /* ConverterPersonJSONProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB462F525D6BE6500932D6B /* ConverterPersonJSONProtocol.swift */; };
+		2FB462FB25D6E86200932D6B /* RequestSenderImplementationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB462FA25D6E86200932D6B /* RequestSenderImplementationTests.swift */; };
 		2FBF3ED825D433B5008C910F /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FBF3ED725D433B5008C910F /* LoadingView.xib */; };
 		2FBF3EDD25D433DE008C910F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF3EDC25D433DE008C910F /* LoadingView.swift */; };
 		2FEBDE5F25D5A5A800C9869D /* PeopleViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEBDE5E25D5A5A800C9869D /* PeopleViewControllerImplementation.swift */; };
@@ -95,6 +96,7 @@
 		2F7FC4DD25D2C47C009D925D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		2FB462F025D6BE1700932D6B /* ConverterPersonJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterPersonJSON.swift; sourceTree = "<group>"; };
 		2FB462F525D6BE6500932D6B /* ConverterPersonJSONProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterPersonJSONProtocol.swift; sourceTree = "<group>"; };
+		2FB462FA25D6E86200932D6B /* RequestSenderImplementationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSenderImplementationTests.swift; sourceTree = "<group>"; };
 		2FBF3ED725D433B5008C910F /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		2FBF3EDC25D433DE008C910F /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		2FEBDE5E25D5A5A800C9869D /* PeopleViewControllerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewControllerImplementation.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			children = (
 				2F7FC44A25D05359009D925D /* WhoPaidOneDollarTests.swift */,
 				2F7FC44C25D05359009D925D /* Info.plist */,
+				2FB462FA25D6E86200932D6B /* RequestSenderImplementationTests.swift */,
 			);
 			path = WhoPaidOneDollarTests;
 			sourceTree = "<group>";
@@ -616,6 +619,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FB462FB25D6E86200932D6B /* RequestSenderImplementationTests.swift in Sources */,
 				2F7FC44B25D05359009D925D /* WhoPaidOneDollarTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

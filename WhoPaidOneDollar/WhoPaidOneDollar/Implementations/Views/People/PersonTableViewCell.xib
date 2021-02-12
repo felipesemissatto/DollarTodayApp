@@ -40,16 +40,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VaE-Xv-siN">
-                                <rect key="frame" x="96" y="37" width="294" height="16"/>
+                                <rect key="frame" x="96" y="37" width="294" height="19.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitter" translatesAutoresizingMaskIntoConstraints="NO" id="zPC-FF-3yv">
-                                        <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="16" height="19.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="16" id="94b-Zc-rbj"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@twitter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTq-hF-qBC">
-                                        <rect key="frame" x="20" y="0.0" width="274" height="16"/>
+                                        <rect key="frame" x="20" y="0.0" width="274" height="19.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -62,21 +62,21 @@
                                     <constraint firstAttribute="bottom" secondItem="zPC-FF-3yv" secondAttribute="bottom" id="T1U-q8-s2g"/>
                                     <constraint firstAttribute="trailing" secondItem="pTq-hF-qBC" secondAttribute="trailing" id="Xgu-8X-cvt"/>
                                     <constraint firstItem="zPC-FF-3yv" firstAttribute="leading" secondItem="VaE-Xv-siN" secondAttribute="leading" id="YYh-ba-V6p"/>
-                                    <constraint firstAttribute="height" constant="16" id="tzJ-Qx-8GS"/>
+                                    <constraint firstAttribute="height" secondItem="pTq-hF-qBC" secondAttribute="height" id="sdr-O0-f9B"/>
                                     <constraint firstAttribute="bottom" secondItem="pTq-hF-qBC" secondAttribute="bottom" id="u8Z-8L-0Wi"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pTm-DC-tiR">
-                                <rect key="frame" x="96" y="53" width="294" height="16"/>
+                                <rect key="frame" x="96" y="56.5" width="294" height="19.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@instagram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGH-TL-SvD">
-                                        <rect key="frame" x="20" y="0.0" width="274" height="16"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="20" y="0.0" width="274" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instagram" translatesAutoresizingMaskIntoConstraints="NO" id="1Gq-KJ-2ek">
-                                        <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="16" height="19.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="16" id="9dc-rU-VAx"/>
                                         </constraints>
