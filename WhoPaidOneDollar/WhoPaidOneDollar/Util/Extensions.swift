@@ -45,3 +45,46 @@ extension Date {
         return (t < 10 ? "0\(t)" : t.description)
     }
 }
+
+extension UIImageView {
+
+    func setCustomImage(_ imgURLString: String?) {
+        guard let imageURLString = imgURLString else {
+            self.image = UIImage(named: "defaultPhoto.png")
+            return
+        }
+        DispatchQueue.global().async { [weak self] in
+            let data = try? Data(contentsOf: URL(string: imageURLString)!)
+            DispatchQueue.main.async {
+                self?.image = data != nil ? UIImage(data: data!) : UIImage(named: "default.png")
+            }
+        }
+    }
+}
+
+extension String {
+
+    var length: Int {
+        return count
+    }
+
+    subscript (i: Int) -> String {
+        return self[i ..< i + 1]
+    }
+
+    func substring(fromIndex: Int) -> String {
+        return self[min(fromIndex, length) ..< length]
+    }
+
+    func substring(toIndex: Int) -> String {
+        return self[0 ..< max(0, toIndex)]
+    }
+
+    subscript (r: Range<Int>) -> String {
+        let range = Range(uncheckedBounds: (lower: max(0, min(length, r.lowerBound)),
+                                            upper: min(length, max(0, r.upperBound))))
+        let start = index(startIndex, offsetBy: range.lowerBound)
+        let end = index(start, offsetBy: range.upperBound - range.lowerBound)
+        return String(self[start ..< end])
+    }
+}

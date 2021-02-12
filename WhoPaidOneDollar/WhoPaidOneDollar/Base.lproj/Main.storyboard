@@ -60,12 +60,12 @@
         <!--People-->
         <scene sceneID="71L-Sh-fWP">
             <objects>
-                <viewController id="pD0-mV-wE7" sceneMemberID="viewController">
+                <viewController title="People" id="pD0-mV-wE7" customClass="PeopleViewControllerImplementation" customModule="WhoPaidOneDollar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i1h-5x-EOZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="1Om-FX-De3"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="People" id="Iee-Eq-Kpe"/>
                 </viewController>

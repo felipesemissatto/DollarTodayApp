@@ -30,8 +30,19 @@
 		2F7FC4D425D1A72F009D925D /* ButtonSaveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7FC4D325D1A72F009D925D /* ButtonSaveTableViewCell.xib */; };
 		2F7FC4D925D1A761009D925D /* ButtonSaveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FC4D825D1A761009D925D /* ButtonSaveTableViewCell.swift */; };
 		2F7FC4DE25D2C47D009D925D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FC4DD25D2C47C009D925D /* Extensions.swift */; };
+		2FB462F125D6BE1700932D6B /* ConverterPersonJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB462F025D6BE1700932D6B /* ConverterPersonJSON.swift */; };
+		2FB462F625D6BE6500932D6B /* ConverterPersonJSONProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB462F525D6BE6500932D6B /* ConverterPersonJSONProtocol.swift */; };
+		2FB462FB25D6E86200932D6B /* RequestSenderImplementationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB462FA25D6E86200932D6B /* RequestSenderImplementationTests.swift */; };
+		2FB4630825D6FAA300932D6B /* ConverterPeopleJSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4630725D6FAA300932D6B /* ConverterPeopleJSONTests.swift */; };
 		2FBF3ED825D433B5008C910F /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FBF3ED725D433B5008C910F /* LoadingView.xib */; };
 		2FBF3EDD25D433DE008C910F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF3EDC25D433DE008C910F /* LoadingView.swift */; };
+		2FEBDE5F25D5A5A800C9869D /* PeopleViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEBDE5E25D5A5A800C9869D /* PeopleViewControllerImplementation.swift */; };
+		2FEBDE6525D5A5DF00C9869D /* PeopleViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEBDE6425D5A5DF00C9869D /* PeopleViewImplementation.swift */; };
+		2FEBDE6D25D5A60700C9869D /* PeopleViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FEBDE6C25D5A60700C9869D /* PeopleViewImplementation.xib */; };
+		2FEBDE7225D5A66700C9869D /* PeopleViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEBDE7125D5A66700C9869D /* PeopleViewProtocol.swift */; };
+		2FEBDE7A25D5A67C00C9869D /* PeopleViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEBDE7925D5A67C00C9869D /* PeopleViewControllerProtocol.swift */; };
+		2FEBDE7F25D5AD1500C9869D /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEBDE7E25D5AD1500C9869D /* PersonTableViewCell.swift */; };
+		2FEBDE8425D5AD2900C9869D /* PersonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FEBDE8325D5AD2900C9869D /* PersonTableViewCell.xib */; };
 		9B2B0C3B55A171FDAFF3D4A4 /* Pods_WhoPaidOneDollarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19AB3EC280B30F13F4FCB05 /* Pods_WhoPaidOneDollarTests.framework */; };
 		A1BAAE8D82C88BAF4DAF3BBE /* Pods_WhoPaidOneDollar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464D3BE6F456224DC97B4C58 /* Pods_WhoPaidOneDollar.framework */; };
 		F4C5810D4ACB0BD3B8DA213F /* Pods_WhoPaidOneDollar_WhoPaidOneDollarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E696AA33453B67B3155701E /* Pods_WhoPaidOneDollar_WhoPaidOneDollarUITests.framework */; };
@@ -84,8 +95,19 @@
 		2F7FC4D325D1A72F009D925D /* ButtonSaveTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonSaveTableViewCell.xib; sourceTree = "<group>"; };
 		2F7FC4D825D1A761009D925D /* ButtonSaveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSaveTableViewCell.swift; sourceTree = "<group>"; };
 		2F7FC4DD25D2C47C009D925D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		2FB462F025D6BE1700932D6B /* ConverterPersonJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterPersonJSON.swift; sourceTree = "<group>"; };
+		2FB462F525D6BE6500932D6B /* ConverterPersonJSONProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterPersonJSONProtocol.swift; sourceTree = "<group>"; };
+		2FB462FA25D6E86200932D6B /* RequestSenderImplementationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSenderImplementationTests.swift; sourceTree = "<group>"; };
+		2FB4630725D6FAA300932D6B /* ConverterPeopleJSONTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterPeopleJSONTests.swift; sourceTree = "<group>"; };
 		2FBF3ED725D433B5008C910F /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		2FBF3EDC25D433DE008C910F /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		2FEBDE5E25D5A5A800C9869D /* PeopleViewControllerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewControllerImplementation.swift; sourceTree = "<group>"; };
+		2FEBDE6425D5A5DF00C9869D /* PeopleViewImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewImplementation.swift; sourceTree = "<group>"; };
+		2FEBDE6C25D5A60700C9869D /* PeopleViewImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleViewImplementation.xib; sourceTree = "<group>"; };
+		2FEBDE7125D5A66700C9869D /* PeopleViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewProtocol.swift; sourceTree = "<group>"; };
+		2FEBDE7925D5A67C00C9869D /* PeopleViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewControllerProtocol.swift; sourceTree = "<group>"; };
+		2FEBDE7E25D5AD1500C9869D /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
+		2FEBDE8325D5AD2900C9869D /* PersonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonTableViewCell.xib; sourceTree = "<group>"; };
 		464D3BE6F456224DC97B4C58 /* Pods_WhoPaidOneDollar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhoPaidOneDollar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8567035F148D22ECC950A365 /* Pods-WhoPaidOneDollar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoPaidOneDollar.release.xcconfig"; path = "Target Support Files/Pods-WhoPaidOneDollar/Pods-WhoPaidOneDollar.release.xcconfig"; sourceTree = "<group>"; };
 		87B773409D888D194A89AABB /* Pods-WhoPaidOneDollar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoPaidOneDollar.debug.xcconfig"; path = "Target Support Files/Pods-WhoPaidOneDollar/Pods-WhoPaidOneDollar.debug.xcconfig"; sourceTree = "<group>"; };
@@ -168,6 +190,8 @@
 			children = (
 				2F7FC44A25D05359009D925D /* WhoPaidOneDollarTests.swift */,
 				2F7FC44C25D05359009D925D /* Info.plist */,
+				2FB462FA25D6E86200932D6B /* RequestSenderImplementationTests.swift */,
+				2FB4630725D6FAA300932D6B /* ConverterPeopleJSONTests.swift */,
 			);
 			path = WhoPaidOneDollarTests;
 			sourceTree = "<group>";
@@ -204,6 +228,7 @@
 		2F7FC47025D05489009D925D /* JSON */ = {
 			isa = PBXGroup;
 			children = (
+				2FB462F025D6BE1700932D6B /* ConverterPersonJSON.swift */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -211,6 +236,7 @@
 		2F7FC47125D054F1009D925D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2FEBDE6325D5A5B600C9869D /* People */,
 				2FBF3ED625D43383008C910F /* Misc */,
 				2F7FC4B125D1862C009D925D /* Login */,
 			);
@@ -221,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				2F7FC48D25D17016009D925D /* LoginViewControllerImplementation.swift */,
+				2FEBDE5E25D5A5A800C9869D /* PeopleViewControllerImplementation.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -230,6 +257,9 @@
 			children = (
 				2F7FC48325D16C85009D925D /* LoginViewControllerProtocol.swift */,
 				2F7FC48825D16E4E009D925D /* LoginViewProtocol.swift */,
+				2FEBDE7125D5A66700C9869D /* PeopleViewProtocol.swift */,
+				2FEBDE7925D5A67C00C9869D /* PeopleViewControllerProtocol.swift */,
+				2FB462F525D6BE6500932D6B /* ConverterPersonJSONProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -282,6 +312,17 @@
 				2FBF3EDC25D433DE008C910F /* LoadingView.swift */,
 			);
 			path = Misc;
+			sourceTree = "<group>";
+		};
+		2FEBDE6325D5A5B600C9869D /* People */ = {
+			isa = PBXGroup;
+			children = (
+				2FEBDE6C25D5A60700C9869D /* PeopleViewImplementation.xib */,
+				2FEBDE6425D5A5DF00C9869D /* PeopleViewImplementation.swift */,
+				2FEBDE8325D5AD2900C9869D /* PersonTableViewCell.xib */,
+				2FEBDE7E25D5AD1500C9869D /* PersonTableViewCell.swift */,
+			);
+			path = People;
 			sourceTree = "<group>";
 		};
 		75D686EBA4AB83AACEAB4E22 /* Frameworks */ = {
@@ -415,9 +456,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FEBDE6D25D5A60700C9869D /* PeopleViewImplementation.xib in Resources */,
 				2F7FC4D425D1A72F009D925D /* ButtonSaveTableViewCell.xib in Resources */,
 				2FBF3ED825D433B5008C910F /* LoadingView.xib in Resources */,
 				2F7FC44025D05359009D925D /* LaunchScreen.storyboard in Resources */,
+				2FEBDE8425D5AD2900C9869D /* PersonTableViewCell.xib in Resources */,
 				2F7FC4CC25D1A19C009D925D /* TextFieldsTableViewCell.xib in Resources */,
 				2F7FC43D25D05359009D925D /* Assets.xcassets in Resources */,
 				2F7FC4BD25D19002009D925D /* PhotoTableViewCell.xib in Resources */,
@@ -553,17 +596,24 @@
 				2F7FC48E25D17016009D925D /* LoginViewControllerImplementation.swift in Sources */,
 				2F7FC48925D16E4E009D925D /* LoginViewProtocol.swift in Sources */,
 				2F7FC48425D16C85009D925D /* LoginViewControllerProtocol.swift in Sources */,
+				2FEBDE7A25D5A67C00C9869D /* PeopleViewControllerProtocol.swift in Sources */,
+				2FB462F125D6BE1700932D6B /* ConverterPersonJSON.swift in Sources */,
 				2F7FC43425D05355009D925D /* AppDelegate.swift in Sources */,
 				2F7FC4B825D18964009D925D /* LoginViewImplementation.swift in Sources */,
 				2F7FC43625D05355009D925D /* SceneDelegate.swift in Sources */,
 				2F7FC4D925D1A761009D925D /* ButtonSaveTableViewCell.swift in Sources */,
+				2FEBDE7225D5A66700C9869D /* PeopleViewProtocol.swift in Sources */,
 				2F7FC47F25D059B4009D925D /* Message.swift in Sources */,
 				2FBF3EDD25D433DE008C910F /* LoadingView.swift in Sources */,
 				2F7FC47A25D05778009D925D /* Person.swift in Sources */,
 				2F7FC4A225D176D3009D925D /* RequestSenderImplementation.swift in Sources */,
 				2F7FC46825D053F1009D925D /* Constants.swift in Sources */,
 				2F7FC4C225D1902F009D925D /* PhotoTableViewCell.swift in Sources */,
+				2FEBDE5F25D5A5A800C9869D /* PeopleViewControllerImplementation.swift in Sources */,
+				2FB462F625D6BE6500932D6B /* ConverterPersonJSONProtocol.swift in Sources */,
+				2FEBDE6525D5A5DF00C9869D /* PeopleViewImplementation.swift in Sources */,
 				2F7FC4C725D1A16D009D925D /* TextFieldsTableViewCell.swift in Sources */,
+				2FEBDE7F25D5AD1500C9869D /* PersonTableViewCell.swift in Sources */,
 				2F7FC4DE25D2C47D009D925D /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -572,7 +622,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FB462FB25D6E86200932D6B /* RequestSenderImplementationTests.swift in Sources */,
 				2F7FC44B25D05359009D925D /* WhoPaidOneDollarTests.swift in Sources */,
+				2FB4630825D6FAA300932D6B /* ConverterPeopleJSONTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
