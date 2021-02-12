@@ -36,6 +36,7 @@ class PersonTableViewCell: UITableViewCell {
         // Image profile pic
         imageViewProfilePic.clipsToBounds = true
         imageViewProfilePic.layer.cornerRadius = 0.5 * imageViewProfilePic.bounds.size.width
+        imageViewProfilePic.contentMode = .scaleAspectFill
     }
 }
 
