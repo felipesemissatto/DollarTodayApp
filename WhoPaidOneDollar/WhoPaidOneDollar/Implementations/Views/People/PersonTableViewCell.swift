@@ -14,8 +14,11 @@ class PersonTableViewCell: UITableViewCell {
     @IBOutlet weak var labelPersonName: UILabel!
     
     @IBOutlet weak var viewTwitter: UIView!
+    @IBOutlet weak var imageViewTwitter: UIImageView!
     @IBOutlet weak var labelTwitter: UILabel!
+    
     @IBOutlet weak var viewInstagram: UIView!
+    @IBOutlet weak var imageViewInstagram: UIImageView!
     @IBOutlet weak var labelInstagram: UILabel!
     
     @IBOutlet weak var labelDate: UILabel!

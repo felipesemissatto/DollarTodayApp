@@ -85,17 +85,30 @@ extension PeopleViewImplementation: UITableViewDataSource, UITableViewDelegate {
             cell.imageViewProfilePic.setCustomImage(data[indexPath.row].photoUrl?.absoluteString)
             cell.labelPersonName.text = data[indexPath.row].name
             
-            if data[indexPath.row].twitter != nil {
-                cell.labelTwitter.text = data[indexPath.row].twitter
+            if let twitter = data[indexPath.row].twitter {
+                if twitter != ""{
+                    cell.labelTwitter.text = twitter
+                } else {
+                    cell.viewTwitter.isHidden = true
+                    cell.imageViewTwitter.isHidden = true
+                }
             } else {
                 cell.viewTwitter.isHidden = true
+                cell.imageViewTwitter.isHidden = true
             }
             
-            if data[indexPath.row].instagram != nil {
-                cell.labelInstagram.text = data[indexPath.row].instagram
+            if let instagram = data[indexPath.row].instagram {
+                if instagram != "" {
+                    cell.labelInstagram.text = instagram
+                } else {
+                    cell.viewInstagram.isHidden = true
+                    cell.imageViewInstagram.isHidden = true
+                }
             } else {
-                cell.viewInstagram.isHidden = true
+                cell.viewTwitter.isHidden = true
+                cell.imageViewTwitter.isHidden = true
             }
+            
             
             cell.labelDate.text = data[indexPath.row].date.description
             
