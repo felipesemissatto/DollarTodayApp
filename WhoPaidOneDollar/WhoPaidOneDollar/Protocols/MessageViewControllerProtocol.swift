@@ -6,3 +6,18 @@
 //
 
 import Foundation
+
+protocol MessageViewControllerProtocol {
+    
+    /**
+     
+     
+     Method that receives messages from backend.
+     
+     */
+    
+    func getAllMessages()
+    
+    // Dependecies
+    var myView: MessageViewProtocol? {get set}
+}
