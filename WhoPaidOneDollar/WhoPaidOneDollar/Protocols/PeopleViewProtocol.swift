@@ -10,13 +10,14 @@ import Foundation
 protocol PeopleViewProtocol {
     /**
      
-     Method that starts the login view. It receives the view controller.
+     Method that starts the People view. It receives the view controller and the people who payed one dollar.
      
+     - parameter data: people that will be shown.
      - parameter viewController: a controller with PeopleViewControllerProtocol type.
      
      */
     
-    init(viewController: PeopleViewControllerProtocol)
+    init(data: [Person], viewController: PeopleViewControllerProtocol)
     
     // Dependencies
     var viewController: PeopleViewControllerProtocol {get set}

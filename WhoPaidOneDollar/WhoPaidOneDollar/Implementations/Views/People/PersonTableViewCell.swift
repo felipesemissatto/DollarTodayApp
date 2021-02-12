@@ -24,7 +24,6 @@ class PersonTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         // View background
-        viewBackground.layer.cornerRadius = 6
         viewBackground.layer.shadowColor = UIColor.black.cgColor
         viewBackground.layer.shadowOpacity = 0.25
         viewBackground.layer.shadowOffset = CGSize(width: 0, height: 4)

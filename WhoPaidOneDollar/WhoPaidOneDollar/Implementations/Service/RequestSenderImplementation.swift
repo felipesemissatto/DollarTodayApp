@@ -79,4 +79,27 @@ class RequestSenderImplementation {
                 }
             })
     }
+    
+    func getAllPeople(completion: @escaping([Person]?, String?) -> Void) {
+        guard let url = URL(string: ROOT_BACKEND_URL + "/person") else {
+            completion(nil, "Error: URL not decoded")
+            return
+        }
+        
+        Alamofire
+            .request(url,
+                     method: .get,
+                     encoding: JSONEncoding.default)
+            .responseJSON(completionHandler: { response in
+                switch response.result {
+                case .success:
+                    let json = try? JSONSerialization.jsonObject(with: response.data!, options: .allowFragments) as? [String:Any]
+                    print(json)
+                    print(response.result.value)
+                    completion([], nil)
+                case .failure(let error):
+                    completion(nil, error.localizedDescription)
+                }
+            })
+    }
 }

@@ -16,12 +16,17 @@ class PeopleViewImplementation: UIView, PeopleViewProtocol {
     // MARK: - Dependencies
     var viewController: PeopleViewControllerProtocol
     
+    // MARK: - Private attributes
+    private var data: [Person]
+    
     // MARK: - Init methods
-    required init(viewController: PeopleViewControllerProtocol) {
+    required init(data: [Person], viewController: PeopleViewControllerProtocol) {
+        self.data = data
         self.viewController = viewController
         super.init(frame: CGRect.zero)
         initFromNib()
         setupTableView()
+        referenceXib(nibName: "PersonTableViewCell")
     }
     
     required init?(coder: NSCoder) {
@@ -72,10 +77,33 @@ extension PeopleViewImplementation: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "PersonTableViewCell", for: indexPath) as? PersonTableViewCell {
+            cell.imageViewProfilePic.setCustomImage(data[indexPath.row].photoUrl?.absoluteString)
+            cell.labelPersonName.text = data[indexPath.row].name
+            
+            if data[indexPath.row].twitter != nil {
+                cell.labelTwitter.text = data[indexPath.row].twitter
+            } else {
+                cell.viewTwitter.isHidden = true
+            }
+            
+            if data[indexPath.row].instagram != nil {
+                cell.labelInstagram.text = data[indexPath.row].instagram
+            } else {
+                cell.viewInstagram.isHidden = true
+            }
+            
+            cell.labelDate.text = data[indexPath.row].date.description
+            
+            return cell
+        } else {
+            let cell = UITableViewCell.init()
+            cell.textLabel?.text = data[indexPath.row].name
+            return cell
+        }
     }
 }
