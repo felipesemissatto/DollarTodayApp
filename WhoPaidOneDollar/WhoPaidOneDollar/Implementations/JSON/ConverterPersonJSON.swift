@@ -23,15 +23,15 @@ class ConverterPersonJSON: ConverterPersonJSONProtocol {
     
     // MARK: - ConverterPersonJSONProtocol methods
     func createPerson(json: JSON) throws -> Person {
-        var id: String
+        var id: CLong
         var name: String
         var photoUrl: String?
         var twitter: String?
         var instagram: String?
         var date: String
         
-        if let personId = json["personId"].string {
-            id = personId
+        if let personId = json["personId"].number {
+            id = CLong(truncating: personId)
         } else {
             throw ErrorParsePerson.noPersonId
         }
@@ -70,7 +70,7 @@ class ConverterPersonJSON: ConverterPersonJSONProtocol {
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let dateCreated = dateFormatter.date(from: date)!
         
-        let person = Person(personId: CLong((id as NSString).longLongValue),
+        let person = Person(personId: id,
                             name: name,
                             photoUrl: URL(string: photoUrl ?? IMAGE_DEFAULT_URL),
                             twitter: twitter,

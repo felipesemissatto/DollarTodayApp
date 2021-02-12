@@ -110,7 +110,7 @@ extension PeopleViewImplementation: UITableViewDataSource, UITableViewDelegate {
             }
             
             
-            cell.labelDate.text = data[indexPath.row].date.description
+            cell.labelDate.text = data[indexPath.row].date.description[0 ..< 11]
             
             return cell
         } else {

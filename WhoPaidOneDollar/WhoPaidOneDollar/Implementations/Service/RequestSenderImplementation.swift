@@ -11,6 +11,8 @@ import SwiftyJSON
 
 class RequestSenderImplementation {
     
+    private var parserPeople = ConverterPersonJSON()
+    
     func getURLFromAnImage(image: UIImage,
                            completion: @escaping(String?, String?) -> Void){
         var newProfilePicURLString: String?
@@ -93,10 +95,14 @@ class RequestSenderImplementation {
             .responseJSON(completionHandler: { response in
                 switch response.result {
                 case .success:
-                    let json = try? JSONSerialization.jsonObject(with: response.data!, options: .allowFragments) as? [String:Any]
-                    print(json)
-                    print(response.result.value)
-                    completion([], nil)
+                    guard let responseValue = response.value else { return }
+                    let jsonResponse = JSON(responseValue)
+                    guard let jsonResponseArray = jsonResponse.array else {
+                        completion(nil, "Error: it was not possible to process response")
+                        return
+                    }
+                    let people = self.parserPeople.parserJSONPeople(json: jsonResponseArray)
+                    completion(people, nil)
                 case .failure(let error):
                     completion(nil, error.localizedDescription)
                 }
