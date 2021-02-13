@@ -27,7 +27,7 @@
         <!--Community-->
         <scene sceneID="E4e-rB-W6X">
             <objects>
-                <viewController id="AFp-Du-EAT" sceneMemberID="viewController">
+                <viewController id="AFp-Du-EAT" customClass="MessageViewControllerImplementation" customModule="WhoPaidOneDollar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z5P-EV-U7X">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

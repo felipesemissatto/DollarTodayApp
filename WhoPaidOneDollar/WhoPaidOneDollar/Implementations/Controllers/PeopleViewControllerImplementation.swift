@@ -46,7 +46,7 @@ class PeopleViewControllerImplementation: UIViewController, PeopleViewController
         getAllPeople()
     }
     
-    // MARK: - LoginViewControllerProtocol methods
+    // MARK: - PeopleViewControllerProtocol methods
     func getAllPeople() {
         self.view = LoadingView(message: "Loading people...",
                                 error: false,

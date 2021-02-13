@@ -83,7 +83,17 @@ extension MessageViewImplementation: UITableViewDataSource, UITableViewDelegate 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "MessageTableViewCell", for: indexPath) as? MessageTableViewCell {
+            cell.imageViewProfilePic.setCustomImage(data[indexPath.row].person.photoUrl?.absoluteString)
+            cell.labelPersonName.text = data[indexPath.row].person.name
+            cell.labelMessageDate.text = data[indexPath.row].date.description[0 ..< 11]
+            cell.labelTextMessage.text = data[indexPath.row].textMessage
+            return cell
+        } else {
+            let cell = UITableViewCell.init()
+            cell.textLabel?.text = data[indexPath.row].textMessage
+            return cell
+        }
     }
     
     
