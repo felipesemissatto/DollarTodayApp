@@ -66,7 +66,7 @@ class PeopleViewControllerImplementation: UIViewController, PeopleViewController
             
             guard let allPeople = people else {
                 self.view = LoadingView(message: "Something went wrong",
-                                       error: false,
+                                       error: true,
                                        frame: CGRect.zero)!
                 return
             }

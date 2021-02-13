@@ -12,6 +12,12 @@ class MessageTableViewCell: UITableViewCell {
     @IBOutlet weak var viewBackground: UIView!
     @IBOutlet weak var imageViewProfilePic: UIImageView!
     
+    @IBOutlet weak var viewTwitter: UIView!
+    @IBOutlet weak var labelTwitter: UILabel!
+    
+    @IBOutlet weak var viewInstagram: UIView!
+    @IBOutlet weak var labelInstagram: UILabel!
+    
     @IBOutlet weak var labelPersonName: UILabel!
     @IBOutlet weak var labelMessageDate: UILabel!
     @IBOutlet weak var labelTextMessage: UILabel!

@@ -24,6 +24,7 @@ class LoadingView: UIView {
             
             labelLoadingMessage.text = message
             activityIndicator.startAnimating()
+            activityIndicator.isHidden = error
         }
     }
     

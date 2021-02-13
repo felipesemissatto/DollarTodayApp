@@ -65,7 +65,7 @@ class MessageViewControllerImplementation: UIViewController, MessageViewControll
             
             guard let allMessages = messages else {
                 self.view = LoadingView(message: "Something went wrong",
-                                       error: false,
+                                       error: true,
                                        frame: CGRect.zero)!
                 return
             }
