@@ -24,7 +24,7 @@ class ConverterPeopleJSONTests: XCTestCase {
         let inputJSON = createValidMockJSON()
         
         // When
-        let resultPerson = try testSubject.createPerson(json: inputJSON)
+        let resultPerson = try testSubject.createPerson(j: inputJSON)
         
         // Then
         let date = "2021-02-13"
@@ -54,7 +54,7 @@ class ConverterPeopleJSONTests: XCTestCase {
         
         do {
             // When
-            _ = try testSubject.createPerson(json: inputJSON)
+            _ = try testSubject.createPerson(j: inputJSON)
 
             XCTFail("The id field is not a string field, but an integer. An error was expected.")
         }

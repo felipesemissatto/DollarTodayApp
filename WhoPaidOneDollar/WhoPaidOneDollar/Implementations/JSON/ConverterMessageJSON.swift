@@ -37,8 +37,6 @@ class ConverterMessageJSON: ConverterMessageJSONProtocol {
     }
     
     func createMessage(json: JSON) throws -> Message {
-        let personParser = ConverterPersonJSON()
-        
         var id: CLong
         var textMessage: String
         var date: String
@@ -62,8 +60,60 @@ class ConverterMessageJSON: ConverterMessageJSONProtocol {
             throw ErrorParseMessage.noDate
         }
         
-        if let personResponse = json["idPerson"].array {
-            person = try personParser.createPerson(json: personResponse[0])
+        if let personResponse = json["idPerson"].dictionary {
+            var id: CLong
+            var name: String
+            var photoUrl: String?
+            var twitter: String?
+            var instagram: String?
+            var date: String
+            
+            if let personId = personResponse["personId"]?.number {
+                id = CLong(truncating: personId)
+            } else {
+                throw ErrorParsePerson.noPersonId
+            }
+            
+            if let personName = personResponse["name"]?.string {
+                name = personName
+            } else {
+                throw ErrorParsePerson.noName
+            }
+            
+            if let personPhotoUrl = personResponse["photoUrl"]?.string {
+                photoUrl = personPhotoUrl
+            } else {
+                throw ErrorParsePerson.noPhotoUrl
+            }
+            
+            if let personTwitter = personResponse["twitter"]?.string {
+                twitter = personTwitter
+            } else {
+                throw ErrorParsePerson.noTwitter
+            }
+            
+            if let personInstagram = personResponse["instagram"]?.string {
+                instagram = personInstagram
+            } else {
+                throw ErrorParsePerson.noInstagram
+            }
+            
+            if let personDateCreated = personResponse["date"]?.string {
+                date = personDateCreated
+            } else {
+                throw ErrorParsePerson.noDate
+            }
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            let dateCreated = dateFormatter.date(from: date)!
+            
+            person = Person(personId: id,
+                                name: name,
+                                photoUrl: URL(string: photoUrl ?? IMAGE_DEFAULT_URL),
+                                twitter: twitter,
+                                instagram: instagram,
+                                date: dateCreated as NSDate)
         } else {
             throw ErrorParseMessage.noPerson
         }

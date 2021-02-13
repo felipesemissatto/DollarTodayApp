@@ -48,6 +48,32 @@ class MessageViewControllerImplementation: UIViewController, MessageViewControll
     
     // MARK: - MessageViewControllerProtocol methods
     func getAllMessages() {
+        self.view = LoadingView(message: "Loading messages...",
+                                error: false,
+                                frame: CGRect.zero)!
         
+        requestSender.getAllMessages() { messages, error in
+            if error != nil {
+                self.view = self.mainView
+                
+                let alert = UIAlertController(title: "Error Loading Messages",
+                                              message: "Connection fail. Try it again later.",
+                                              preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(alert, animated: true, completion: nil)
+            }
+            
+            guard let allMessages = messages else {
+                self.view = LoadingView(message: "Something went wrong",
+                                       error: false,
+                                       frame: CGRect.zero)!
+                return
+            }
+            
+            self.view = self.mainView
+            let defaultView = MessageViewImplementation(data: allMessages, viewController: self)
+            self.myView = defaultView
+            self.view = defaultView
+        }
     }
 }

@@ -21,16 +21,16 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KNC-Nb-yPU">
-                    <rect key="frame" x="87" y="348" width="240" height="40"/>
+                    <rect key="frame" x="41.333333333333343" y="348" width="331.33333333333326" height="40"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1BN-DT-fsO">
-                            <rect key="frame" x="70" y="5.6666666666666874" width="100" height="28.666666666666671"/>
+                            <rect key="frame" x="115.66666666666666" y="5.6666666666666874" width="100" height="28.666666666666671"/>
                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
                             <color key="textColor" systemColor="secondaryLabelColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="3Jx-Ip-1RA">
-                            <rect key="frame" x="178" y="10" width="20" height="20"/>
+                            <rect key="frame" x="223.66666666666666" y="10" width="20" height="20"/>
                         </activityIndicatorView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -38,7 +38,6 @@
                         <constraint firstItem="3Jx-Ip-1RA" firstAttribute="centerY" secondItem="1BN-DT-fsO" secondAttribute="centerY" id="Ja6-1G-pGf"/>
                         <constraint firstItem="3Jx-Ip-1RA" firstAttribute="leading" secondItem="1BN-DT-fsO" secondAttribute="trailing" constant="8" id="Krw-zR-0Ti"/>
                         <constraint firstItem="3Jx-Ip-1RA" firstAttribute="leading" secondItem="1BN-DT-fsO" secondAttribute="trailing" constant="8" id="QYF-f7-fy3"/>
-                        <constraint firstAttribute="width" constant="240" id="TNe-oq-suw"/>
                         <constraint firstItem="1BN-DT-fsO" firstAttribute="centerX" secondItem="KNC-Nb-yPU" secondAttribute="centerX" id="WPx-y5-Kx3"/>
                         <constraint firstAttribute="height" constant="40" id="lR8-iw-aOF"/>
                         <constraint firstItem="1BN-DT-fsO" firstAttribute="centerY" secondItem="KNC-Nb-yPU" secondAttribute="centerY" id="lwx-R4-f9x"/>
@@ -50,6 +49,7 @@
             <constraints>
                 <constraint firstItem="KNC-Nb-yPU" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Q9f-Nx-Dhn"/>
                 <constraint firstItem="KNC-Nb-yPU" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="sm7-0P-v49"/>
+                <constraint firstItem="KNC-Nb-yPU" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" multiplier="0.8" id="vWF-Ma-bxV"/>
             </constraints>
             <point key="canvasLocation" x="105.79710144927537" y="43.206521739130437"/>
         </view>

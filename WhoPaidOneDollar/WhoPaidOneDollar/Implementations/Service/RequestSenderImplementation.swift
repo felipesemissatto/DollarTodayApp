@@ -13,6 +13,7 @@ class RequestSenderImplementation {
     
     // MARK: - Parsers
     private var parserPeople = ConverterPersonJSON()
+    private var parserMessages = ConverterMessageJSON()
     
     // MARK: - People Methods
     func getURLFromAnImage(image: UIImage,
@@ -131,8 +132,8 @@ class RequestSenderImplementation {
                         completion(nil, "Error: it was not possible to process response")
                         return
                     }
-//                    let messages = self.parserPeople.parserJSONPeople(json: jsonResponseArray)
-//                    completion(messages, nil)
+                    let messages = self.parserMessages.parserJSONMessages(json: jsonResponseArray)
+                    completion(messages, nil)
                 case .failure(let error):
                     completion(nil, error.localizedDescription)
                 }
