@@ -69,10 +69,7 @@ class MessageViewImplementation: UIView, MessageViewProtocol {
     
     // MARK: -IBActions Functions
     @IBAction func openTextFieldMessage(_ sender: Any) {
-//        let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        let tabViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "TabBarViewStoryboard") as! UITabBarController
-//        tabViewController.modalPresentationStyle = .fullScreen
-//        self.present(tabViewController, animated:true, completion:nil)
+        viewController.newMessageButtonWasClicked()
     }
 }
 

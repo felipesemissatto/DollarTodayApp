@@ -76,4 +76,8 @@ class MessageViewControllerImplementation: UIViewController, MessageViewControll
             self.view = defaultView
         }
     }
+    
+    func newMessageButtonWasClicked(){
+        performSegue(withIdentifier: "SendMessageSegue", sender: nil)
+    }
 }

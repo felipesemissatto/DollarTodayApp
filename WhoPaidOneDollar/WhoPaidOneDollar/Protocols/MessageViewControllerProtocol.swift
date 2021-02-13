@@ -21,9 +21,11 @@ protocol MessageViewControllerProtocol {
     /**
      
      
-     Method that sends a message to backend.
+     Method that opens a view to send a new message with text field.
      
      */
+    
+    func newMessageButtonWasClicked()
     
 //    func postNewMessage(person: Person,
 //                        date: String,
