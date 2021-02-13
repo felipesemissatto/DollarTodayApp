@@ -27,10 +27,6 @@ protocol MessageViewControllerProtocol {
     
     func newMessageButtonWasClicked()
     
-//    func postNewMessage(person: Person,
-//                        date: String,
-//                        textMessage: String)
-    
     // Dependecies
     var myView: MessageViewProtocol? {get set}
 }
