@@ -43,7 +43,7 @@
                                 <rect key="frame" x="8" y="56" width="382" height="70"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIx-7d-Qqj">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="21"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="70"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -53,8 +53,9 @@
                                 <constraints>
                                     <constraint firstItem="WIx-7d-Qqj" firstAttribute="top" secondItem="11D-3x-RQr" secondAttribute="top" id="60E-yS-wHV"/>
                                     <constraint firstItem="WIx-7d-Qqj" firstAttribute="leading" secondItem="11D-3x-RQr" secondAttribute="leading" id="d5V-HF-zC3"/>
-                                    <constraint firstAttribute="height" secondItem="WIx-7d-Qqj" secondAttribute="height" multiplier="3.33333" id="nWT-C3-tuO"/>
+                                    <constraint firstAttribute="height" secondItem="WIx-7d-Qqj" secondAttribute="height" id="nWT-C3-tuO"/>
                                     <constraint firstAttribute="trailing" secondItem="WIx-7d-Qqj" secondAttribute="trailing" id="nmu-W5-HBr"/>
+                                    <constraint firstAttribute="bottom" secondItem="WIx-7d-Qqj" secondAttribute="bottom" id="pBY-wb-5SE"/>
                                 </constraints>
                             </view>
                         </subviews>
