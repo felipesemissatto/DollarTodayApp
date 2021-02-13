@@ -98,4 +98,24 @@ class RequestSenderImplementationTests: XCTestCase {
         wait(for: [responseExpectation], timeout: 5.0)
     }
     
+    func testGetMessages_WhenBackendIsUp_shouldReturnMessages() throws {
+        // Given
+        let responseExpectation = XCTestExpectation(description: "Messages retrieved from backend and properly parsed.")
+        
+        let completionHandler: ([Message]?, String?) -> Void = { (messages, error) in
+            guard let messagesFromParser = messages else {
+                XCTFail("Error ocurred with message \(error!)")
+                return
+            }
+            XCTAssert(messagesFromParser.count > 0)
+            
+            responseExpectation.fulfill()
+        }
+        
+        // When
+        testSubject.getAllMessages(completion: completionHandler)
+        
+        // Then
+        wait(for: [responseExpectation], timeout: 10.0)
+    }
 }
