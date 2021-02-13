@@ -11,8 +11,10 @@ import SwiftyJSON
 
 class RequestSenderImplementation {
     
+    // MARK: - Parsers
     private var parserPeople = ConverterPersonJSON()
     
+    // MARK: - People Methods
     func getURLFromAnImage(image: UIImage,
                            completion: @escaping(String?, String?) -> Void){
         var newProfilePicURLString: String?
@@ -103,6 +105,34 @@ class RequestSenderImplementation {
                     }
                     let people = self.parserPeople.parserJSONPeople(json: jsonResponseArray)
                     completion(people, nil)
+                case .failure(let error):
+                    completion(nil, error.localizedDescription)
+                }
+            })
+    }
+    
+    // MARK: - Message Methods
+    func getAllMessages(completion: @escaping([Message]?, String?) -> Void) {
+        guard let url = URL(string: ROOT_BACKEND_URL + "/message") else {
+            completion(nil, "Error: URL not decoded")
+            return
+        }
+        
+        Alamofire
+            .request(url,
+                     method: .get,
+                     encoding: JSONEncoding.default)
+            .responseJSON(completionHandler: { response in
+                switch response.result {
+                case .success:
+                    guard let responseValue = response.value else { return }
+                    let jsonResponse = JSON(responseValue)
+                    guard let jsonResponseArray = jsonResponse.array else {
+                        completion(nil, "Error: it was not possible to process response")
+                        return
+                    }
+//                    let messages = self.parserPeople.parserJSONPeople(json: jsonResponseArray)
+//                    completion(messages, nil)
                 case .failure(let error):
                     completion(nil, error.localizedDescription)
                 }

@@ -41,6 +41,8 @@
 		2FB4632925D7043300932D6B /* MessageViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4632825D7043200932D6B /* MessageViewControllerProtocol.swift */; };
 		2FB4632E25D7548A00932D6B /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4632D25D7548A00932D6B /* MessageTableViewCell.swift */; };
 		2FB4633325D7549900932D6B /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FB4633225D7549900932D6B /* MessageTableViewCell.xib */; };
+		2FB4633825D809A500932D6B /* ConverterMessageJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4633725D809A500932D6B /* ConverterMessageJSON.swift */; };
+		2FB4633D25D809D300932D6B /* ConverterMessageJSONProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4633C25D809D300932D6B /* ConverterMessageJSONProtocol.swift */; };
 		2FBF3ED825D433B5008C910F /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FBF3ED725D433B5008C910F /* LoadingView.xib */; };
 		2FBF3EDD25D433DE008C910F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF3EDC25D433DE008C910F /* LoadingView.swift */; };
 		2FEBDE5F25D5A5A800C9869D /* PeopleViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEBDE5E25D5A5A800C9869D /* PeopleViewControllerImplementation.swift */; };
@@ -113,6 +115,8 @@
 		2FB4632825D7043200932D6B /* MessageViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewControllerProtocol.swift; sourceTree = "<group>"; };
 		2FB4632D25D7548A00932D6B /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		2FB4633225D7549900932D6B /* MessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
+		2FB4633725D809A500932D6B /* ConverterMessageJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterMessageJSON.swift; sourceTree = "<group>"; };
+		2FB4633C25D809D300932D6B /* ConverterMessageJSONProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterMessageJSONProtocol.swift; sourceTree = "<group>"; };
 		2FBF3ED725D433B5008C910F /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		2FBF3EDC25D433DE008C910F /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		2FEBDE5E25D5A5A800C9869D /* PeopleViewControllerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewControllerImplementation.swift; sourceTree = "<group>"; };
@@ -243,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				2FB462F025D6BE1700932D6B /* ConverterPersonJSON.swift */,
+				2FB4633725D809A500932D6B /* ConverterMessageJSON.swift */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 				2FB462F525D6BE6500932D6B /* ConverterPersonJSONProtocol.swift */,
 				2FB4632325D7041F00932D6B /* MessageViewProtocol.swift */,
 				2FB4632825D7043200932D6B /* MessageViewControllerProtocol.swift */,
+				2FB4633C25D809D300932D6B /* ConverterMessageJSONProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -630,6 +636,7 @@
 				2FB4632425D7041F00932D6B /* MessageViewProtocol.swift in Sources */,
 				2F7FC48925D16E4E009D925D /* LoginViewProtocol.swift in Sources */,
 				2F7FC48425D16C85009D925D /* LoginViewControllerProtocol.swift in Sources */,
+				2FB4633D25D809D300932D6B /* ConverterMessageJSONProtocol.swift in Sources */,
 				2FEBDE7A25D5A67C00C9869D /* PeopleViewControllerProtocol.swift in Sources */,
 				2FB462F125D6BE1700932D6B /* ConverterPersonJSON.swift in Sources */,
 				2F7FC43425D05355009D925D /* AppDelegate.swift in Sources */,
@@ -644,6 +651,7 @@
 				2F7FC4A225D176D3009D925D /* RequestSenderImplementation.swift in Sources */,
 				2F7FC46825D053F1009D925D /* Constants.swift in Sources */,
 				2F7FC4C225D1902F009D925D /* PhotoTableViewCell.swift in Sources */,
+				2FB4633825D809A500932D6B /* ConverterMessageJSON.swift in Sources */,
 				2FEBDE5F25D5A5A800C9869D /* PeopleViewControllerImplementation.swift in Sources */,
 				2FB462F625D6BE6500932D6B /* ConverterPersonJSONProtocol.swift in Sources */,
 				2FEBDE6525D5A5DF00C9869D /* PeopleViewImplementation.swift in Sources */,
