@@ -67,12 +67,12 @@ class MessageViewImplementation: UIView, MessageViewProtocol {
         tableView.register(nib, forCellReuseIdentifier: nibName)
     }
     
-    // MARK: -Objc Functions
-    @objc private func addUser() {
-        // Some code, e.g.
-//        let storyboard = UIStoryboard(name: "CreateNewUser", bundle: nil)
-//        let vc = storyboard.instantiateViewController(withIdentifier: "createUser") as! CreateUserVC
-//        self.navigationController?.pushViewController(vc, animated: true)
+    // MARK: -IBActions Functions
+    @IBAction func openTextFieldMessage(_ sender: Any) {
+//        let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let tabViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "TabBarViewStoryboard") as! UITabBarController
+//        tabViewController.modalPresentationStyle = .fullScreen
+//        self.present(tabViewController, animated:true, completion:nil)
     }
 }
 

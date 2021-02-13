@@ -18,6 +18,17 @@ protocol MessageViewControllerProtocol {
     
     func getAllMessages()
     
+    /**
+     
+     
+     Method that sends a message to backend.
+     
+     */
+    
+//    func postNewMessage(person: Person,
+//                        date: String,
+//                        textMessage: String)
+    
     // Dependecies
     var myView: MessageViewProtocol? {get set}
 }

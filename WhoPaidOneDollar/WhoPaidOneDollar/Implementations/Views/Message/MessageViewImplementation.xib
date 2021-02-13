@@ -21,7 +21,13 @@
                 <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="veG-G3-B7w">
                     <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                     <items>
-                        <navigationItem title="Community" id="xhG-Am-ort"/>
+                        <navigationItem title="Community" id="xhG-Am-ort">
+                            <barButtonItem key="rightBarButtonItem" systemItem="add" id="oyS-D1-a35">
+                                <connections>
+                                    <action selector="openTextFieldMessage:" destination="-1" id="VU0-Wa-HsH"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
                     </items>
                 </navigationBar>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="21y-Hp-wgB">
