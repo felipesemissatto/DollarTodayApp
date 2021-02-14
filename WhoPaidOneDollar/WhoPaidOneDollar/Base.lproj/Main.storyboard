@@ -43,10 +43,10 @@
             </objects>
             <point key="canvasLocation" x="2028" y="80"/>
         </scene>
-        <!--View Controller-->
+        <!--New Message View Controller Implementation-->
         <scene sceneID="49u-DF-16c">
             <objects>
-                <viewController storyboardIdentifier="SendMessageViewStoryboard" id="b85-4U-Ikr" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SendMessageViewStoryboard" id="b85-4U-Ikr" customClass="NewMessageViewControllerImplementation" customModule="WhoPaidOneDollar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UjY-RQ-JAw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
