@@ -16,7 +16,7 @@ protocol NewMessageViewProtocol {
      
      */
     
-    init(viewController: MessageViewControllerProtocol)
+    init(viewController: NewMessageViewControllerProtocol)
     
     // Dependencies
     var viewController: NewMessageViewControllerProtocol {get set}

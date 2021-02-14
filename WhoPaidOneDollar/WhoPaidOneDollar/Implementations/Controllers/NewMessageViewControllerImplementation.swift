@@ -17,6 +17,9 @@ class NewMessageViewControllerImplementation: UIViewController, NewMessageViewCo
     // MARK: - Lifecycle methods
     override func loadView() {
         super.loadView()
+        let defaultView = NewMessageViewImplementation(viewController: self)
+        self.myView = defaultView
+        self.view = defaultView
     }
     
     override func viewDidLoad() {

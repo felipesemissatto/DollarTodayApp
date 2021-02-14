@@ -46,7 +46,9 @@
 		2FB4634225D845CA00932D6B /* ConverterMessagesJSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4634125D845CA00932D6B /* ConverterMessagesJSONTests.swift */; };
 		2FB4634725D89E0E00932D6B /* NewMessageViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4634625D89E0E00932D6B /* NewMessageViewProtocol.swift */; };
 		2FB4634C25D89E2800932D6B /* NewMessageViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4634B25D89E2800932D6B /* NewMessageViewControllerProtocol.swift */; };
-		2FB4635125D89F1700932D6B /* NewMessageViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4635025D89F1700932D6B /* NewMessageViewControllerImplementation.swift */; };
+		2FB4635A25D8A09000932D6B /* NewMessageViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4635925D8A09000932D6B /* NewMessageViewImplementation.swift */; };
+		2FB4636225D8A09E00932D6B /* NewMessageViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FB4636125D8A09E00932D6B /* NewMessageViewImplementation.xib */; };
+		2FB4636A25D8A55100932D6B /* NewMessageViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4636925D8A55100932D6B /* NewMessageViewControllerImplementation.swift */; };
 		2FBF3ED825D433B5008C910F /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FBF3ED725D433B5008C910F /* LoadingView.xib */; };
 		2FBF3EDD25D433DE008C910F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF3EDC25D433DE008C910F /* LoadingView.swift */; };
 		2FEBDE5F25D5A5A800C9869D /* PeopleViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEBDE5E25D5A5A800C9869D /* PeopleViewControllerImplementation.swift */; };
@@ -124,7 +126,9 @@
 		2FB4634125D845CA00932D6B /* ConverterMessagesJSONTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterMessagesJSONTests.swift; sourceTree = "<group>"; };
 		2FB4634625D89E0E00932D6B /* NewMessageViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageViewProtocol.swift; sourceTree = "<group>"; };
 		2FB4634B25D89E2800932D6B /* NewMessageViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageViewControllerProtocol.swift; sourceTree = "<group>"; };
-		2FB4635025D89F1700932D6B /* NewMessageViewControllerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageViewControllerImplementation.swift; sourceTree = "<group>"; };
+		2FB4635925D8A09000932D6B /* NewMessageViewImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageViewImplementation.swift; sourceTree = "<group>"; };
+		2FB4636125D8A09E00932D6B /* NewMessageViewImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewMessageViewImplementation.xib; sourceTree = "<group>"; };
+		2FB4636925D8A55100932D6B /* NewMessageViewControllerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageViewControllerImplementation.swift; sourceTree = "<group>"; };
 		2FBF3ED725D433B5008C910F /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		2FBF3EDC25D433DE008C910F /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		2FEBDE5E25D5A5A800C9869D /* PeopleViewControllerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewControllerImplementation.swift; sourceTree = "<group>"; };
@@ -264,6 +268,7 @@
 		2F7FC47125D054F1009D925D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2FB4635825D8A06600932D6B /* NewMessage */,
 				2FB4631025D702C100932D6B /* Message */,
 				2FEBDE6325D5A5B600C9869D /* People */,
 				2FBF3ED625D43383008C910F /* Misc */,
@@ -278,7 +283,7 @@
 				2F7FC48D25D17016009D925D /* LoginViewControllerImplementation.swift */,
 				2FEBDE5E25D5A5A800C9869D /* PeopleViewControllerImplementation.swift */,
 				2FB4631E25D703D400932D6B /* MessageViewControllerImplementation.swift */,
-				2FB4635025D89F1700932D6B /* NewMessageViewControllerImplementation.swift */,
+				2FB4636925D8A55100932D6B /* NewMessageViewControllerImplementation.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -350,6 +355,15 @@
 				2FB4633225D7549900932D6B /* MessageTableViewCell.xib */,
 			);
 			path = Message;
+			sourceTree = "<group>";
+		};
+		2FB4635825D8A06600932D6B /* NewMessage */ = {
+			isa = PBXGroup;
+			children = (
+				2FB4635925D8A09000932D6B /* NewMessageViewImplementation.swift */,
+				2FB4636125D8A09E00932D6B /* NewMessageViewImplementation.xib */,
+			);
+			path = NewMessage;
 			sourceTree = "<group>";
 		};
 		2FBF3ED625D43383008C910F /* Misc */ = {
@@ -513,6 +527,7 @@
 				2F7FC4CC25D1A19C009D925D /* TextFieldsTableViewCell.xib in Resources */,
 				2F7FC43D25D05359009D925D /* Assets.xcassets in Resources */,
 				2F7FC4BD25D19002009D925D /* PhotoTableViewCell.xib in Resources */,
+				2FB4636225D8A09E00932D6B /* NewMessageViewImplementation.xib in Resources */,
 				2F7FC4B325D186CD009D925D /* LoginViewImplementation.xib in Resources */,
 				2F7FC43B25D05355009D925D /* Main.storyboard in Resources */,
 			);
@@ -645,11 +660,11 @@
 				2FB4632925D7043300932D6B /* MessageViewControllerProtocol.swift in Sources */,
 				2FB4631225D7039100932D6B /* MessageViewImplementation.swift in Sources */,
 				2F7FC48E25D17016009D925D /* LoginViewControllerImplementation.swift in Sources */,
+				2FB4635A25D8A09000932D6B /* NewMessageViewImplementation.swift in Sources */,
 				2FB4632425D7041F00932D6B /* MessageViewProtocol.swift in Sources */,
 				2F7FC48925D16E4E009D925D /* LoginViewProtocol.swift in Sources */,
 				2F7FC48425D16C85009D925D /* LoginViewControllerProtocol.swift in Sources */,
 				2FB4633D25D809D300932D6B /* ConverterMessageJSONProtocol.swift in Sources */,
-				2FB4635125D89F1700932D6B /* NewMessageViewControllerImplementation.swift in Sources */,
 				2FEBDE7A25D5A67C00C9869D /* PeopleViewControllerProtocol.swift in Sources */,
 				2FB462F125D6BE1700932D6B /* ConverterPersonJSON.swift in Sources */,
 				2F7FC43425D05355009D925D /* AppDelegate.swift in Sources */,
@@ -672,6 +687,7 @@
 				2FEBDE6525D5A5DF00C9869D /* PeopleViewImplementation.swift in Sources */,
 				2F7FC4C725D1A16D009D925D /* TextFieldsTableViewCell.swift in Sources */,
 				2FEBDE7F25D5AD1500C9869D /* PersonTableViewCell.swift in Sources */,
+				2FB4636A25D8A55100932D6B /* NewMessageViewControllerImplementation.swift in Sources */,
 				2FB4631F25D703D400932D6B /* MessageViewControllerImplementation.swift in Sources */,
 				2F7FC4DE25D2C47D009D925D /* Extensions.swift in Sources */,
 			);

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewMessageViewImplementation" customModule="WhoPaidOneDollar" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zb7-bB-8Wf">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <items>
+                        <navigationItem title="Send a message" id="Jua-d3-hxO">
+                            <barButtonItem key="rightBarButtonItem" title="Send" id="Btt-nZ-cgl">
+                                <connections>
+                                    <action selector="sendNewMessage:" destination="-1" id="Ko5-Dh-pew"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="zb7-bB-8Wf" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="F3E-VP-NNE"/>
+                <constraint firstItem="zb7-bB-8Wf" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Jmw-Z8-q7L"/>
+                <constraint firstItem="zb7-bB-8Wf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ayY-ed-TdV"/>
+            </constraints>
+            <point key="canvasLocation" x="-146" y="82"/>
+        </view>
+    </objects>
+</document>
