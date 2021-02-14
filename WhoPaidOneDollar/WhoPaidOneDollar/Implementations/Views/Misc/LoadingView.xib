@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="activityIndicator" destination="3Jx-Ip-1RA" id="dSN-U7-A3l"/>
                 <outlet property="labelLoadingMessage" destination="1BN-DT-fsO" id="SO0-x6-7qb"/>
+                <outlet property="labelSecondMessage" destination="FyX-ls-gQz" id="ruE-5R-gL1"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -43,11 +44,19 @@
                         <constraint firstItem="1BN-DT-fsO" firstAttribute="centerY" secondItem="KNC-Nb-yPU" secondAttribute="centerY" id="lwx-R4-f9x"/>
                     </constraints>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="it can take a few seconds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FyX-ls-gQz">
+                    <rect key="frame" x="156.66666666666666" y="394" width="100.99999999999997" height="10"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.25" colorSpace="custom" customColorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="FyX-ls-gQz" firstAttribute="centerX" secondItem="KNC-Nb-yPU" secondAttribute="centerX" id="FJr-vc-9rc"/>
                 <constraint firstItem="KNC-Nb-yPU" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Q9f-Nx-Dhn"/>
+                <constraint firstItem="FyX-ls-gQz" firstAttribute="bottom" secondItem="KNC-Nb-yPU" secondAttribute="bottom" constant="16" id="RSt-lm-aa2"/>
                 <constraint firstItem="KNC-Nb-yPU" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="sm7-0P-v49"/>
                 <constraint firstItem="KNC-Nb-yPU" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" multiplier="0.8" id="vWF-Ma-bxV"/>
             </constraints>
