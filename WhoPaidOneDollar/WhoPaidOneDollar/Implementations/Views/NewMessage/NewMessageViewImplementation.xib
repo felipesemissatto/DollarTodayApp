@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewMessageViewImplementation" customModule="WhoPaidOneDollar" customModuleProvider="target">
             <connections>
+                <outlet property="buttonSend" destination="Btt-nZ-cgl" id="oe6-2M-HBA"/>
                 <outlet property="textView" destination="xC0-0p-BWy" id="Ukw-ny-A2J"/>
             </connections>
         </placeholder>

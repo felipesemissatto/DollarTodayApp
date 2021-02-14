@@ -12,6 +12,7 @@ class NewMessageViewImplementation: UIView, NewMessageViewProtocol {
     
     // MARK: -IBOutlet
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var buttonSend: UIBarButtonItem!
     
     // MARK: - Dependencies
     var viewController: NewMessageViewControllerProtocol
@@ -21,6 +22,8 @@ class NewMessageViewImplementation: UIView, NewMessageViewProtocol {
         self.viewController = viewController
         super.init(frame: CGRect.zero)
         initFromNib()
+        
+        buttonSend.isEnabled = false
         
         textView.delegate = self
         textView.text = "Write something..."
@@ -42,9 +45,10 @@ class NewMessageViewImplementation: UIView, NewMessageViewProtocol {
     
     // MARK: -IBAction Methods
     @IBAction func sendNewMessage(_ sender: Any) {
-        print("nova message")
+        print(textView.text)
     }
 }
+
 // MARK: - Extension Text View
 extension NewMessageViewImplementation: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
@@ -58,6 +62,15 @@ extension NewMessageViewImplementation: UITextViewDelegate {
         if textView.text.isEmpty {
             textView.text = "Write something..."
             textView.textColor = UIColor.lightGray
+            buttonSend.isEnabled = false
+        }
+    }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        if !textView.text.isEmpty {
+            buttonSend.isEnabled = true
+        } else {
+            buttonSend.isEnabled = false
         }
     }
 }
