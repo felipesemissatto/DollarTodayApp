@@ -70,6 +70,10 @@ class NewMessageViewImplementation: UIView, NewMessageViewProtocol {
             
             viewController.postNewMessage(person: person, date: localDate, textMessage: textMessage)
         }
+        
+        textView.text = "Write something..."
+        textView.textColor = UIColor.lightGray
+        buttonSend.isEnabled = false
     }
 }
 
