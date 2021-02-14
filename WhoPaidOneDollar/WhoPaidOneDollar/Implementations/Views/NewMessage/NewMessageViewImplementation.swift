@@ -11,6 +11,7 @@ import AuthenticationServices
 class NewMessageViewImplementation: UIView, NewMessageViewProtocol {
     
     // MARK: -IBOutlet
+    @IBOutlet weak var textView: UITextView!
     
     // MARK: - Dependencies
     var viewController: NewMessageViewControllerProtocol
@@ -20,6 +21,10 @@ class NewMessageViewImplementation: UIView, NewMessageViewProtocol {
         self.viewController = viewController
         super.init(frame: CGRect.zero)
         initFromNib()
+        
+        textView.delegate = self
+        textView.text = "Write something..."
+        textView.textColor = UIColor.lightGray
     }
     
     required init?(coder: NSCoder) {
@@ -34,8 +39,25 @@ class NewMessageViewImplementation: UIView, NewMessageViewProtocol {
             addSubview(nibView)
         }
     }
+    
+    // MARK: -IBAction Methods
     @IBAction func sendNewMessage(_ sender: Any) {
         print("nova message")
     }
+}
+// MARK: - Extension Text View
+extension NewMessageViewImplementation: UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
     
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "Write something..."
+            textView.textColor = UIColor.lightGray
+        }
+    }
 }
