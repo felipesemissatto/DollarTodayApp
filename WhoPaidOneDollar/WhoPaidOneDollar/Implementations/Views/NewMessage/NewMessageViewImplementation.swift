@@ -45,7 +45,31 @@ class NewMessageViewImplementation: UIView, NewMessageViewProtocol {
     
     // MARK: -IBAction Methods
     @IBAction func sendNewMessage(_ sender: Any) {
-        print(textView.text)
+        // Creating the person who sends the new message
+        if let id = UserDefaults.standard.string(forKey: "id"),
+           let name = UserDefaults.standard.string(forKey: "name"),
+           let photoUrl = UserDefaults.standard.string(forKey: "photoUrlString"),
+           let twitter = UserDefaults.standard.string(forKey: "twitter"),
+           let instagram = UserDefaults.standard.string(forKey: "instagram"),
+           let date = UserDefaults.standard.string(forKey: "date") {
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            let dateCreated = dateFormatter.date(from: date)!
+            
+            let person = Person(personId: CLong(truncating: Int(id)! as NSNumber),
+                                name: name,
+                                photoUrl: URL(string: photoUrl),
+                                twitter: twitter,
+                                instagram: instagram,
+                                date: dateCreated as NSDate)
+            
+            let localDate = Date().get(.year) + "-" + Date().get(.month) + "-" + Date().get(.day)
+            
+            let textMessage = textView.text ?? "I paid one dollar!!"
+            
+            viewController.postNewMessage(person: person, date: localDate, textMessage: textMessage)
+        }
     }
 }
 
