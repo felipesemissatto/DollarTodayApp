@@ -139,4 +139,37 @@ class RequestSenderImplementation {
                 }
             })
     }
+    
+    func postNewMessage(person: Person, date: String, textMessage: String, completion: @escaping(String?) -> Void) {
+        guard let url = URL(string: ROOT_BACKEND_URL + "/message") else {
+            completion("Error: URL not decoded")
+            return
+        }
+        
+        let parameters: Parameters = [
+            "idPerson": [
+                "personId": person.personId,
+                "name": person.name,
+                "photoUrl": person.photoUrl?.absoluteString ?? IMAGE_DEFAULT_URL,
+                "twitter": person.twitter ?? "",
+                "instagram": person.instagram ?? "",
+                "date": person.date.description[0 ..< 11]
+            ],
+            "textMessage": textMessage,
+            "date": date]
+        
+        Alamofire
+            .request(url,
+                     method: .post,
+                     parameters: parameters,
+                     encoding: JSONEncoding.default)
+            .responseString(completionHandler: { response in
+                switch response.result {
+                case .success:
+                    completion(nil)
+                case .failure(let error):
+                    completion(error.localizedDescription)
+                }
+            })
+    }
 }
