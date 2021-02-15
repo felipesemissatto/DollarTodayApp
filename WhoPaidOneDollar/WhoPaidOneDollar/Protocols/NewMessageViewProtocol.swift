@@ -12,7 +12,7 @@ protocol NewMessageViewProtocol {
      
      Method that starts the New Message view. It receives the view controller.
      
-     - parameter viewController: a controller with PeopleViewControllerProtocol type.
+     - parameter viewController: a controller with ProfileViewControllerProtocol type.
      
      */
     

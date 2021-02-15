@@ -51,6 +51,8 @@
 		2FB4636A25D8A55100932D6B /* NewMessageViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4636925D8A55100932D6B /* NewMessageViewControllerImplementation.swift */; };
 		2FBF3ED825D433B5008C910F /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FBF3ED725D433B5008C910F /* LoadingView.xib */; };
 		2FBF3EDD25D433DE008C910F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF3EDC25D433DE008C910F /* LoadingView.swift */; };
+		2FE4FCF725D9F8F000B0FAC5 /* ProfileViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE4FCF625D9F8F000B0FAC5 /* ProfileViewProtocol.swift */; };
+		2FE4FCFC25D9F93800B0FAC5 /* ProfileViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE4FCFB25D9F93800B0FAC5 /* ProfileViewControllerProtocol.swift */; };
 		2FEBDE5F25D5A5A800C9869D /* PeopleViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEBDE5E25D5A5A800C9869D /* PeopleViewControllerImplementation.swift */; };
 		2FEBDE6525D5A5DF00C9869D /* PeopleViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEBDE6425D5A5DF00C9869D /* PeopleViewImplementation.swift */; };
 		2FEBDE6D25D5A60700C9869D /* PeopleViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FEBDE6C25D5A60700C9869D /* PeopleViewImplementation.xib */; };
@@ -131,6 +133,8 @@
 		2FB4636925D8A55100932D6B /* NewMessageViewControllerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageViewControllerImplementation.swift; sourceTree = "<group>"; };
 		2FBF3ED725D433B5008C910F /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		2FBF3EDC25D433DE008C910F /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		2FE4FCF625D9F8F000B0FAC5 /* ProfileViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewProtocol.swift; sourceTree = "<group>"; };
+		2FE4FCFB25D9F93800B0FAC5 /* ProfileViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerProtocol.swift; sourceTree = "<group>"; };
 		2FEBDE5E25D5A5A800C9869D /* PeopleViewControllerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewControllerImplementation.swift; sourceTree = "<group>"; };
 		2FEBDE6425D5A5DF00C9869D /* PeopleViewImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewImplementation.swift; sourceTree = "<group>"; };
 		2FEBDE6C25D5A60700C9869D /* PeopleViewImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleViewImplementation.xib; sourceTree = "<group>"; };
@@ -301,6 +305,8 @@
 				2FB4633C25D809D300932D6B /* ConverterMessageJSONProtocol.swift */,
 				2FB4634625D89E0E00932D6B /* NewMessageViewProtocol.swift */,
 				2FB4634B25D89E2800932D6B /* NewMessageViewControllerProtocol.swift */,
+				2FE4FCF625D9F8F000B0FAC5 /* ProfileViewProtocol.swift */,
+				2FE4FCFB25D9F93800B0FAC5 /* ProfileViewControllerProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -658,6 +664,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FB4632925D7043300932D6B /* MessageViewControllerProtocol.swift in Sources */,
+				2FE4FCFC25D9F93800B0FAC5 /* ProfileViewControllerProtocol.swift in Sources */,
 				2FB4631225D7039100932D6B /* MessageViewImplementation.swift in Sources */,
 				2F7FC48E25D17016009D925D /* LoginViewControllerImplementation.swift in Sources */,
 				2FB4635A25D8A09000932D6B /* NewMessageViewImplementation.swift in Sources */,
@@ -677,6 +684,7 @@
 				2FEBDE7225D5A66700C9869D /* PeopleViewProtocol.swift in Sources */,
 				2F7FC47F25D059B4009D925D /* Message.swift in Sources */,
 				2FBF3EDD25D433DE008C910F /* LoadingView.swift in Sources */,
+				2FE4FCF725D9F8F000B0FAC5 /* ProfileViewProtocol.swift in Sources */,
 				2F7FC47A25D05778009D925D /* Person.swift in Sources */,
 				2F7FC4A225D176D3009D925D /* RequestSenderImplementation.swift in Sources */,
 				2F7FC46825D053F1009D925D /* Constants.swift in Sources */,
