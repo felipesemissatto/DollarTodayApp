@@ -63,7 +63,7 @@ class ConverterPersonJSON: ConverterPersonJSONProtocol {
         if let personDateCreated = json["date"].string {
             date = personDateCreated
         } else {
-            throw ErrorParsePerson.noInstagram
+            throw ErrorParsePerson.noDate
         }
         
         let dateFormatter = DateFormatter()

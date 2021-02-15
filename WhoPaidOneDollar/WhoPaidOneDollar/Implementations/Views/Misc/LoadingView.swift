@@ -12,6 +12,7 @@ class LoadingView: UIView {
     // MARK: - IBOutlets
     @IBOutlet weak var labelLoadingMessage: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var labelSecondMessage: UILabel!
     
     // MARK: - Lifecycle
     required init?(message: String, error: Bool, frame: CGRect) {
@@ -24,6 +25,8 @@ class LoadingView: UIView {
             
             labelLoadingMessage.text = message
             activityIndicator.startAnimating()
+            activityIndicator.isHidden = error
+            labelSecondMessage.isHidden = error
         }
     }
     

@@ -1,17 +1,17 @@
 //
-//  PeopleViewControllerImplementation.swift
+//  NewMessageViewControllerImplementation.swift
 //  WhoPaidOneDollar
 //
-//  Created by Felipe Semissatto on 11/02/21.
+//  Created by Felipe Semissatto on 13/02/21.
 //
 
 import Foundation
 import UIKit
 
-class PeopleViewControllerImplementation: UIViewController, PeopleViewControllerProtocol {
+class NewMessageViewControllerImplementation: UIViewController, NewMessageViewControllerProtocol {
     
     // MARK: - Dependencies
-    var myView: PeopleViewProtocol?
+    var myView: NewMessageViewProtocol?
     let requestSender = RequestSenderImplementation()
     
     // MARK: - Private Variables
@@ -21,6 +21,9 @@ class PeopleViewControllerImplementation: UIViewController, PeopleViewController
     // MARK: - Lifecycle methods
     override func loadView() {
         super.loadView()
+        let defaultView = NewMessageViewImplementation(viewController: self)
+        self.myView = defaultView
+        self.view = defaultView
         
         self.loadingView = LoadingView(message: "Loading the people...",
                                        error: false,
@@ -38,43 +41,37 @@ class PeopleViewControllerImplementation: UIViewController, PeopleViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "People"
+        self.hideKeyboardWhenTappedAround()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        getAllPeople()
     }
     
-    // MARK: - PeopleViewControllerProtocol methods
-    func getAllPeople() {
-        self.view = LoadingView(message: "Loading people...",
+    // MARK: - NewMessageViewControllerProtocol methods
+    func postNewMessage(person: Person, date: String, textMessage: String) {
+        self.view = LoadingView(message: "Sending message...",
                                 error: false,
                                 frame: CGRect.zero)!
         
-        requestSender.getAllPeople() { people, error in
-            
+        requestSender.postNewMessage(person: person, date: date, textMessage: textMessage) { error in
             if error != nil {
                 self.view = self.mainView
                 
-                let alert = UIAlertController(title: "Error Loading People",
+                let alert = UIAlertController(title: "Error Sending Message",
                                               message: "Connection fail. Try it again later.",
                                               preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default))
                 self.present(alert, animated: true, completion: nil)
             }
             
-            guard let allPeople = people else {
-                self.view = LoadingView(message: "Something went wrong",
-                                       error: true,
-                                       frame: CGRect.zero)!
-                return
-            }
-            
             self.view = self.mainView
-            let defaultView = PeopleViewImplementation(data: allPeople, viewController: self)
-            self.myView = defaultView
-            self.view = defaultView
+            let alert = UIAlertController(title: "Success",
+                                          message: "Message sent.",
+                                          preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alert, animated: true, completion: nil)
         }
     }
+    
 }
