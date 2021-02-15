@@ -38,7 +38,6 @@ class MessageViewControllerImplementation: UIViewController, MessageViewControll
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "People"
     }
     
     override func viewWillAppear(_ animated: Bool) {

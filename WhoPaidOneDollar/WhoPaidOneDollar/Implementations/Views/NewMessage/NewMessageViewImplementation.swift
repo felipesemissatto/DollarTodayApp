@@ -75,6 +75,7 @@ class NewMessageViewImplementation: UIView, NewMessageViewProtocol {
         textView.textColor = UIColor.lightGray
         buttonSend.isEnabled = false
     }
+    
 }
 
 // MARK: - Extension Text View

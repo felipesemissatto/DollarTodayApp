@@ -118,4 +118,38 @@ class RequestSenderImplementationTests: XCTestCase {
         // Then
         wait(for: [responseExpectation], timeout: 10.0)
     }
+    
+    func testPostMessage_WhenBackendIsUP_shouldReturnNil() throws {
+        // Given
+        let responseExpectation = XCTestExpectation(description: "Message was properly posted.")
+        
+        let completionHandler: (String?) -> Void = {error in
+            if let errorMessage = error  {
+                XCTFail("Error ocurred with message \(errorMessage)")
+                return
+            }
+                        
+            responseExpectation.fulfill()
+        }
+        
+        let mockPerson = Person(personId: 1,
+                                name: "John",
+                                photoUrl: URL(string: IMAGE_DEFAULT_URL),
+                                twitter: "@twitter",
+                                instagram: "@instagram",
+                                date: NSDate.now as NSDate)
+        let mockMessage = Message(messageId: 1,
+                                  person: mockPerson,
+                                  textMessage: "this message is a mock message",
+                                  date: NSDate.now as NSDate)
+        // When
+        let localDate = Date().get(.year) + "-" + Date().get(.month) + "-" + Date().get(.day)
+        testSubject.postNewMessage(person: mockMessage.person,
+                                   date: localDate,
+                                   textMessage: mockMessage.textMessage,
+                                   completion: completionHandler)
+        
+        // Then
+        wait(for: [responseExpectation], timeout: 5.0)
+    }
 }
