@@ -119,7 +119,14 @@ extension ProfileViewImplementation: UITableViewDataSource, UITableViewDelegate 
             }
             
             if let photoUrl = UserDefaults.standard.string(forKey: "photoUrlString") {
-                cell.photoButton.imageView?.setCustomImage(photoUrl)
+                DispatchQueue.global().async {
+                    if let data = try? Data(contentsOf: URL(string: photoUrl)!)
+                    {
+                        DispatchQueue.main.async {
+                            cell.photoButton.setImage(UIImage( data:data), for: .normal)
+                        }
+                    }
+                }
             }
             
             cell.photoButton.addTarget(self,
@@ -140,13 +147,11 @@ extension ProfileViewImplementation: UITableViewDataSource, UITableViewDelegate 
                 fatalError("The dequeued cell is not an instance of TextFieldsTableViewCell.")
             }
             
-            if  let name = UserDefaults.standard.string(forKey: "name"),
-               let twitter = UserDefaults.standard.string(forKey: "twitter"),
-               let instagram = UserDefaults.standard.string(forKey: "instagram") {
-                cell.textFieldName.text = name
-                cell.textFieldTwitter.text = twitter
-                cell.textFieldInstagram.text = instagram
-            }
+            
+            cell.textFieldName.text = UserDefaults.standard.string(forKey: "name")
+            cell.textFieldTwitter.text = UserDefaults.standard.string(forKey: "twitter")
+            cell.textFieldInstagram.text = UserDefaults.standard.string(forKey: "instagram")
+            
             cell.textFieldName.addTarget(self,
                                          action: #selector(edditingTextFieldName),
                                          for: .allEditingEvents)
@@ -165,7 +170,7 @@ extension ProfileViewImplementation: UITableViewDataSource, UITableViewDelegate 
             guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ButtonSaveTableViewCell  else {
                 fatalError("The dequeued cell is not an instance of ButtonSaveTableViewCell.")
             }
-            
+            cell.saveButton.setTitle("UPDATE", for: .normal)
             cell.saveButton.addTarget(self,
                                       action: #selector(tapSaveButton),
                                       for: .touchUpInside)

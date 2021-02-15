@@ -39,16 +39,64 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "25EBA18E-768D-4BD5-990F-08265DBB314B"
+            uuid = "B9825165-581F-46A1-95DA-B8B221EE939C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WhoPaidOneDollar/Util/Extensions.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "setCustomImage(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B9825165-581F-46A1-95DA-B8B221EE939C - 3a7e7cbdba989d2c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in WhoPaidOneDollar):__C.UIImageView.setCustomImage(Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "WhoPaidOneDollar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/felipesemissatto/Desktop/WhoPaidOneDollarApp/WhoPaidOneDollarApp/WhoPaidOneDollar/WhoPaidOneDollar/Util/Extensions.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "381">
+               </Location>
+               <Location
+                  uuid = "B9825165-581F-46A1-95DA-B8B221EE939C - 8db9d9129d92cec2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in (extension in WhoPaidOneDollar):__C.UIImageView.setCustomImage(Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "WhoPaidOneDollar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/felipesemissatto/Desktop/WhoPaidOneDollarApp/WhoPaidOneDollarApp/WhoPaidOneDollar/WhoPaidOneDollar/Util/Extensions.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "260">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BF887975-844A-42A5-B3BF-A3A0FBD507B3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WhoPaidOneDollar/Implementations/Views/Profile/ProfileViewImplementation.swift"
+            filePath = "WhoPaidOneDollar/Implementations/Views/NewMessage/NewMessageViewImplementation.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "sendNewMessage(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
