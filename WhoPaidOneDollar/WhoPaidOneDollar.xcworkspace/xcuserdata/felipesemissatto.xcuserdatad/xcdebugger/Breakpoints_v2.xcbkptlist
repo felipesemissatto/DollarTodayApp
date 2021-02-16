@@ -87,16 +87,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BF887975-844A-42A5-B3BF-A3A0FBD507B3"
+            uuid = "E1100AD0-8454-4437-8EEE-28505DE31A78"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WhoPaidOneDollar/Implementations/Views/NewMessage/NewMessageViewImplementation.swift"
+            filePath = "WhoPaidOneDollar/Implementations/Service/RequestSenderImplementation.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "sendNewMessage(_:)"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
+            landmarkName = "updatePerson(person:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "97AEE0C8-AEA8-4C0C-9516-00A3FD02A94E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WhoPaidOneDollar/Implementations/Service/RequestSenderImplementation.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
+            landmarkName = "updatePerson(person:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3E52AC92-1193-4665-81FC-E19CD661B944"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WhoPaidOneDollar/Implementations/Service/RequestSenderImplementation.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
+            landmarkName = "updatePerson(person:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

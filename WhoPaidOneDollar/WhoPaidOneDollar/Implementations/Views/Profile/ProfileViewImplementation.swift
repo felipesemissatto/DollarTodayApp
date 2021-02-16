@@ -23,6 +23,10 @@ class ProfileViewImplementation: UIView, ProfileViewProtocol {
     
     private var buttonPhoto = UIButton()
     
+    private var textFieldName: UITextField = UITextField()
+    private var textFieldTwitter: UITextField = UITextField()
+    private var textFieldInstagram: UITextField = UITextField()
+    
     // MARK: - Init methods
     required init(viewController: ProfileViewControllerProtocol) {
         self.viewController = viewController
@@ -162,6 +166,10 @@ extension ProfileViewImplementation: UITableViewDataSource, UITableViewDelegate 
                                               action: #selector(edditingTextFieldInstagram),
                                               for: .allEditingEvents)
             
+            textFieldName = cell.textFieldName
+            textFieldTwitter = cell.textFieldTwitter
+            textFieldInstagram = cell.textFieldInstagram
+            
             finalCell = cell
         case 2:
             cellIdentifier = "ButtonSaveTableViewCell"
@@ -215,13 +223,23 @@ extension ProfileViewImplementation: UITableViewDataSource, UITableViewDelegate 
     @objc func tapSaveButton(sender: UIButton!) {
         let button: UIButton = sender
         if button.tag == 1 {
-
-//            let localDate = Date().get(.year) + "-" + Date().get(.month) + "-" + Date().get(.day)
-//            viewController.insertNewPerson(image: (buttonPhoto.imageView?.image)!,
-//                                           name: textName ?? "",
-//                                           twitter: textTwitter,
-//                                           instagram: textInstagram,
-//                                           date: localDate)
+            if let id = UserDefaults.standard.string(forKey: "id"),
+               let photoUrl = UserDefaults.standard.string(forKey: "photoUrlString"),
+               let date = UserDefaults.standard.string(forKey: "date") {
+                
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "yyyy-MM-dd"
+                let dateCreated = dateFormatter.date(from: date)!
+                
+                let person = Person(personId: CLong(truncating: Int(id)! as NSNumber),
+                                    name: textFieldName.text ?? "One Dollar",
+                                    photoUrl: URL(string: photoUrl),
+                                    twitter: textFieldTwitter.text,
+                                    instagram: textFieldInstagram.text,
+                                    date: dateCreated as NSDate)
+                viewController.getURLFromImage(image: buttonPhoto.image(for: .normal)!,
+                                               person: person)
+            }
         }
     }
     
