@@ -98,6 +98,64 @@ class RequestSenderImplementationTests: XCTestCase {
         wait(for: [responseExpectation], timeout: 5.0)
     }
     
+    func testUpdatePerson_WhenBackendIsUp_shouldReturnNil() throws {
+        // Given
+        let responseExpectationPost = XCTestExpectation(description: "Person was properly posted.")
+        
+        let completionHandlerPost: (String?, String?) -> Void = { idResponse, error in
+            guard let id = idResponse else {
+                XCTFail("Error ocurred with message \(error!)")
+                return
+            }
+            
+            XCTAssertNotNil(id, "Error: id was not received.")
+            
+            responseExpectationPost.fulfill()
+        }
+        
+        let responseExpectationPut = XCTestExpectation(description: "Person was properly updated.")
+        
+        let completionHandlerPut: (String?) -> Void = {error in
+            if let errorMessage = error  {
+                XCTFail("Error ocurred with message \(errorMessage)")
+                return
+            }
+                        
+            responseExpectationPut.fulfill()
+        }
+        
+        let mockPerson = Person(personId: 3,
+                                name: "Robert",
+                                photoUrl: URL(string: IMAGE_DEFAULT_URL),
+                                twitter: "@lilrobert",
+                                instagram: "@bigrob",
+                                date: NSDate.now as NSDate)
+        
+        // When
+        let localDate = Date().get(.year) + "-" + Date().get(.month) + "-" + Date().get(.day)
+        testSubject.addNewPerson(name: mockPerson.name,
+                                 photoUrlString: mockPerson.photoUrl?.absoluteString,
+                                 twitter: mockPerson.twitter,
+                                 instagram: mockPerson.instagram,
+                                 date: localDate,
+                                 completion: completionHandlerPost)
+        
+        let updatedPerson = Person(personId: 3,
+                                name: "Robert",
+                                photoUrl: URL(string: IMAGE_DEFAULT_URL),
+                                twitter: "",
+                                instagram: "",
+                                date: NSDate.now as NSDate)
+        
+        testSubject.updatePerson(person: updatedPerson,
+                                 completion: completionHandlerPut)
+        
+        // Then
+        wait(for: [responseExpectationPost], timeout: 5.0)
+        wait(for: [responseExpectationPut], timeout: 5.0)
+    }
+    
+    // MARK: - Message Methods
     func testGetMessages_WhenBackendIsUp_shouldReturnMessages() throws {
         // Given
         let responseExpectation = XCTestExpectation(description: "Messages retrieved from backend and properly parsed.")

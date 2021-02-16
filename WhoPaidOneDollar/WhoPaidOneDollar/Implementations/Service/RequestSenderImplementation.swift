@@ -149,9 +149,7 @@ class RequestSenderImplementation {
             urlString += "&instagram="
             instagramText = ""
         }
-        
-        print(urlString)
-        
+                
         guard let uString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
             completion("Error: URL not decoded")
             return

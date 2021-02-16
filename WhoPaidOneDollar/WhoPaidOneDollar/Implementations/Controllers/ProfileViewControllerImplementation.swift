@@ -42,10 +42,6 @@ class ProfileViewControllerImplementation: UIViewController, ProfileViewControll
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
-        print(UserDefaults.standard.string(forKey: "name"))
-        print(UserDefaults.standard.string(forKey: "twitter"))
-        print(UserDefaults.standard.string(forKey: "instagram"))
-        print(UserDefaults.standard.string(forKey: "photoUrlString"))
     }
     // MARK: - ProfileViewControllerProtocol methods
     
