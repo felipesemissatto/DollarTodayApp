@@ -36,5 +36,85 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B9825165-581F-46A1-95DA-B8B221EE939C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WhoPaidOneDollar/Util/Extensions.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "setCustomImage(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B9825165-581F-46A1-95DA-B8B221EE939C - 3a7e7cbdba989d2c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in WhoPaidOneDollar):__C.UIImageView.setCustomImage(Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "WhoPaidOneDollar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/felipesemissatto/Desktop/WhoPaidOneDollarApp/WhoPaidOneDollarApp/WhoPaidOneDollar/WhoPaidOneDollar/Util/Extensions.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "381">
+               </Location>
+               <Location
+                  uuid = "B9825165-581F-46A1-95DA-B8B221EE939C - 8db9d9129d92cec2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in (extension in WhoPaidOneDollar):__C.UIImageView.setCustomImage(Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "WhoPaidOneDollar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/felipesemissatto/Desktop/WhoPaidOneDollarApp/WhoPaidOneDollarApp/WhoPaidOneDollar/WhoPaidOneDollar/Util/Extensions.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "260">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C5B266CF-A568-453A-A7FF-783042590313"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WhoPaidOneDollar/Implementations/Views/Profile/ProfileViewImplementation.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "246"
+            endingLineNumber = "246"
+            landmarkName = "keyboardWillShow(notification:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D5D82AF1-D51B-425E-A7F7-6E01F960D581"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WhoPaidOneDollar/Implementations/Views/Profile/ProfileViewImplementation.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "245"
+            endingLineNumber = "245"
+            landmarkName = "keyboardWillShow(notification:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

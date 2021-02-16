@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol ProfileViewControllerProtocol {
     
@@ -17,6 +18,14 @@ protocol ProfileViewControllerProtocol {
      */
     func updateProfile(person: Person)
 
+    /**
+     
+     
+     Method that creates a URL from image by IMGUR API.
+     
+     */
+    func getURLFromImage(image: UIImage, person: Person)
+    
     // Dependecies
     var myView: ProfileViewProtocol? {get set}
 }

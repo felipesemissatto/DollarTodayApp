@@ -49,8 +49,6 @@ class NewMessageViewImplementation: UIView, NewMessageViewProtocol {
         if let id = UserDefaults.standard.string(forKey: "id"),
            let name = UserDefaults.standard.string(forKey: "name"),
            let photoUrl = UserDefaults.standard.string(forKey: "photoUrlString"),
-           let twitter = UserDefaults.standard.string(forKey: "twitter"),
-           let instagram = UserDefaults.standard.string(forKey: "instagram"),
            let date = UserDefaults.standard.string(forKey: "date") {
             
             let dateFormatter = DateFormatter()
@@ -60,8 +58,8 @@ class NewMessageViewImplementation: UIView, NewMessageViewProtocol {
             let person = Person(personId: CLong(truncating: Int(id)! as NSNumber),
                                 name: name,
                                 photoUrl: URL(string: photoUrl),
-                                twitter: twitter,
-                                instagram: instagram,
+                                twitter: UserDefaults.standard.string(forKey: "twitter"),
+                                instagram: UserDefaults.standard.string(forKey: "instagram"),
                                 date: dateCreated as NSDate)
             
             let localDate = Date().get(.year) + "-" + Date().get(.month) + "-" + Date().get(.day)

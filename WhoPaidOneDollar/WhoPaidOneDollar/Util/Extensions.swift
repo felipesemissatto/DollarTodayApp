@@ -56,7 +56,7 @@ extension UIImageView {
         DispatchQueue.global().async { [weak self] in
             let data = try? Data(contentsOf: URL(string: imageURLString)!)
             DispatchQueue.main.async {
-                self?.image = data != nil ? UIImage(data: data!) : UIImage(named: "default.png")
+                self?.image = data != nil ? UIImage(data: data!) : UIImage(named: "defaultPhoto.png")
             }
         }
     }

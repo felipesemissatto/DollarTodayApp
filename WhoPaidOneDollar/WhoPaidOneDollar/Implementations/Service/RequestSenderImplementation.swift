@@ -112,6 +112,74 @@ class RequestSenderImplementation {
             })
     }
     
+    func updatePerson(person: Person,
+                      completion: @escaping(String?) -> Void) {
+        var nameText = ""
+        var photoUrlText = ""
+        var twitterText = ""
+        var instagramText = ""
+        
+        // Building the url
+        // a pessoa pode retirar o twitter ou instagram deixando os campos vazios
+        var urlString = ROOT_BACKEND_URL + "person/\(person.personId)?"
+        
+        urlString += "name=\(person.name)"
+        nameText = person.name
+        
+        if let twitter = person.twitter {
+                urlString += "&twitter=\(twitter)"
+                twitterText = twitter
+        } else  {
+            urlString += "&twitter="
+            twitterText = ""
+        }
+        
+        if let url = person.photoUrl {
+                urlString += "&photoUrl=\(url.absoluteString)"
+                photoUrlText = url.absoluteString
+        } else {
+            urlString += "&photoUrl="
+            photoUrlText = ""
+        }
+        
+        if let instagram = person.instagram  {
+                urlString += "&instagram=\(instagram)"
+                instagramText = instagram
+        } else {
+            urlString += "&instagram="
+            instagramText = ""
+        }
+                
+        guard let uString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
+            completion("Error: URL not decoded")
+            return
+        }
+        
+        guard let url = URL(string: uString) else {
+            completion("Error: URL not decoded")
+            return
+        }
+        
+
+        let parameters: Parameters = ["name": nameText,
+                                      "photoUrl": photoUrlText,
+                                      "twitter": twitterText,
+                                      "instagram": instagramText]
+        
+        Alamofire
+            .request(url,
+                     method: .put,
+                     parameters: parameters,
+                     encoding: JSONEncoding.default)
+            .responseString(completionHandler: { response in
+                switch response.result {
+                case .success:
+                    completion(nil)
+                case .failure(let error):
+                    completion(error.localizedDescription)
+                }
+            })
+    }
     // MARK: - Message Methods
     func getAllMessages(completion: @escaping([Message]?, String?) -> Void) {
         guard let url = URL(string: ROOT_BACKEND_URL + "/message") else {
