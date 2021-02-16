@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewMessageViewImplementation" customModule="WhoPaidOneDollar" customModuleProvider="target">
             <connections>
-                <outlet property="buttonSend" destination="Btt-nZ-cgl" id="oe6-2M-HBA"/>
+                <outlet property="buttonSend" destination="WCj-wI-jFg" id="0zt-bP-OzI"/>
                 <outlet property="textView" destination="xC0-0p-BWy" id="Ukw-ny-A2J"/>
             </connections>
         </placeholder>
@@ -20,34 +20,33 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zb7-bB-8Wf">
-                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                    <items>
-                        <navigationItem title="Send a message" id="Jua-d3-hxO">
-                            <barButtonItem key="rightBarButtonItem" title="Send" id="Btt-nZ-cgl">
-                                <connections>
-                                    <action selector="sendNewMessage:" destination="-1" id="Ko5-Dh-pew"/>
-                                </connections>
-                            </barButtonItem>
-                        </navigationItem>
-                    </items>
-                </navigationBar>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xC0-0p-BWy">
-                    <rect key="frame" x="8" y="104" width="398" height="245.5"/>
+                    <rect key="frame" x="8" y="60" width="398" height="245.5"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <color key="textColor" systemColor="labelColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCj-wI-jFg">
+                    <rect key="frame" x="24" y="321.5" width="366" height="41"/>
+                    <color key="backgroundColor" red="0.039215686274509803" green="0.51764705882352935" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <state key="normal" title="SEND">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="sendNewMessage:" destination="-1" eventType="touchUpInside" id="Aig-Tj-6eJ"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="zb7-bB-8Wf" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="F3E-VP-NNE"/>
-                <constraint firstItem="zb7-bB-8Wf" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Jmw-Z8-q7L"/>
-                <constraint firstItem="xC0-0p-BWy" firstAttribute="top" secondItem="zb7-bB-8Wf" secondAttribute="bottom" constant="16" id="LE1-P1-Qm8"/>
+                <constraint firstItem="WCj-wI-jFg" firstAttribute="top" secondItem="xC0-0p-BWy" secondAttribute="bottom" constant="16" id="Bg5-zn-pDc"/>
+                <constraint firstItem="WCj-wI-jFg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="CKF-ap-NkH"/>
+                <constraint firstItem="xC0-0p-BWy" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="ONY-km-i22"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="WCj-wI-jFg" secondAttribute="trailing" constant="24" id="RdV-mv-AN1"/>
                 <constraint firstItem="xC0-0p-BWy" firstAttribute="height" secondItem="vUN-kp-3ea" secondAttribute="height" multiplier="0.3" id="aDp-Oj-o7U"/>
-                <constraint firstItem="zb7-bB-8Wf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ayY-ed-TdV"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xC0-0p-BWy" secondAttribute="trailing" constant="8" id="rpb-Sw-k9x"/>
                 <constraint firstItem="xC0-0p-BWy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="yQL-eW-0o9"/>
             </constraints>

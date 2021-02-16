@@ -12,7 +12,7 @@ class NewMessageViewImplementation: UIView, NewMessageViewProtocol {
     
     // MARK: -IBOutlet
     @IBOutlet weak var textView: UITextView!
-    @IBOutlet weak var buttonSend: UIBarButtonItem!
+    @IBOutlet weak var buttonSend: UIButton!
     
     // MARK: - Dependencies
     var viewController: NewMessageViewControllerProtocol
@@ -24,6 +24,7 @@ class NewMessageViewImplementation: UIView, NewMessageViewProtocol {
         initFromNib()
         
         buttonSend.isEnabled = false
+        buttonSend.layer.cornerRadius = 8
         
         textView.delegate = self
         textView.text = "Write something..."

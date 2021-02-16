@@ -45,6 +45,12 @@ class MessageViewControllerImplementation: UIViewController, MessageViewControll
         getAllMessages()
     }
     
+    // MARK: -IBAction functions
+    
+    @IBAction func tapAddButton(_ sender: Any) {
+        newMessageButtonWasClicked()
+    }
+    
     // MARK: - MessageViewControllerProtocol methods
     func getAllMessages() {
         self.view = LoadingView(message: "Loading messages...",
@@ -77,6 +83,9 @@ class MessageViewControllerImplementation: UIViewController, MessageViewControll
     }
     
     func newMessageButtonWasClicked(){
-        performSegue(withIdentifier: "SendMessageSegue", sender: nil)
+        if let navController = self.navigationController {
+            let viewController = NewMessageViewControllerImplementation()
+            navController.pushViewController(viewController, animated: true)
+        }
     }
 }

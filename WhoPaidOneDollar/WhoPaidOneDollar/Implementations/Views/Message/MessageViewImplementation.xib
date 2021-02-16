@@ -18,31 +18,16 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="veG-G3-B7w">
-                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                    <items>
-                        <navigationItem title="Community" id="xhG-Am-ort">
-                            <barButtonItem key="rightBarButtonItem" systemItem="add" id="oyS-D1-a35">
-                                <connections>
-                                    <action selector="openTextFieldMessage:" destination="-1" id="VU0-Wa-HsH"/>
-                                </connections>
-                            </barButtonItem>
-                        </navigationItem>
-                    </items>
-                </navigationBar>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="21y-Hp-wgB">
-                    <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="21y-Hp-wgB" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="3up-Jv-3Ik"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="21y-Hp-wgB" secondAttribute="bottom" id="G7s-1m-0Bf"/>
-                <constraint firstItem="veG-G3-B7w" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="OZ4-cn-I2n"/>
-                <constraint firstItem="veG-G3-B7w" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="VXe-Ng-AsW"/>
-                <constraint firstItem="veG-G3-B7w" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="eVu-5u-aN6"/>
-                <constraint firstItem="21y-Hp-wgB" firstAttribute="top" secondItem="veG-G3-B7w" secondAttribute="bottom" id="gj0-aB-aJT"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="21y-Hp-wgB" secondAttribute="trailing" id="joZ-a8-VKx"/>
                 <constraint firstItem="21y-Hp-wgB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="tET-vW-M74"/>
             </constraints>

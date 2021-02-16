@@ -41,6 +41,7 @@ class NewMessageViewControllerImplementation: UIViewController, NewMessageViewCo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Send a message"
         self.hideKeyboardWhenTappedAround()
     }
     
