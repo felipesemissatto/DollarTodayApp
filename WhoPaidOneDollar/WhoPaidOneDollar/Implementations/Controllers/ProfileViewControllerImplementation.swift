@@ -42,6 +42,10 @@ class ProfileViewControllerImplementation: UIViewController, ProfileViewControll
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
+        print(UserDefaults.standard.string(forKey: "name"))
+        print(UserDefaults.standard.string(forKey: "twitter"))
+        print(UserDefaults.standard.string(forKey: "instagram"))
+        print(UserDefaults.standard.string(forKey: "photoUrlString"))
     }
     // MARK: - ProfileViewControllerProtocol methods
     
@@ -100,10 +104,10 @@ class ProfileViewControllerImplementation: UIViewController, ProfileViewControll
             } else {
                 // Update person in UserDefaults
                 UserDefaults.standard.set(person.name, forKey: "name")
-                UserDefaults.standard.set(person.photoUrl, forKey: "photoUrlString")
+                UserDefaults.standard.set(person.photoUrl?.absoluteString, forKey: "photoUrlString")
                 UserDefaults.standard.set(person.twitter, forKey: "twitter")
                 UserDefaults.standard.set(person.instagram, forKey: "instagram")
-                UserDefaults.standard.set(person.date, forKey: "date")
+                UserDefaults.standard.set(person.date.description[0 ..< 10], forKey: "date")
                 
                 // Reload data
                 let defaultView = ProfileViewImplementation(viewController: self)

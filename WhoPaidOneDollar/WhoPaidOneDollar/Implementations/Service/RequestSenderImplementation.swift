@@ -120,9 +120,10 @@ class RequestSenderImplementation {
         var instagramText = ""
         
         // Building the url
+        // a pessoa pode retirar o twitter ou instagram deixando os campos vazios
         var urlString = ROOT_BACKEND_URL + "person/\(person.personId)?"
         if person.name != "" {
-            urlString += "?name=\(person.name)"
+            urlString += "name=\(person.name)"
             nameText = person.name
         }
         
@@ -149,11 +150,17 @@ class RequestSenderImplementation {
         
         print(urlString)
         
-        guard let url = URL(string: urlString) else {
+        guard let uString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
             completion("Error: URL not decoded")
             return
         }
         
+        guard let url = URL(string: uString) else {
+            completion("Error: URL not decoded")
+            return
+        }
+        
+
         let parameters: Parameters = ["name": nameText,
                                       "photoUrl": photoUrlText,
                                       "twitter": twitterText,

@@ -223,17 +223,15 @@ extension ProfileViewImplementation: UITableViewDataSource, UITableViewDelegate 
     @objc func tapSaveButton(sender: UIButton!) {
         let button: UIButton = sender
         if button.tag == 1 {
-            if let id = UserDefaults.standard.string(forKey: "id"),
-               let photoUrl = UserDefaults.standard.string(forKey: "photoUrlString"),
-               let date = UserDefaults.standard.string(forKey: "date") {
-                
+            if let id = UserDefaults.standard.string(forKey: "id") {
+                let date = UserDefaults.standard.string(forKey: "date") ?? Date().get(.year) + "-" + Date().get(.month) + "-" + Date().get(.day)
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "yyyy-MM-dd"
                 let dateCreated = dateFormatter.date(from: date)!
                 
                 let person = Person(personId: CLong(truncating: Int(id)! as NSNumber),
                                     name: textFieldName.text ?? "One Dollar",
-                                    photoUrl: URL(string: photoUrl),
+                                    photoUrl: URL(string: UserDefaults.standard.string(forKey: "photoUrlString") ?? IMAGE_DEFAULT_URL),
                                     twitter: textFieldTwitter.text,
                                     instagram: textFieldInstagram.text,
                                     date: dateCreated as NSDate)
