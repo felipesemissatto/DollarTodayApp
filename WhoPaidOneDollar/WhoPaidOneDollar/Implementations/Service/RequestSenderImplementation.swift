@@ -122,30 +122,32 @@ class RequestSenderImplementation {
         // Building the url
         // a pessoa pode retirar o twitter ou instagram deixando os campos vazios
         var urlString = ROOT_BACKEND_URL + "person/\(person.personId)?"
-        if person.name != "" {
-            urlString += "name=\(person.name)"
-            nameText = person.name
-        }
+        
+        urlString += "name=\(person.name)"
+        nameText = person.name
         
         if let twitter = person.twitter {
-            if twitter != ""{
                 urlString += "&twitter=\(twitter)"
                 twitterText = twitter
-            }
+        } else  {
+            urlString += "&twitter="
+            twitterText = ""
         }
         
         if let url = person.photoUrl {
-            if url.absoluteString != "" {
                 urlString += "&photoUrl=\(url.absoluteString)"
                 photoUrlText = url.absoluteString
-            }
+        } else {
+            urlString += "&photoUrl="
+            photoUrlText = ""
         }
         
         if let instagram = person.instagram  {
-            if instagram != "" {
                 urlString += "&instagram=\(instagram)"
                 instagramText = instagram
-            }
+        } else {
+            urlString += "&instagram="
+            instagramText = ""
         }
         
         print(urlString)
