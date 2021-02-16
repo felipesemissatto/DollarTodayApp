@@ -33,6 +33,7 @@ class ProfileViewImplementation: UIView, ProfileViewProtocol {
         super.init(frame: CGRect.zero)
         initFromNib()
         setupTableView()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
     }
     
     required init?(coder: NSCoder) {
