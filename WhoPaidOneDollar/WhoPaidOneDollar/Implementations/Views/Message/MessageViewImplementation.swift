@@ -86,25 +86,20 @@ extension MessageViewImplementation: UITableViewDataSource, UITableViewDelegate 
             cell.labelMessageDate.text = data[indexPath.row].date.description[0 ..< 11]
             cell.labelTextMessage.text = data[indexPath.row].textMessage
             
-            if let twitter = data[indexPath.row].person.twitter {
-                if twitter != ""{
-                    cell.labelTwitter.text = twitter
-                } else {
-                    cell.viewTwitter.isHidden = true
-                }
+            if data[indexPath.row].person.twitter != ""{
+                cell.viewTwitter.isHidden = false
+                cell.labelTwitter.text = data[indexPath.row].person.twitter
             } else {
                 cell.viewTwitter.isHidden = true
             }
             
-            if let instagram = data[indexPath.row].person.instagram {
-                if instagram != "" {
-                    cell.labelInstagram.text = instagram
-                } else {
-                    cell.viewInstagram.isHidden = true
-                }
+            if data[indexPath.row].person.instagram != "" {
+                cell.viewInstagram.isHidden = false
+                cell.labelInstagram.text = data[indexPath.row].person.instagram
             } else {
-                cell.viewTwitter.isHidden = true
+                cell.viewInstagram.isHidden = true
             }
+            
             
             return cell
         } else {
