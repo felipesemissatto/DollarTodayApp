@@ -23,6 +23,12 @@ class LoadingView: UIView {
             nibView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             addSubview(nibView)
             
+            if #available(iOS 13.0, *) {
+                activityIndicator.style = .large
+            } else {
+                activityIndicator.style = .whiteLarge
+            }
+            
             labelLoadingMessage.text = message
             activityIndicator.startAnimating()
             activityIndicator.isHidden = error
