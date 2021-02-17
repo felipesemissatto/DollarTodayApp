@@ -21,18 +21,6 @@ class MessageViewControllerImplementation: UIViewController, MessageViewControll
     // MARK: - Lifecycle methods
     override func loadView() {
         super.loadView()
-        
-        self.loadingView = LoadingView(message: "Loading messages...",
-                                       error: false,
-                                       frame: CGRect.zero)!
-        self.view.addSubview(loadingView)
-        loadingView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            loadingView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            loadingView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
-        ])
-        self.view.sendSubviewToBack(self.loadingView)
-
         self.mainView = self.view
     }
     
@@ -42,6 +30,10 @@ class MessageViewControllerImplementation: UIViewController, MessageViewControll
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         getAllMessages()
     }
     
