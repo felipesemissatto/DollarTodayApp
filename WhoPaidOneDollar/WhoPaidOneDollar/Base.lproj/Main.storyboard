@@ -62,7 +62,7 @@
             </objects>
             <point key="canvasLocation" x="3779.7101449275365" y="77.678571428571431"/>
         </scene>
-        <!--Profile-->
+        <!--Profile View Controller Implementation-->
         <scene sceneID="Zkg-9F-8wb">
             <objects>
                 <viewController id="M3f-6z-Uny" customClass="ProfileViewControllerImplementation" customModule="WhoPaidOneDollar" customModuleProvider="target" sceneMemberID="viewController">
@@ -72,7 +72,7 @@
                         <viewLayoutGuide key="safeArea" id="vUb-lv-VTe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="VVr-Fy-TgK"/>
+                    <tabBarItem key="tabBarItem" title="" image="user 1" id="VVr-Fy-TgK"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ItX-bK-uxx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -89,7 +89,7 @@
                         <viewLayoutGuide key="safeArea" id="1Om-FX-De3"/>
                         <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="People" id="Iee-Eq-Kpe"/>
+                    <tabBarItem key="tabBarItem" title="" image="group 1" id="Iee-Eq-Kpe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4hq-dE-ZTJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -114,11 +114,11 @@
             </objects>
             <point key="canvasLocation" x="1138" y="79"/>
         </scene>
-        <!--Community-->
+        <!--Navigation Controller-->
         <scene sceneID="0XQ-97-o5p">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3iG-Xv-FDy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Community" id="EHN-VE-W9C"/>
+                    <tabBarItem key="tabBarItem" title="" image="speech-bubble 1" id="EHN-VE-W9C"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nt2-s5-wA2">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -135,6 +135,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="group 1" width="23" height="23"/>
+        <image name="speech-bubble 1" width="23" height="23"/>
+        <image name="user 1" width="23" height="23"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
