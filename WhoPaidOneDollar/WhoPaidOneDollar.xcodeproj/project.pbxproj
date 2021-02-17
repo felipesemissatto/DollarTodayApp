@@ -56,6 +56,7 @@
 		2FE4FD0125D9FA8300B0FAC5 /* ProfileViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE4FD0025D9FA8300B0FAC5 /* ProfileViewControllerImplementation.swift */; };
 		2FE4FD0725D9FAC600B0FAC5 /* ProfileViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE4FD0625D9FAC600B0FAC5 /* ProfileViewImplementation.swift */; };
 		2FE4FD0F25D9FAD300B0FAC5 /* ProfileViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FE4FD0E25D9FAD300B0FAC5 /* ProfileViewImplementation.xib */; };
+		2FE4FD1D25DD72C600B0FAC5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FE4FD1C25DD72C500B0FAC5 /* StoreKit.framework */; };
 		2FEBDE5F25D5A5A800C9869D /* PeopleViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEBDE5E25D5A5A800C9869D /* PeopleViewControllerImplementation.swift */; };
 		2FEBDE6525D5A5DF00C9869D /* PeopleViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEBDE6425D5A5DF00C9869D /* PeopleViewImplementation.swift */; };
 		2FEBDE6D25D5A60700C9869D /* PeopleViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FEBDE6C25D5A60700C9869D /* PeopleViewImplementation.xib */; };
@@ -141,6 +142,7 @@
 		2FE4FD0025D9FA8300B0FAC5 /* ProfileViewControllerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerImplementation.swift; sourceTree = "<group>"; };
 		2FE4FD0625D9FAC600B0FAC5 /* ProfileViewImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewImplementation.swift; sourceTree = "<group>"; };
 		2FE4FD0E25D9FAD300B0FAC5 /* ProfileViewImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewImplementation.xib; sourceTree = "<group>"; };
+		2FE4FD1C25DD72C500B0FAC5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		2FEBDE5E25D5A5A800C9869D /* PeopleViewControllerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewControllerImplementation.swift; sourceTree = "<group>"; };
 		2FEBDE6425D5A5DF00C9869D /* PeopleViewImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewImplementation.swift; sourceTree = "<group>"; };
 		2FEBDE6C25D5A60700C9869D /* PeopleViewImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleViewImplementation.xib; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1BAAE8D82C88BAF4DAF3BBE /* Pods_WhoPaidOneDollar.framework in Frameworks */,
+				2FE4FD1D25DD72C600B0FAC5 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +415,7 @@
 		75D686EBA4AB83AACEAB4E22 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2FE4FD1C25DD72C500B0FAC5 /* StoreKit.framework */,
 				464D3BE6F456224DC97B4C58 /* Pods_WhoPaidOneDollar.framework */,
 				8E696AA33453B67B3155701E /* Pods_WhoPaidOneDollar_WhoPaidOneDollarUITests.framework */,
 				A19AB3EC280B30F13F4FCB05 /* Pods_WhoPaidOneDollarTests.framework */,
