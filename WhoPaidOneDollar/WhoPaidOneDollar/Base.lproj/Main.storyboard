@@ -164,11 +164,11 @@
             </objects>
             <point key="canvasLocation" x="2937.68115942029" y="850.44642857142856"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="8KK-pg-RqY">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3wl-rB-1c3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="deO-bI-mpP"/>
+                    <tabBarItem key="tabBarItem" title="" image="camera 1" id="deO-bI-mpP"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kip-5x-PsB">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -185,6 +185,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera 1" width="23" height="23"/>
         <image name="group 1" width="23" height="23"/>
         <image name="speech-bubble 1" width="23" height="23"/>
         <image name="user 1" width="23" height="23"/>
