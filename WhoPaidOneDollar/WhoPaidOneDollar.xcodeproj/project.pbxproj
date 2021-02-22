@@ -57,8 +57,6 @@
 		2FE4FD0725D9FAC600B0FAC5 /* ProfileViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE4FD0625D9FAC600B0FAC5 /* ProfileViewImplementation.swift */; };
 		2FE4FD0F25D9FAD300B0FAC5 /* ProfileViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FE4FD0E25D9FAD300B0FAC5 /* ProfileViewImplementation.xib */; };
 		2FE4FD1D25DD72C600B0FAC5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FE4FD1C25DD72C500B0FAC5 /* StoreKit.framework */; };
-		2FE4FD3225DE9FAA00B0FAC5 /* ARViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE4FD3125DE9FAA00B0FAC5 /* ARViewControllerImplementation.swift */; };
-		2FE4FDCD25DEB9D600B0FAC5 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 2FE4FDB325DEB65B00B0FAC5 /* Experience.rcproject */; };
 		2FEBDE5F25D5A5A800C9869D /* PeopleViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEBDE5E25D5A5A800C9869D /* PeopleViewControllerImplementation.swift */; };
 		2FEBDE6525D5A5DF00C9869D /* PeopleViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEBDE6425D5A5DF00C9869D /* PeopleViewImplementation.swift */; };
 		2FEBDE6D25D5A60700C9869D /* PeopleViewImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FEBDE6C25D5A60700C9869D /* PeopleViewImplementation.xib */; };
@@ -145,8 +143,6 @@
 		2FE4FD0625D9FAC600B0FAC5 /* ProfileViewImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewImplementation.swift; sourceTree = "<group>"; };
 		2FE4FD0E25D9FAD300B0FAC5 /* ProfileViewImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewImplementation.xib; sourceTree = "<group>"; };
 		2FE4FD1C25DD72C500B0FAC5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		2FE4FD3125DE9FAA00B0FAC5 /* ARViewControllerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewControllerImplementation.swift; sourceTree = "<group>"; };
-		2FE4FDB325DEB65B00B0FAC5 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		2FEBDE5E25D5A5A800C9869D /* PeopleViewControllerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewControllerImplementation.swift; sourceTree = "<group>"; };
 		2FEBDE6425D5A5DF00C9869D /* PeopleViewImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewImplementation.swift; sourceTree = "<group>"; };
 		2FEBDE6C25D5A60700C9869D /* PeopleViewImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleViewImplementation.xib; sourceTree = "<group>"; };
@@ -285,7 +281,6 @@
 		2F7FC47125D054F1009D925D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2FE4FD4025DEA2E900B0FAC5 /* ARView */,
 				2FE4FD0525D9FAA500B0FAC5 /* Profile */,
 				2FB4635825D8A06600932D6B /* NewMessage */,
 				2FB4631025D702C100932D6B /* Message */,
@@ -304,7 +299,6 @@
 				2FB4631E25D703D400932D6B /* MessageViewControllerImplementation.swift */,
 				2FB4636925D8A55100932D6B /* NewMessageViewControllerImplementation.swift */,
 				2FE4FD0025D9FA8300B0FAC5 /* ProfileViewControllerImplementation.swift */,
-				2FE4FD3125DE9FAA00B0FAC5 /* ARViewControllerImplementation.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -405,14 +399,6 @@
 				2FE4FD0E25D9FAD300B0FAC5 /* ProfileViewImplementation.xib */,
 			);
 			path = Profile;
-			sourceTree = "<group>";
-		};
-		2FE4FD4025DEA2E900B0FAC5 /* ARView */ = {
-			isa = PBXGroup;
-			children = (
-				2FE4FDB325DEB65B00B0FAC5 /* Experience.rcproject */,
-			);
-			path = ARView;
 			sourceTree = "<group>";
 		};
 		2FEBDE6325D5A5B600C9869D /* People */ = {
@@ -704,7 +690,6 @@
 				2FB4631225D7039100932D6B /* MessageViewImplementation.swift in Sources */,
 				2F7FC48E25D17016009D925D /* LoginViewControllerImplementation.swift in Sources */,
 				2FB4635A25D8A09000932D6B /* NewMessageViewImplementation.swift in Sources */,
-				2FE4FDCD25DEB9D600B0FAC5 /* Experience.rcproject in Sources */,
 				2FB4632425D7041F00932D6B /* MessageViewProtocol.swift in Sources */,
 				2F7FC48925D16E4E009D925D /* LoginViewProtocol.swift in Sources */,
 				2FE4FD0725D9FAC600B0FAC5 /* ProfileViewImplementation.swift in Sources */,
@@ -717,7 +702,6 @@
 				2F7FC43625D05355009D925D /* SceneDelegate.swift in Sources */,
 				2FE4FD0125D9FA8300B0FAC5 /* ProfileViewControllerImplementation.swift in Sources */,
 				2FB4632E25D7548A00932D6B /* MessageTableViewCell.swift in Sources */,
-				2FE4FD3225DE9FAA00B0FAC5 /* ARViewControllerImplementation.swift in Sources */,
 				2FB4634725D89E0E00932D6B /* NewMessageViewProtocol.swift in Sources */,
 				2FB4634C25D89E2800932D6B /* NewMessageViewControllerProtocol.swift in Sources */,
 				2F7FC4D925D1A761009D925D /* ButtonSaveTableViewCell.swift in Sources */,
@@ -846,7 +830,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -901,7 +885,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -920,12 +904,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29CGD3CF6U;
 				INFOPLIST_FILE = WhoPaidOneDollar/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = semissattofelipe.WhoPaidOneDollar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -942,12 +926,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29CGD3CF6U;
 				INFOPLIST_FILE = WhoPaidOneDollar/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = semissattofelipe.WhoPaidOneDollar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
