@@ -71,9 +71,9 @@ enum Currencies {
             case .INR:
                 return (UIImage(named: "india"),"₹", "India")
             case .RUB:
-                return (UIImage(named: "abkhazia"),"₽", "Abkhazia")
+                return (UIImage(named: "russia"),"₽", "Russia")
             case .HRK:
-                return (UIImage(named: "jroatia"),"kn", "Croatia")
+                return (UIImage(named: "croatia"),"kn", "Croatia")
             case .JPY:
                 return (UIImage(named: "japan"),"¥", "Japan")
             case .THB:
