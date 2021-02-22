@@ -86,6 +86,11 @@ extension DollarTodayViewImplementation: UITableViewDataSource, UITableViewDeleg
             cell.labelNameCurrency.text = data[indexPath.row].nameCurrency
             cell.labelValue.text = String(data[indexPath.row].value)
             
+            let countryInfos = infosFromNameCurrency(nameCurrency: data[indexPath.row].nameCurrency)
+            cell.imageViewFlag.image = countryInfos.image
+            cell.labelCountry.text = countryInfos.country
+            cell.labelSymbol.text = countryInfos.symbol
+            
             return cell
         } else {
             let cell = UITableViewCell.init()
