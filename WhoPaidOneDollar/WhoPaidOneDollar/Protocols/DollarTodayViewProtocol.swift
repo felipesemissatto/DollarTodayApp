@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol DollarTodayProtocol {
+protocol DollarTodayViewProtocol {
     /**
      
      Method that starts the currencies view. It receives the view controller and the currencies.

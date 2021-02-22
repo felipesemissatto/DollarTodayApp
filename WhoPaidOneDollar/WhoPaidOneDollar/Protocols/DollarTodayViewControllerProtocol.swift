@@ -20,5 +20,5 @@ protocol DollarTodayViewControllerProtocol {
     
     
     // Dependecies
-    var myView: DollarTodayProtocol? {get set}
+    var myView: DollarTodayViewProtocol? {get set}
 }
