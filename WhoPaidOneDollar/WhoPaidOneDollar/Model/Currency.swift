@@ -29,4 +29,10 @@ class Currency {
         self.lastDateUpdated = lastDateUpdated
         self.flagImage = flagImage
     }
+    
+    init(nameCurrency: String,
+         value: Float){
+        self.nameCurrency = nameCurrency
+        self.value = value
+    }
 }

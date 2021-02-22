@@ -14,6 +14,7 @@ class RequestSenderImplementation {
     // MARK: - Parsers
     private var parserPeople = ConverterPersonJSON()
     private var parserMessages = ConverterMessageJSON()
+    private var parserCurrencies = ConverterCurrencyJSON()
     
     // MARK: - People Methods
     func getURLFromAnImage(image: UIImage,
@@ -237,6 +238,30 @@ class RequestSenderImplementation {
                     completion(nil)
                 case .failure(let error):
                     completion(error.localizedDescription)
+                }
+            })
+    }
+    
+    // MARK: - Dollar Today Methods
+    func getAllCurrencies(completion: @escaping([Currency]?, String?) -> Void) {
+        guard let url = URL(string: "https://api.exchangeratesapi.io/latest?base=USD") else {
+            completion(nil, "Error: URL not decoded")
+            return
+        }
+        
+        Alamofire
+            .request(url,
+                     method: .get,
+                     encoding: JSONEncoding.default)
+            .responseJSON(completionHandler: { response in
+                switch response.result {
+                case .success:
+                    guard let responseValue = response.value else { return }
+                    let jsonResponse = JSON(responseValue)
+                    let currencies = self.parserCurrencies.parserJSONCurrencies(json: jsonResponse)
+                    completion(currencies, nil)
+                case .failure(let error):
+                    completion(nil, error.localizedDescription)
                 }
             })
     }

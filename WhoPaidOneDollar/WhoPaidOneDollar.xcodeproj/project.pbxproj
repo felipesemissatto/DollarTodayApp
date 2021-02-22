@@ -16,6 +16,8 @@
 		2F0CDD2825E3F36000E9CD3F /* CurrencyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F0CDD2725E3F36000E9CD3F /* CurrencyTableViewCell.xib */; };
 		2F0CDD2D25E3F37900E9CD3F /* CurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0CDD2C25E3F37900E9CD3F /* CurrencyTableViewCell.swift */; };
 		2F0CDD3525E3FA0300E9CD3F /* CurrenciesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0CDD3425E3FA0300E9CD3F /* CurrenciesList.swift */; };
+		2F0CDD3A25E41EEF00E9CD3F /* ConverterCurrencyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0CDD3925E41EEF00E9CD3F /* ConverterCurrencyJSON.swift */; };
+		2F0CDD3F25E4258900E9CD3F /* ConverterCurrencyJSONProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0CDD3E25E4258900E9CD3F /* ConverterCurrencyJSONProtocol.swift */; };
 		2F7FC43425D05355009D925D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FC43325D05355009D925D /* AppDelegate.swift */; };
 		2F7FC43625D05355009D925D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FC43525D05355009D925D /* SceneDelegate.swift */; };
 		2F7FC43B25D05355009D925D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F7FC43925D05355009D925D /* Main.storyboard */; };
@@ -105,6 +107,8 @@
 		2F0CDD2725E3F36000E9CD3F /* CurrencyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrencyTableViewCell.xib; sourceTree = "<group>"; };
 		2F0CDD2C25E3F37900E9CD3F /* CurrencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewCell.swift; sourceTree = "<group>"; };
 		2F0CDD3425E3FA0300E9CD3F /* CurrenciesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesList.swift; sourceTree = "<group>"; };
+		2F0CDD3925E41EEF00E9CD3F /* ConverterCurrencyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterCurrencyJSON.swift; sourceTree = "<group>"; };
+		2F0CDD3E25E4258900E9CD3F /* ConverterCurrencyJSONProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterCurrencyJSONProtocol.swift; sourceTree = "<group>"; };
 		2F7FC43025D05355009D925D /* WhoPaidOneDollar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhoPaidOneDollar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F7FC43325D05355009D925D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F7FC43525D05355009D925D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -304,6 +308,7 @@
 			children = (
 				2FB462F025D6BE1700932D6B /* ConverterPersonJSON.swift */,
 				2FB4633725D809A500932D6B /* ConverterMessageJSON.swift */,
+				2F0CDD3925E41EEF00E9CD3F /* ConverterCurrencyJSON.swift */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -352,6 +357,7 @@
 				2FE4FCFB25D9F93800B0FAC5 /* ProfileViewControllerProtocol.swift */,
 				2F0CDD0225E3EB1A00E9CD3F /* DollarTodayViewProtocol.swift */,
 				2F0CDD0725E3EB5C00E9CD3F /* DollarTodayViewControllerProtocol.swift */,
+				2F0CDD3E25E4258900E9CD3F /* ConverterCurrencyJSONProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -735,6 +741,7 @@
 				2FE4FD0725D9FAC600B0FAC5 /* ProfileViewImplementation.swift in Sources */,
 				2F7FC48425D16C85009D925D /* LoginViewControllerProtocol.swift in Sources */,
 				2FB4633D25D809D300932D6B /* ConverterMessageJSONProtocol.swift in Sources */,
+				2F0CDD3A25E41EEF00E9CD3F /* ConverterCurrencyJSON.swift in Sources */,
 				2FEBDE7A25D5A67C00C9869D /* PeopleViewControllerProtocol.swift in Sources */,
 				2FB462F125D6BE1700932D6B /* ConverterPersonJSON.swift in Sources */,
 				2F7FC43425D05355009D925D /* AppDelegate.swift in Sources */,
@@ -744,6 +751,7 @@
 				2F0CDD2D25E3F37900E9CD3F /* CurrencyTableViewCell.swift in Sources */,
 				2FB4632E25D7548A00932D6B /* MessageTableViewCell.swift in Sources */,
 				2FB4634725D89E0E00932D6B /* NewMessageViewProtocol.swift in Sources */,
+				2F0CDD3F25E4258900E9CD3F /* ConverterCurrencyJSONProtocol.swift in Sources */,
 				2FB4634C25D89E2800932D6B /* NewMessageViewControllerProtocol.swift in Sources */,
 				2F7FC4D925D1A761009D925D /* ButtonSaveTableViewCell.swift in Sources */,
 				2FEBDE7225D5A66700C9869D /* PeopleViewProtocol.swift in Sources */,
