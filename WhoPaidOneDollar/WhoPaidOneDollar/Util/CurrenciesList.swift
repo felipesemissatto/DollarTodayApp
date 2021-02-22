@@ -42,72 +42,72 @@ enum Currencies {
     case KRW
     case PLN
     
-    var info: (image: UIImage?, symbol: String, country: String) {
+    var info: (currency: String, image: UIImage?, symbol: String, country: String) {
             switch self {
             case .CAD:
-                return (UIImage(named: "canada"),"$", "Canada")
+                return ("CAD", UIImage(named: "canada"),"$", "Canada")
             case .HKD:
-                return (UIImage(named: "hongkong"),"$", "Hong Kong")
+                return ("HKD", UIImage(named: "hongkong"),"$", "Hong Kong")
             case .BRL:
-                return (UIImage(named: "brazil"),"R$", "Brazil")
+                return ("BRL", UIImage(named: "brazil"),"R$", "Brazil")
             case .ISK:
-                return (UIImage(named: "iceland"),"kr", "Iceland")
+                return ("ISK", UIImage(named: "iceland"),"kr", "Iceland")
             case .PHP:
-                return (UIImage(named: "philippines"),"₱", "Philippines")
+                return ("PHP", UIImage(named: "philippines"),"₱", "Philippines")
             case .DKK:
-                return (UIImage(named: "denmark"),"kr", "Denmark")
+                return ("DKK", UIImage(named: "denmark"),"kr", "Denmark")
             case .HUF:
-                return (UIImage(named: "hungary"),"Ft", "Hungary")
+                return ("HUF", UIImage(named: "hungary"),"Ft", "Hungary")
             case .CZK:
-                return (UIImage(named: "czechrepublic"),"Kč", "Czech Republic")
+                return ("CZK", UIImage(named: "czechrepublic"),"Kč", "Czech Republic")
             case .GBP:
-                return (UIImage(named: "unitedkingdom"),"£", "United Kingdom")
+                return ("GBP", UIImage(named: "unitedkingdom"),"£", "United Kingdom")
             case .RON:
-                return (UIImage(named: "romania"),"lei", "Romania")
+                return ("RON", UIImage(named: "romania"),"lei", "Romania")
             case .SEK:
-                return (UIImage(named: "sweden"),"lei", "Sweden")
+                return ("SEK", UIImage(named: "sweden"),"lei", "Sweden")
             case .IDR:
-                return (UIImage(named: "indonesia"),"Rp", "Indonesia")
+                return ("IDR", UIImage(named: "indonesia"),"Rp", "Indonesia")
             case .INR:
-                return (UIImage(named: "india"),"₹", "India")
+                return ("INR", UIImage(named: "india"),"₹", "India")
             case .RUB:
-                return (UIImage(named: "russia"),"₽", "Russia")
+                return ("RUB", UIImage(named: "russia"),"₽", "Russia")
             case .HRK:
-                return (UIImage(named: "croatia"),"kn", "Croatia")
+                return ("HRK", UIImage(named: "croatia"),"kn", "Croatia")
             case .JPY:
-                return (UIImage(named: "japan"),"¥", "Japan")
+                return ("JPY", UIImage(named: "japan"),"¥", "Japan")
             case .THB:
-                return (UIImage(named: "thailand"),"฿", "Thailand")
+                return ("THB", UIImage(named: "thailand"),"฿", "Thailand")
             case .CHF:
-                return (UIImage(named: "switzerland"),"Fr.", "Switzerland")
+                return ("CHF", UIImage(named: "switzerland"),"Fr.", "Switzerland")
             case .EUR:
-                return (UIImage(named: "euro"),"€", "Euro")
+                return ("EUR", UIImage(named: "euro"),"€", "Euro")
             case .BGN:
-                return (UIImage(named: "bulgaria"),"лв.", "Bulgaria")
+                return ("BGN", UIImage(named: "bulgaria"),"лв.", "Bulgaria")
             case .TRY:
-                return (UIImage(named: "turkey"),"₺", "Turkey")
+                return ("TRY", UIImage(named: "turkey"),"₺", "Turkey")
             case .CNY:
-                return (UIImage(named: "china"),"¥", "China")
+                return ("CNY", UIImage(named: "china"),"¥", "China")
             case .NOK:
-                return (UIImage(named: "norway"),"kr", "Norway")
+                return ("NOK", UIImage(named: "norway"),"kr", "Norway")
             case .NZD:
-                return (UIImage(named: "newzealand"),"$", "New Zealand")
+                return ("NZD", UIImage(named: "newzealand"),"$", "New Zealand")
             case .ZAR:
-                return (UIImage(named: "southafrica"),"R", "South Africa")
+                return ("ZAR", UIImage(named: "southafrica"),"R", "South Africa")
             case .USD:
-                return (UIImage(named: "unitedstates"),"$", "United States")
+                return ("USD", UIImage(named: "unitedstates"),"$", "United States")
             case .MXN:
-                return (UIImage(named: "mexico"),"$", "Mexico")
+                return ("MXN", UIImage(named: "mexico"),"$", "Mexico")
             case .SGD:
-                return (UIImage(named: "singapore"),"$", "Singapore")
+                return ("SGD", UIImage(named: "singapore"),"$", "Singapore")
             case .AUD:
-                return (UIImage(named: "australia"),"$", "Australia")
+                return ("AUD", UIImage(named: "australia"),"$", "Australia")
             case .ILS:
-                return (UIImage(named: "israel"),"₪", "Israel")
+                return ("ILS", UIImage(named: "israel"),"₪", "Israel")
             case .KRW:
-                return (UIImage(named: "southkorea"),"₩", "South Korea")
+                return ("KRW", UIImage(named: "southkorea"),"₩", "South Korea")
             case .PLN:
-                return (UIImage(named: "poland"),"zł", "Poland")
+                return ("PLN", UIImage(named: "poland"),"zł", "Poland")
             }
         }
 }

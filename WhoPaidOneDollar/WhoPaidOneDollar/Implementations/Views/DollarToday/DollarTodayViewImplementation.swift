@@ -83,12 +83,86 @@ extension DollarTodayViewImplementation: UITableViewDataSource, UITableViewDeleg
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "CurrencyTableViewCell", for: indexPath) as? CurrencyTableViewCell {
            
+            cell.labelNameCurrency.text = data[indexPath.row].nameCurrency
+            cell.labelValue.text = String(data[indexPath.row].value)
             
             return cell
         } else {
             let cell = UITableViewCell.init()
             cell.textLabel?.text = String(data[indexPath.row].value)
             return cell
+        }
+    }
+    
+    func infosFromNameCurrency(nameCurrency: String) -> (currency: String, image: UIImage?, symbol: String, country: String){
+        
+        switch nameCurrency {
+        case Currencies.CAD.info.currency:
+            return Currencies.CAD.info
+        case Currencies.HKD.info.currency:
+            return Currencies.HKD.info
+        case Currencies.BRL.info.currency:
+            return Currencies.BRL.info
+        case Currencies.ISK.info.currency:
+            return Currencies.ISK.info
+        case Currencies.PHP.info.currency:
+            return Currencies.PHP.info
+        case Currencies.DKK.info.currency:
+            return Currencies.DKK.info
+        case Currencies.HUF.info.currency:
+            return Currencies.HUF.info
+        case Currencies.CZK.info.currency:
+            return Currencies.CZK.info
+        case Currencies.GBP.info.currency:
+            return Currencies.GBP.info
+        case Currencies.RON.info.currency:
+            return Currencies.RON.info
+        case Currencies.SEK.info.currency:
+            return Currencies.SEK.info
+        case Currencies.IDR.info.currency:
+            return Currencies.IDR.info
+        case Currencies.INR.info.currency:
+            return Currencies.INR.info
+        case Currencies.RUB.info.currency:
+            return Currencies.RUB.info
+        case Currencies.HRK.info.currency:
+            return Currencies.HRK.info
+        case Currencies.JPY.info.currency:
+            return Currencies.JPY.info
+        case Currencies.THB.info.currency:
+            return Currencies.THB.info
+        case Currencies.CHF.info.currency:
+            return Currencies.CHF.info
+        case Currencies.EUR.info.currency:
+            return Currencies.EUR.info
+        case Currencies.BGN.info.currency:
+            return Currencies.BGN.info
+        case Currencies.TRY.info.currency:
+            return Currencies.TRY.info
+        case Currencies.CNY.info.currency:
+            return Currencies.CNY.info
+        case Currencies.NOK.info.currency:
+            return Currencies.NOK.info
+        case Currencies.NZD.info.currency:
+            return Currencies.NZD.info
+        case Currencies.ZAR.info.currency:
+            return Currencies.ZAR.info
+        case Currencies.USD.info.currency:
+            return Currencies.USD.info
+        case Currencies.MXN.info.currency:
+            return Currencies.MXN.info
+        case Currencies.SGD.info.currency:
+            return Currencies.SGD.info
+        case Currencies.AUD.info.currency:
+            return Currencies.AUD.info
+        case Currencies.ILS.info.currency:
+            return Currencies.ILS.info
+        case Currencies.KRW.info.currency:
+            return Currencies.KRW.info
+        case Currencies.PLN.info.currency:
+            return Currencies.PLN.info
+        default:
+            return("", nil, "", "")
         }
     }
 }
