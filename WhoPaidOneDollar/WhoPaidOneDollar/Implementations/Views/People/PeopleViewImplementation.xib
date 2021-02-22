@@ -26,7 +26,7 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                     <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                     <items>
-                        <navigationItem title="People Who Paid One Dollar" id="fjw-L3-rWb" userLabel="Who Paid One Dollar?"/>
+                        <navigationItem title="Members" id="fjw-L3-rWb" userLabel="Who Paid One Dollar?"/>
                     </items>
                 </navigationBar>
             </subviews>
