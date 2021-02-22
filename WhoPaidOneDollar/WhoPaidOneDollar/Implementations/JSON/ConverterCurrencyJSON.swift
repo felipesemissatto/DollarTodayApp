@@ -70,7 +70,9 @@ class ConverterCurrencyJSON: ConverterCurrencyJSONProtocol {
                            _ currenciesArray: inout [Currency]) {
         
         if let value = response[currency]?.number {
-            currenciesArray.append(Currency(nameCurrency: currency, value: Float(truncating: value)))
+            let y = (value.floatValue*100).rounded()/100
+            currenciesArray.append(Currency(nameCurrency: currency,
+                                            value: y))
         }
     }
 }
