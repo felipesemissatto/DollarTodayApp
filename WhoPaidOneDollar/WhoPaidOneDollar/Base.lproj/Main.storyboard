@@ -150,11 +150,11 @@
             </objects>
             <point key="canvasLocation" x="2027.5362318840582" y="79.6875"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="Z4y-vU-fxE">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yNB-iD-ZKL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="0Vn-im-1sC"/>
+                    <tabBarItem key="tabBarItem" title="" image="pilha-de-notas-de-dolar 1" selectedImage="pilha-de-notas-de-dolar 1" id="0Vn-im-1sC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qi2-n9-ZjX">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -172,6 +172,7 @@
     </scenes>
     <resources>
         <image name="group 1" width="23" height="23"/>
+        <image name="pilha-de-notas-de-dolar 1" width="25" height="25"/>
         <image name="speech-bubble 1" width="23" height="23"/>
         <image name="user 1" width="23" height="23"/>
         <systemColor name="systemBackgroundColor">

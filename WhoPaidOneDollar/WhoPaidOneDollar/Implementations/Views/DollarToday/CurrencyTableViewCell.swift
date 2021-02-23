@@ -27,7 +27,7 @@ class CurrencyTableViewCell: UITableViewCell {
         viewBackground.layer.shadowRadius = 1
         viewBackground.layer.masksToBounds = false
         
-        // Image profile pic
+        // Image flag
         imageViewFlag.clipsToBounds = true
         imageViewFlag.layer.cornerRadius = 0.5 * imageViewFlag.bounds.size.width
         imageViewFlag.contentMode = .scaleAspectFill
