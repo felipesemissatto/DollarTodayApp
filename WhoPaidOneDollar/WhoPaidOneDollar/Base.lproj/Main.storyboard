@@ -122,8 +122,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="yNB-iD-ZKL" kind="relationship" relationship="viewControllers" id="tDc-NP-cNi"/>
-                        <segue destination="pD0-mV-wE7" kind="relationship" relationship="viewControllers" id="2zb-0r-O7I"/>
                         <segue destination="3iG-Xv-FDy" kind="relationship" relationship="viewControllers" id="0CH-JF-Grg"/>
+                        <segue destination="pD0-mV-wE7" kind="relationship" relationship="viewControllers" id="2zb-0r-O7I"/>
                         <segue destination="M3f-6z-Uny" kind="relationship" relationship="viewControllers" id="2wS-lo-MMQ"/>
                     </connections>
                 </tabBarController>

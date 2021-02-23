@@ -22,7 +22,7 @@ class PeopleViewControllerImplementation: UIViewController, PeopleViewController
     override func loadView() {
         super.loadView()
         
-        self.loadingView = LoadingView(message: "Loading the people...",
+        self.loadingView = LoadingView(message: "Loading members...",
                                        error: false,
                                        frame: CGRect.zero)!
         self.view.addSubview(loadingView)
@@ -38,7 +38,7 @@ class PeopleViewControllerImplementation: UIViewController, PeopleViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "People"
+        navigationItem.title = "Members"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,7 +48,7 @@ class PeopleViewControllerImplementation: UIViewController, PeopleViewController
     
     // MARK: - PeopleViewControllerProtocol methods
     func getAllPeople() {
-        self.view = LoadingView(message: "Loading people...",
+        self.view = LoadingView(message: "Loading members...",
                                 error: false,
                                 frame: CGRect.zero)!
         
@@ -57,7 +57,7 @@ class PeopleViewControllerImplementation: UIViewController, PeopleViewController
             if error != nil {
                 self.view = self.mainView
                 
-                let alert = UIAlertController(title: "Error Loading People",
+                let alert = UIAlertController(title: "Error Loading members",
                                               message: "Connection fail. Try it again later.",
                                               preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default))
