@@ -80,7 +80,10 @@ class LoginViewImplementation: UIView, LoginViewProtocol {
     private func chooseProfilePic() {
         let picker = UIImagePickerController()
         picker.delegate = self
-        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        var alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        if (UIDevice.current.userInterfaceIdiom == .pad) {
+            alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+        }
         alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: {
             action in
             picker.sourceType = .camera
