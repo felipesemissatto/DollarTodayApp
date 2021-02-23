@@ -210,4 +210,28 @@ class RequestSenderImplementationTests: XCTestCase {
         // Then
         wait(for: [responseExpectation], timeout: 5.0)
     }
+    
+    // MARK: - Dollar Today Methods
+    
+    func testGetCurrenciesToday_WhenBackendIsUp_shouldReturnCurrencies() throws {
+        // Given
+        let responseExpectation = XCTestExpectation(description: "Currencies retrieved from Foreign Exchange Rates and properly parsed.")
+        
+        let completionHandler: ([Currency]?, String?) -> Void = { currencies, error in
+            guard let currenciesFromParser = currencies else {
+                XCTFail("Error ocurred with message \(error!)")
+                return
+            }
+            
+            XCTAssert(currenciesFromParser.count > 0)
+            
+            responseExpectation.fulfill()
+        }
+        
+        // When
+        testSubject.getAllCurrencies(completion: completionHandler)
+        
+        // Then
+        wait(for: [responseExpectation], timeout: 5.0)
+    }
 }
