@@ -33,6 +33,6 @@ Dollar Today is an iOS app that allows you to see the day's exchange rates for t
 - Unit Tests
 - SQL with PostgreSQL
 - Deployed in Heroku
-- 
+
 <br><br>
 See the <a href="https://www.facebook.com/101910025282147/posts/101927558613727/?d=n">Privacy Policy</a>
